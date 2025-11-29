@@ -95,3 +95,7 @@ source scripts_sh/run_test.sh
 ## Aknowledgemnts
 This work is support by The Virtual Brain Twin Project, which has received funding from the European Union's Research and Innovation Program Horizon Europe under grant agreement No 101137289.
 
+## Contacts
+Alberto Arturo Vergani, PhD
+albertoarturo.vergani@unipv.it
+
