@@ -28,10 +28,10 @@
 #bash scripts_sh/batch_setups_NR_base.sh
 
 #echo "Running script2"
-#bash scripts_sh/batch_setups_HR_base.sh
+bash scripts_sh/batch_setups_HR_base.sh
 
 #echo "Running script1"
-bash scripts_sh/batch_setups_NR_vbt.sh
+#bash scripts_sh/batch_setups_NR_vbt.sh
 
 
 echo "All scripts completed."

@@ -4,7 +4,7 @@
 stim_name="basal_activity" #kase_stim_vitro" #"pawan_stim_vitro"
 start=0
 stop=40
-n_steps=16
+n_steps=32 #16
 
 # === COMBINAZIONI DI PARAMETRI ===
 declare -a compensations=(0)
@@ -37,7 +37,7 @@ for szh in "${sz_hyph_raw[@]}"; do
                     echo "⏱️ Tempo trascorso: ${elapsed_min}m ${elapsed_sec}s"
 
                     # Lancia lo script principale con TUTTI i parametri
-                    bash scripts_sh/sim_setup_v3.sh "$stim_name" "$start" "$stop" "$n_steps" "$comp" "$szh" "$do_dcnio" "$reserve_k0" "$reserve_sharpness"
+                    bash scripts_sh/sim_setup_v5.sh "$stim_name" "$start" "$stop" "$n_steps" "$comp" "$szh" "$do_dcnio" "$reserve_k0" "$reserve_sharpness"
 
                     ((count++))
                 done

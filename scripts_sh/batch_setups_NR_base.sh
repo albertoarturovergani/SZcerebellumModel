@@ -4,7 +4,7 @@
 stim_name="basal_activity" #kase_stim_vitro" #"pawan_stim_vitro"
 start=0
 stop=40
-n_steps=16
+n_steps=32 #16
 
 # === COMBINAZIONI DI PARAMETRI ===
 declare -a compensations=(0)
