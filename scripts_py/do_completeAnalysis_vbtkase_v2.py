@@ -351,6 +351,31 @@ def compute_transfer_entropy_binned_old(source, target, bins=16):
     return conditional_entropy(p_y1y, p_y) - conditional_entropy(p_y1yx, p_yx)
 
 
+def _bootstrap_indices(n, block, rng):
+    if block <= 1:
+        return rng.integers(0, n, size=n)
+    n_blocks = int(np.ceil(n / block))
+    starts = rng.integers(0, max(1, n - block + 1), size=n_blocks)
+    idx = np.concatenate([np.arange(s, s + block) for s in starts])[:n]
+    return idx
+
+def te_bootstrap_std(source, target, n_boot=200, block=200, bins=16, seed=0):
+    x = np.asarray(source)
+    y = np.asarray(target)
+    n = min(len(x), len(y))
+    if n < 10:
+        return np.nan
+    x = x[:n]
+    y = y[:n]
+    rng = np.random.default_rng(seed)
+    vals = np.empty(n_boot, dtype=float)
+    for b in range(n_boot):
+        idx = _bootstrap_indices(n, block, rng)
+        vals[b] = compute_transfer_entropy_binned_old(x[idx], y[idx], bins=bins)
+    return float(np.std(vals, ddof=1))
+
+
+
 from collections import Counter
 import numpy as np
 #bins = int(np.sqrt(len(source)))  # regola di Sturges modificata
@@ -1727,11 +1752,14 @@ def loadData(data_path: Path, mainEventKey: str,
             "cosine_similarity_mossy_fibers_purk": float(cosine_similarity(m_mean, p_mean)),
             "cosine_similarity_stim_mossy_fibers": float(stim_to_mossy_fibers_cosine),
             "cosine_similarity_stim_purk": float(stim_to_purk_cosine),
-
             "cross_corr": compute_cross_corr_and_lag(m_mean, p_mean, dt)[0],
             "optimal_lag_ms": compute_cross_corr_and_lag(m_mean, p_mean, dt)[1],
+
             "te_mossy_fibers_to_purk": compute_transfer_entropy_binned_old(m_mean, p_mean),
             "te_purk_to_mossy_fibers": compute_transfer_entropy_binned_old(p_mean, m_mean),
+            "te_std_mossy_fibers_to_purk": te_bootstrap_std(m_mean, p_mean, n_boot=200, block=200, bins=16, seed=0),
+            "te_std_purk_to_mossy_fibers": te_bootstrap_std(p_mean, m_mean, n_boot=200, block=200, bins=16, seed=1),
+            
             "plv": compute_plv(m_mean, p_mean),
             "intra_corr_mossy_fibers": mean_pairwise_corr(mossy_fibers[:, start:end]),
             "intra_corr_purk": mean_pairwise_corr(purk[:, start:end]),
