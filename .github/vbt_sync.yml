@@ -2,16 +2,16 @@ name: Mirror to vbt_t3-2_unipv_szcerebellummodel
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   to_vbt_t3-2_unipv_szcerebellummodel:
     runs-on: ubuntu-latest
     steps:
-      - name: syncmaster
+      - name: syncmain
         uses: wei/git-sync@v3
         with:
           source_repo: "albertoarturovergani/SZcerebellumModel"
-          source_branch: "master"
+          source_branch: "main"
           destination_repo: "https://ghpusher:${{ secrets.VBT_SYNC }}@gitlab.jsc.fz-juelich.de:virtualbraintwin/vbt_t3-2_unipv_szcerebellummodel.git"
-          destination_branch: "master"
+          destination_branch: "main"
