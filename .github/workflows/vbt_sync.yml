@@ -13,5 +13,5 @@ jobs:
         with:
           source_repo: "albertoarturovergani/SZcerebellumModel"
           source_branch: "main"
-          destination_repo: "https://ghpusher:${{ secrets.VBT_SYNC }}@gitlab.jsc.fz-juelich.de:virtualbraintwin/vbt_t3-2_unipv_szcerebellummodel.git"
+          destination_repo: "https://ghpusher:${{ secrets.VBT_SYNC }}@gitlab.jsc.fz-juelich.de/virtualbraintwin/vbt_t3-2_unipv_szcerebellummodel.git"
           destination_branch: "main"
