@@ -183,7 +183,7 @@ The archive is intended to provide:
 - Additional scripts and metadata required to reproduce the reported results
 - Supporting materials for independent verification of the computational analyses
 
-**Reproducibility Archive (Zenodo):** *[DOI and repository link to be added upon release]*
+**Reproducibility Archive (Zenodo):** https://doi.org/10.5281/zenodo.23391996
 
 The reproducibility archive will be maintained as a separate record from the manuscript preprint.
 
