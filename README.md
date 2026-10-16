@@ -1,9 +1,8 @@
-
 # SZcerebellumModel
 
 A computational framework for investigating **schizophrenia-like structural and synaptic alterations** in a biologically grounded, spiking **cerebellar microcircuit model**.
 
-This repository extends the [Brain Scaffold Builder (BSB)](https://github.com/bsb-team/bsb) and [cerebellum](https://github.com/bsb-team/cerebellum) computational frameworks to investigate how progressive neuronal degeneration and resilience mechanisms influence cerebellar network dynamics.
+This repository extends the [Brain Scaffold Builder (BSB)](https://github.com/dbbs-lab/bsb) and [cerebellum](https://github.com/dbbs-lab/cerebellar-models/tree/v0.4.0) computational frameworks to investigate how progressive neuronal degeneration and resilience mechanisms influence cerebellar network dynamics.
 
 ## Key Features
 
@@ -58,31 +57,34 @@ Contains Python scripts and utilities for:
 
 ## 1. Prerequisites
 
-The workflow builds upon the BSB and `cerebellum` frameworks and requires a compatible Python environment.
+The workflow builds upon the BSB and `cerebellum` frameworks and requires a compatible Python environment, MPI, and the NEST simulation backend.
 
 ### 1.1 Brain Scaffold Builder (BSB)
 
-Official repository: [bsb-team/bsb](https://github.com/bsb-team/bsb)
+Official repository: [dbbs-lab/bsb](https://github.com/dbbs-lab/bsb)
 
-Install the core BSB components and the cerebellar extension:
+The simulations described in the manuscript used **BSB 4.4** ([release `v4.4.0`](https://github.com/dbbs-lab/bsb/tree/v4.4.0)). In a dedicated Python environment, install the version-matched BSB core:
 
 ```bash
-python -m pip install bsb-core bsb-cereb
+python -m pip install "bsb-core[parallel]==4.4.0"
 ```
 
 Additional dependencies may be required depending on the simulation backend and analysis scripts.
 
 ### 1.2 Cerebellum Framework
 
-Official repository: [bsb-team/cerebellum](https://github.com/bsb-team/cerebellum)
+Official repository: [dbbs-lab/cerebellar-models](https://github.com/dbbs-lab/cerebellar-models)
 
-Clone the upstream repository:
+Clone the **cerebellum 0.4.0** release, which contains the upstream `cerebellum` package and directory structure used in the paper:
 
 ```bash
-git clone https://github.com/bsb-team/cerebellum.git
+git clone --branch v0.4.0 https://github.com/dbbs-lab/cerebellar-models.git cerebellum
+cd cerebellum
+python -m pip install -e .
+cd ..
 ```
 
-For reproducing the analyses described in the associated manuscript, the reported software versions are BSB 4.4 and cerebellum module 0.4.0. Compatibility with newer releases should be verified.
+For reproducing the analyses described in the associated manuscript, the reported software versions are **BSB 4.4** and **cerebellum 0.4.0**. Compatibility with newer releases should be verified.
 
 ---
 
@@ -157,7 +159,7 @@ The `run_test.sh` script invokes `scripts_sh/sim_setup_v5.sh` with predefined si
 The current example configuration uses:
 
 - **Stimulation protocol:** `kase_stim_vitro`
-- **Degeneration range:** 30–40%
+- **Degeneration level:** 30% (`start=30`, `stop=40`, and `n_steps=1` select only the start value)
 - **Degeneration steps:** 1
 - **Synaptic alteration:** `glutamate:all`
 - **Compensation flag:** `0`
@@ -171,6 +173,36 @@ These parameters can be modified directly in `scripts_sh/run_test.sh`.
 ---
 
 ## 4. Reproducibility
+
+### Reproducing the simulations reported in the paper
+
+To reproduce the main simulation conditions described in the associated manuscript, execute the following Bash scripts from the **root directory of the upstream `cerebellum` framework**, after completing the installation and integration steps above.
+
+The experiments combine two stimulation protocols, **basal activity** and **Kase-inspired saccadic stimulation**, with two resilience configurations: **HR (with resilience)** and **NR (no resilience)**.
+
+| Stimulation protocol | Resilience configuration | Script |
+| --- | --- | --- |
+| Basal activity | HR (with resilience) | [`scripts_sh/batch_setups_HR_base.sh`](scripts_sh/batch_setups_HR_base.sh) |
+| Basal activity | NR (no resilience) | [`scripts_sh/batch_setups_NR_base.sh`](scripts_sh/batch_setups_NR_base.sh) |
+| Kase stimulation | HR (with resilience) | [`scripts_sh/batch_setups_HR_kase.sh`](scripts_sh/batch_setups_HR_kase.sh) |
+| Kase stimulation | NR (no resilience) | [`scripts_sh/batch_setups_NR_kase.sh`](scripts_sh/batch_setups_NR_kase.sh) |
+
+Run the simulations using:
+
+```bash
+bash scripts_sh/batch_setups_HR_base.sh
+bash scripts_sh/batch_setups_NR_base.sh
+bash scripts_sh/batch_setups_HR_kase.sh
+bash scripts_sh/batch_setups_NR_kase.sh
+```
+
+Each launcher calls [`scripts_sh/sim_setup_v5.sh`](scripts_sh/sim_setup_v5.sh), which automatically performs morphological alterations, network construction, stimulus generation, simulation execution, and structural and functional analyses across the specified degeneration levels.
+
+The HR and NR configurations use different resilience parameters (`reserve_sharpness = 15` and `2`, respectively, with `reserve_k0 = 0.5`). The basal simulations assess spontaneous network activity, whereas the Kase simulations assess responses to saccadic-like mossy-fiber stimulation. The basal HR and NR scripts cover 0–40% degeneration in 32 steps; Kase HR uses 32 steps and Kase NR uses 16 steps over the same range.
+
+These launchers reproduce the main **simulation setups**. Exact numerical replication additionally depends on using the same random seeds, simulation environment, and analysis settings as in the original experiments. The current pipeline generates seeds at runtime, so repeated executions may differ numerically.
+
+### Reproducibility Archive
 
 The source code for network construction, simulation, and analysis is publicly available in this GitHub repository.
 
