@@ -1,0 +1,139 @@
+$import:
+  ref: ./dcn_io_0.733.yaml#/
+  values:
+  - packages
+  - storage
+  - network
+  - regions
+  - partitions
+  - morphologies
+  - cell_types
+  - placement
+  - connectivity
+  - after_connectivity
+components:
+- cerebellum/nest_models/build_models.py
+name: DBBS Mouse cerebellum w/ DCN and IO NEST basal activity and mf & cf stimulus
+  for in vitro state
+packages:
+- bsb-nest~=4.3
+simulations:
+  basal_activity:
+    $import:
+      ref: ./dcn_vitro_nest_0.733.yaml#/simulations/basal_activity/
+      values:
+      - simulator
+      - resolution
+      - duration
+      - modules
+      - seed
+      - cell_models
+      - connection_models
+      - devices
+    cell_models:
+      io:
+        constants:
+          A1: 1810.923
+          A2: 1358.197
+          C_m: 189
+          E_L: -45
+          E_rev1: 0
+          E_rev2: -80
+          I_e: -18.101
+          V_m: -45
+          V_reset: -45
+          V_th: -35
+          k_1: 0.191
+          k_2: 0.091
+          k_adap: 1.928
+          lambda_0: 1.2
+          t_ref: 1
+          tau_V: 0.8
+          tau_m: 11
+          tau_syn1: 1
+          tau_syn2: 60
+        model: eglif_cond_alpha_multisyn
+    connection_models:
+      dcn_i_to_io:
+        synapse:
+          delay: 25
+          model: static_synapse
+          receptor_type: 2
+          weight: 0.45
+      io_to_dcn_i:
+        synapse:
+          delay: 5
+          model: static_synapse
+          receptor_type: 1
+          weight: 0.18325
+      io_to_dcn_p:
+        synapse:
+          delay: 4
+          model: static_synapse
+          receptor_type: 1
+          weight: 0.3665
+      io_to_mli_io_to_basket_cell:
+        synapse:
+          delay: 40
+          model: static_synapse
+          receptor_type: 3
+          weight: 3.665
+      io_to_mli_io_to_stellate_cell:
+        synapse:
+          delay: 40
+          model: static_synapse
+          receptor_type: 3
+          weight: 4.7645
+      io_to_purkinje:
+        synapse:
+          delay: 4
+          model: static_synapse
+          receptor_type: 3
+          weight: 0.4398
+    devices:
+      io_record:
+        delay: 0.1
+        device: spike_recorder
+        targetting:
+          cell_models:
+          - io
+          strategy: cell_model
+  mf_cf_stimulus:
+    $import:
+      ref: '#/simulations/basal_activity'
+      values:
+      - simulator
+      - resolution
+      - duration
+      - modules
+      - seed
+      - simulator
+      - cell_models
+      - connection_models
+      - devices
+    devices:
+      cf_stimulus:
+        delay: 0.1
+        device: poisson_generator
+        rate: 500
+        receptor_type: 1
+        start: 1250
+        stop: 1260
+        targetting:
+          cell_models:
+          - io
+          strategy: cell_model
+        weight: 55
+      mf_stimulus:
+        delay: 0.1
+        device: poisson_generator
+        rate: 40
+        start: 1000
+        stop: 1260
+        targetting:
+          cell_models:
+          - mossy_fibers
+          strategy: cell_model
+        weight: 1
+storage:
+  root: mouse_cereb_dcn_io_nest_0.733.hdf5

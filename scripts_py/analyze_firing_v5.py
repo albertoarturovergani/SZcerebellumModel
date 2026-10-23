@@ -164,7 +164,7 @@ def main():
     parser.add_argument("--sigma", type=float, default=100.0, help="Sigma for kernel smoothing in firing rate estimation")
     args = parser.parse_args()
     #root_path = Path(args.root)
-    root_path = Path(args.path)  
+    root_path = Path(args.path)
     filter_mode = True
     trim_ratio = 0.005
     dt = 0.1

@@ -1,0 +1,430 @@
+schema: sz_repro_browser_publication_v1
+model_version: cerebellum 0.5.0
+protocols:
+  auto:
+    mf_poisson_rate_hz: 0
+    mf_weight: 0
+    duration_ms: 5000
+  basal4hz:
+    mf_poisson_rate_hz: 4
+    mf_weight: 1
+    duration_ms: 5000
+  kase:
+    baseline_mf_rate_hz: 4
+    duration_ms: 10000
+    bursts: stored verbatim in per-step YAML
+experiments:
+  HR_auto:
+    archive_2025: 20251120193505_basal_activity_15_0_glutamate_all
+    protocol: auto
+    resilience: HR
+    levels:
+    - step: 000_deg_1.000
+      k: '1.000'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_1.000.yaml
+    - step: 001_deg_0.973
+      k: '0.973'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.973.yaml
+    - step: 002_deg_0.947
+      k: '0.947'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.947.yaml
+    - step: 003_deg_0.920
+      k: '0.920'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.920.yaml
+    - step: 004_deg_0.893
+      k: '0.893'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.893.yaml
+    - step: 005_deg_0.867
+      k: '0.867'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.867.yaml
+    - step: 006_deg_0.840
+      k: '0.840'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.840.yaml
+    - step: 007_deg_0.813
+      k: '0.813'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.813.yaml
+    - step: 008_deg_0.787
+      k: '0.787'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.787.yaml
+    - step: 009_deg_0.760
+      k: '0.760'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.760.yaml
+    - step: 010_deg_0.733
+      k: '0.733'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.733.yaml
+    - step: 011_deg_0.707
+      k: '0.707'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.707.yaml
+    - step: 012_deg_0.680
+      k: '0.680'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.680.yaml
+    - step: 013_deg_0.653
+      k: '0.653'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.653.yaml
+    - step: 014_deg_0.627
+      k: '0.627'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.627.yaml
+    - step: 015_deg_0.600
+      k: '0.600'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.600.yaml
+  NR_auto:
+    archive_2025: 20251120172014_basal_activity_2_0_glutamate_all
+    protocol: auto
+    resilience: NR
+    levels:
+    - step: 000_deg_1.000
+      k: '1.000'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_1.000.yaml
+    - step: 001_deg_0.973
+      k: '0.973'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.973.yaml
+    - step: 002_deg_0.947
+      k: '0.947'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.947.yaml
+    - step: 003_deg_0.920
+      k: '0.920'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.920.yaml
+    - step: 004_deg_0.893
+      k: '0.893'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.893.yaml
+    - step: 005_deg_0.867
+      k: '0.867'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.867.yaml
+    - step: 006_deg_0.840
+      k: '0.840'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.840.yaml
+    - step: 007_deg_0.813
+      k: '0.813'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.813.yaml
+    - step: 008_deg_0.787
+      k: '0.787'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.787.yaml
+    - step: 009_deg_0.760
+      k: '0.760'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.760.yaml
+    - step: 010_deg_0.733
+      k: '0.733'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.733.yaml
+    - step: 011_deg_0.707
+      k: '0.707'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.707.yaml
+    - step: 012_deg_0.680
+      k: '0.680'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.680.yaml
+    - step: 013_deg_0.653
+      k: '0.653'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.653.yaml
+    - step: 014_deg_0.627
+      k: '0.627'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.627.yaml
+    - step: 015_deg_0.600
+      k: '0.600'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.600.yaml
+  HR_basal4hz:
+    archive_2025: 20250628122534_basal_activity_15_0_glutamate_all
+    protocol: basal4hz
+    resilience: HR
+    levels:
+    - step: 000_deg_1.000
+      k: '1.000'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_1.000.yaml
+    - step: 001_deg_0.973
+      k: '0.973'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.973.yaml
+    - step: 002_deg_0.947
+      k: '0.947'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.947.yaml
+    - step: 003_deg_0.920
+      k: '0.920'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.920.yaml
+    - step: 004_deg_0.893
+      k: '0.893'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.893.yaml
+    - step: 005_deg_0.867
+      k: '0.867'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.867.yaml
+    - step: 006_deg_0.840
+      k: '0.840'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.840.yaml
+    - step: 007_deg_0.813
+      k: '0.813'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.813.yaml
+    - step: 008_deg_0.787
+      k: '0.787'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.787.yaml
+    - step: 009_deg_0.760
+      k: '0.760'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.760.yaml
+    - step: 010_deg_0.733
+      k: '0.733'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.733.yaml
+    - step: 011_deg_0.707
+      k: '0.707'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.707.yaml
+    - step: 012_deg_0.680
+      k: '0.680'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.680.yaml
+    - step: 013_deg_0.653
+      k: '0.653'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.653.yaml
+    - step: 014_deg_0.627
+      k: '0.627'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.627.yaml
+    - step: 015_deg_0.600
+      k: '0.600'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.600.yaml
+  NR_basal4hz:
+    archive_2025: 20251004180523_basal_activity_2_0_glutamate_all
+    protocol: basal4hz
+    resilience: NR
+    levels:
+    - step: 000_deg_1.000
+      k: '1.000'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_1.000.yaml
+    - step: 001_deg_0.973
+      k: '0.973'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.973.yaml
+    - step: 002_deg_0.947
+      k: '0.947'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.947.yaml
+    - step: 003_deg_0.920
+      k: '0.920'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.920.yaml
+    - step: 004_deg_0.893
+      k: '0.893'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.893.yaml
+    - step: 005_deg_0.867
+      k: '0.867'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.867.yaml
+    - step: 006_deg_0.840
+      k: '0.840'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.840.yaml
+    - step: 007_deg_0.813
+      k: '0.813'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.813.yaml
+    - step: 008_deg_0.787
+      k: '0.787'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.787.yaml
+    - step: 009_deg_0.760
+      k: '0.760'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.760.yaml
+    - step: 010_deg_0.733
+      k: '0.733'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.733.yaml
+    - step: 011_deg_0.707
+      k: '0.707'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.707.yaml
+    - step: 012_deg_0.680
+      k: '0.680'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.680.yaml
+    - step: 013_deg_0.653
+      k: '0.653'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.653.yaml
+    - step: 014_deg_0.627
+      k: '0.627'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.627.yaml
+    - step: 015_deg_0.600
+      k: '0.600'
+      nest_seed: 1234
+      main: configurations/mouse/dcn-io/dcn_io_vitro_nest_0.600.yaml
+  HR_kase:
+    archive_2025: 20251113214858_kase_stim_vitro_15_0_glutamate_all
+    protocol: kase
+    resilience: HR
+    levels:
+    - step: 000_deg_1.000
+      k: '1.000'
+      nest_seed: 1763066938
+      main: configurations/mouse/nest/kase_stim_vitro_1.000.yaml
+    - step: 001_deg_0.973
+      k: '0.973'
+      nest_seed: 1763068668
+      main: configurations/mouse/nest/kase_stim_vitro_0.973.yaml
+    - step: 002_deg_0.947
+      k: '0.947'
+      nest_seed: 1763070376
+      main: configurations/mouse/nest/kase_stim_vitro_0.947.yaml
+    - step: 003_deg_0.920
+      k: '0.920'
+      nest_seed: 1763071988
+      main: configurations/mouse/nest/kase_stim_vitro_0.920.yaml
+    - step: 004_deg_0.893
+      k: '0.893'
+      nest_seed: 1763073609
+      main: configurations/mouse/nest/kase_stim_vitro_0.893.yaml
+    - step: 005_deg_0.867
+      k: '0.867'
+      nest_seed: 1763075195
+      main: configurations/mouse/nest/kase_stim_vitro_0.867.yaml
+    - step: 006_deg_0.840
+      k: '0.840'
+      nest_seed: 1763076718
+      main: configurations/mouse/nest/kase_stim_vitro_0.840.yaml
+    - step: 007_deg_0.813
+      k: '0.813'
+      nest_seed: 1763078214
+      main: configurations/mouse/nest/kase_stim_vitro_0.813.yaml
+    - step: 008_deg_0.787
+      k: '0.787'
+      nest_seed: 1763079654
+      main: configurations/mouse/nest/kase_stim_vitro_0.787.yaml
+    - step: 009_deg_0.760
+      k: '0.760'
+      nest_seed: 1763081053
+      main: configurations/mouse/nest/kase_stim_vitro_0.760.yaml
+    - step: 010_deg_0.733
+      k: '0.733'
+      nest_seed: 1763082409
+      main: configurations/mouse/nest/kase_stim_vitro_0.733.yaml
+    - step: 011_deg_0.707
+      k: '0.707'
+      nest_seed: 1763083733
+      main: configurations/mouse/nest/kase_stim_vitro_0.707.yaml
+    - step: 012_deg_0.680
+      k: '0.680'
+      nest_seed: 1763084982
+      main: configurations/mouse/nest/kase_stim_vitro_0.680.yaml
+    - step: 013_deg_0.653
+      k: '0.653'
+      nest_seed: 1763086171
+      main: configurations/mouse/nest/kase_stim_vitro_0.653.yaml
+    - step: 014_deg_0.627
+      k: '0.627'
+      nest_seed: 1763087284
+      main: configurations/mouse/nest/kase_stim_vitro_0.627.yaml
+    - step: 015_deg_0.600
+      k: '0.600'
+      nest_seed: 1763088336
+      main: configurations/mouse/nest/kase_stim_vitro_0.600.yaml
+  NR_kase:
+    archive_2025: 20251113161643_kase_stim_vitro_2_0_glutamate_all
+    protocol: kase
+    resilience: NR
+    levels:
+    - step: 000_deg_1.000
+      k: '1.000'
+      nest_seed: 1763047003
+      main: configurations/mouse/nest/kase_stim_vitro_1.000.yaml
+    - step: 001_deg_0.973
+      k: '0.973'
+      nest_seed: 1763048765
+      main: configurations/mouse/nest/kase_stim_vitro_0.973.yaml
+    - step: 002_deg_0.947
+      k: '0.947'
+      nest_seed: 1763050397
+      main: configurations/mouse/nest/kase_stim_vitro_0.947.yaml
+    - step: 003_deg_0.920
+      k: '0.920'
+      nest_seed: 1763051914
+      main: configurations/mouse/nest/kase_stim_vitro_0.920.yaml
+    - step: 004_deg_0.893
+      k: '0.893'
+      nest_seed: 1763053260
+      main: configurations/mouse/nest/kase_stim_vitro_0.893.yaml
+    - step: 005_deg_0.867
+      k: '0.867'
+      nest_seed: 1763054530
+      main: configurations/mouse/nest/kase_stim_vitro_0.867.yaml
+    - step: 006_deg_0.840
+      k: '0.840'
+      nest_seed: 1763055709
+      main: configurations/mouse/nest/kase_stim_vitro_0.840.yaml
+    - step: 007_deg_0.813
+      k: '0.813'
+      nest_seed: 1763056831
+      main: configurations/mouse/nest/kase_stim_vitro_0.813.yaml
+    - step: 008_deg_0.787
+      k: '0.787'
+      nest_seed: 1763057903
+      main: configurations/mouse/nest/kase_stim_vitro_0.787.yaml
+    - step: 009_deg_0.760
+      k: '0.760'
+      nest_seed: 1763058882
+      main: configurations/mouse/nest/kase_stim_vitro_0.760.yaml
+    - step: 010_deg_0.733
+      k: '0.733'
+      nest_seed: 1763059790
+      main: configurations/mouse/nest/kase_stim_vitro_0.733.yaml
+    - step: 011_deg_0.707
+      k: '0.707'
+      nest_seed: 1763060654
+      main: configurations/mouse/nest/kase_stim_vitro_0.707.yaml
+    - step: 012_deg_0.680
+      k: '0.680'
+      nest_seed: 1763061459
+      main: configurations/mouse/nest/kase_stim_vitro_0.680.yaml
+    - step: 013_deg_0.653
+      k: '0.653'
+      nest_seed: 1763062215
+      main: configurations/mouse/nest/kase_stim_vitro_0.653.yaml
+    - step: 014_deg_0.627
+      k: '0.627'
+      nest_seed: 1763062955
+      main: configurations/mouse/nest/kase_stim_vitro_0.627.yaml
+    - step: 015_deg_0.600
+      k: '0.600'
+      nest_seed: 1763063636
+      main: configurations/mouse/nest/kase_stim_vitro_0.600.yaml

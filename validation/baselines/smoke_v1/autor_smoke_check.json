@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "kind": "three-level diagnostic, NOT manuscript reproduction",
+  "source_notebook": "/mnt/bsb_repro/SZcerebellumModel-TEST/notebooks/historical/META_PAPER_MODELING_AUTOR_PREFIXED.ipynb",
+  "source_function": "compute_delta_fr_with_percent_and_zscore",
+  "cases": [
+    "HR_auto",
+    "NR_auto"
+  ],
+  "k": [
+    0.6,
+    0.76,
+    1.0
+  ],
+  "rows": 36,
+  "metrics": [
+    "firing_rate_mean",
+    "delta_fr_mean",
+    "delta_fr_percent",
+    "zscore_fr"
+  ],
+  "notes": [
+    "Missing and zero-baseline populations are not imputed.",
+    "No fifth-degree polynomial fit is applied.",
+    "Original notebook is not executed in full or modified."
+  ]
+}

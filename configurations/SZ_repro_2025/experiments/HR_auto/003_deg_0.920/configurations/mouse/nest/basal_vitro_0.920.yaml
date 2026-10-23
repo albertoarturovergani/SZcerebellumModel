@@ -1,0 +1,304 @@
+$import:
+  ref: ../mouse_cerebellar_cortex_0.920.yaml#/
+  values:
+  - packages
+  - storage
+  - network
+  - regions
+  - partitions
+  - morphologies
+  - cell_types
+  - placement
+  - connectivity
+  - after_connectivity
+components:
+- cerebellum/nest_models/build_models.py
+name: DBBS Mouse cerebellum NEST basal activity for in vitro state
+packages:
+- bsb-nest~=4.3
+simulations:
+  basal_activity:
+    cell_models:
+      basket_cell:
+        constants:
+          A1: 5.953
+          A2: 5.863
+          C_m: 14.6
+          E_L: -68
+          E_rev1: 0
+          E_rev2: -80
+          E_rev3: 0
+          I_e: 3.711
+          V_m: -60.0
+          V_reset: -78
+          V_th: -53
+          k_1: 1.887
+          k_2: 1.096
+          k_adap: 2.025
+          lambda_0: 1.8
+          t_ref: 1.59
+          tau_V: 1.0
+          tau_m: 9.125
+          tau_syn1: 0.64
+          tau_syn2: 2
+          tau_syn3: 1.2
+        model: eglif_cond_alpha_multisyn
+      glomerulus:
+        model: parrot_neuron
+      golgi_cell:
+        constants:
+          A1: 259.988
+          A2: 178.01
+          C_m: 145
+          E_L: -62
+          E_rev1: 0
+          E_rev2: -80
+          E_rev3: 0
+          I_e: 16.214
+          V_m: -60.0
+          V_min: -150
+          V_reset: -75
+          V_th: -55
+          k_1: 0.031
+          k_2: 0.023
+          k_adap: 0.217
+          lambda_0: 0.15
+          t_ref: 2
+          tau_V: 0.09
+          tau_m: 44
+          tau_syn1: 0.23
+          tau_syn2: 10
+          tau_syn3: 0.5
+        model: eglif_cond_alpha_multisyn
+      granule_cell:
+        constants:
+          A1: 0.01
+          A2: -0.94
+          C_m: 7
+          E_L: -62
+          E_rev1: 0
+          E_rev2: -80
+          I_e: -0.888
+          V_m: -62.0
+          V_min: -150
+          V_reset: -70
+          V_th: -41
+          k_1: 0.311
+          k_2: 0.041407868
+          k_adap: 0.022
+          lambda_0: 1.0
+          t_ref: 1.5
+          tau_V: 0.3
+          tau_m: 24.15
+          tau_syn1: 5.8
+          tau_syn2: 13.61
+        model: eglif_cond_alpha_multisyn
+      mossy_fibers:
+        model: parrot_neuron
+      purkinje_cell:
+        constants:
+          A1: 157.622
+          A2: 172.622
+          C_m: 334
+          E_L: -59
+          E_rev1: 0
+          E_rev2: -80
+          E_rev3: 0
+          I_e: 590.0
+          V_m: -59.0
+          V_min: -350
+          V_reset: -69
+          V_th: -43
+          k_1: 0.195
+          k_2: 0.041
+          k_adap: 1.491
+          lambda_0: 0.5
+          t_ref: 0.5
+          tau_V: 2.0
+          tau_m: 47
+          tau_syn1: 1.1
+          tau_syn2: 2.8
+          tau_syn3: 0.4
+        model: eglif_cond_alpha_multisyn
+      stellate_cell:
+        constants:
+          A1: 5.953
+          A2: 5.863
+          C_m: 14.6
+          E_L: -68
+          E_rev1: 0
+          E_rev2: -80
+          E_rev3: 0
+          I_e: 3.711
+          V_m: -60.0
+          V_reset: -78
+          V_th: -53
+          k_1: 1.887
+          k_2: 1.096
+          k_adap: 2.025
+          lambda_0: 1.8
+          t_ref: 1.59
+          tau_V: 1
+          tau_m: 9.125
+          tau_syn1: 0.64
+          tau_syn2: 2
+          tau_syn3: 1.2
+        model: eglif_cond_alpha_multisyn
+    connection_models:
+      ascending_axon_to_golgi:
+        synapse:
+          delay: 2
+          model: static_synapse
+          receptor_type: 3
+          weight: 0.7544
+      ascending_axon_to_purkinje:
+        synapse:
+          delay: 2
+          model: static_synapse
+          receptor_type: 1
+          weight: 0.184
+      basket_to_basket:
+        synapse:
+          delay: 4
+          model: static_synapse
+          receptor_type: 2
+          weight: 0.006
+      basket_to_purkinje:
+        synapse:
+          delay: 4
+          model: static_synapse
+          receptor_type: 2
+          weight: 0.44
+      glomerulus_to_golgi:
+        synapse:
+          delay: 1
+          model: static_synapse
+          receptor_type: 1
+          weight: 0.2208
+      glomerulus_to_granule:
+        synapse:
+          delay: 1
+          model: static_synapse
+          receptor_type: 1
+          weight: 0.2116
+      golgi_to_glomerulus:
+        synapse:
+          delay: 2
+          model: static_synapse
+          receptor_type: 2
+          weight: 0.24
+      golgi_to_golgi:
+        synapse:
+          delay: 4
+          model: static_synapse
+          receptor_type: 2
+          weight: 0.007
+      mossy_fibers_to_glomerulus:
+        synapse:
+          delay: 1
+          model: static_synapse
+          weight: 0.92
+      parallel_fiber_to_basket:
+        synapse:
+          delay: 5
+          model: static_synapse
+          receptor_type: 1
+          weight: 0.0368
+      parallel_fiber_to_golgi:
+        synapse:
+          delay: 5
+          model: static_synapse
+          receptor_type: 3
+          weight: 0.046
+      parallel_fiber_to_purkinje:
+        synapse:
+          delay: 5
+          model: static_synapse
+          receptor_type: 1
+          weight: 0.046
+      parallel_fiber_to_stellate:
+        synapse:
+          delay: 5
+          model: static_synapse
+          receptor_type: 1
+          weight: 0.046
+      stellate_to_purkinje:
+        synapse:
+          delay: 5
+          model: static_synapse
+          receptor_type: 2
+          weight: 0.17
+      stellate_to_stellate:
+        synapse:
+          delay: 4
+          model: static_synapse
+          receptor_type: 2
+          weight: 0.005
+    devices:
+      background_noise:
+        delay: 0.1
+        device: poisson_generator
+        rate: 0
+        targetting:
+          cell_models:
+          - mossy_fibers
+          strategy: cell_model
+        weight: 0
+      basket_record:
+        delay: 0.1
+        device: spike_recorder
+        targetting:
+          cell_models:
+          - basket_cell
+          strategy: cell_model
+      glomerulus_record:
+        delay: 0.1
+        device: spike_recorder
+        targetting:
+          cell_models:
+          - glomerulus
+          strategy: cell_model
+      golgi_record:
+        delay: 0.1
+        device: spike_recorder
+        targetting:
+          cell_models:
+          - golgi_cell
+          strategy: cell_model
+      granule_record:
+        delay: 0.1
+        device: spike_recorder
+        targetting:
+          cell_models:
+          - granule_cell
+          strategy: cell_model
+      mossy_fibers_record:
+        delay: 0.1
+        device: spike_recorder
+        targetting:
+          cell_models:
+          - mossy_fibers
+          strategy: cell_model
+      purkinje_record:
+        delay: 0.1
+        device: spike_recorder
+        targetting:
+          cell_models:
+          - purkinje_cell
+          strategy: cell_model
+      stellate_record:
+        delay: 0.1
+        device: spike_recorder
+        targetting:
+          cell_models:
+          - stellate_cell
+          strategy: cell_model
+    duration: 5000
+    modules:
+    - cerebmodule
+    resolution: 0.1
+    seed: 1234
+    simulator: nest
+storage:
+  engine: hdf5
+  root: mouse_cerebellar_cortex_0.920.hdf5

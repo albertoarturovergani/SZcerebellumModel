@@ -1,0 +1,68 @@
+{
+  "sigma": 10,
+  "cases": {
+    "HR_kase": {
+      "file": "/mnt/bsb_repro/SZ_CLEAN_ANALYSIS_ONLY/legacy_analysis/20251113214858_kase_stim_vitro_15_0_glutamate_all/B_collective_results/2.functions/sigma_10/10_df.pkl",
+      "rows": 3,
+      "k_values": [
+        1.0,
+        0.76,
+        0.6
+      ],
+      "te_baseline_legacy": 475.4785828712993,
+      "columns_verified": [
+        "k",
+        "optimal_lag_ms",
+        "te_mossy_fibers_to_purk",
+        "te_purk_to_mossy_fibers"
+      ]
+    },
+    "NR_kase": {
+      "file": "/mnt/bsb_repro/SZ_CLEAN_ANALYSIS_ONLY/legacy_analysis/20251113161643_kase_stim_vitro_2_0_glutamate_all/B_collective_results/2.functions/sigma_10/10_df.pkl",
+      "rows": 3,
+      "k_values": [
+        1.0,
+        0.76,
+        0.6
+      ],
+      "te_baseline_legacy": 501.67001014863126,
+      "columns_verified": [
+        "k",
+        "optimal_lag_ms",
+        "te_mossy_fibers_to_purk",
+        "te_purk_to_mossy_fibers"
+      ]
+    }
+  },
+  "basal_bridge": {
+    "basal_df_all_str.pkl": {
+      "rows": 150,
+      "columns": 32,
+      "k_values": [
+        0.6,
+        0.76,
+        1.0
+      ]
+    },
+    "basal_df_all_weights.pkl": {
+      "rows": 144,
+      "columns": 12,
+      "k_values": [
+        0.6,
+        0.76,
+        1.0
+      ]
+    },
+    "basal_df_all_fr.pkl": {
+      "rows": 60,
+      "columns": 13,
+      "k_values": [
+        0.6,
+        0.76,
+        1.0
+      ]
+    }
+  },
+  "status": "PASS",
+  "note": "Diagnostic only. Uses historical TE numbers as stored. No TE recalculation. One sigma and three k levels do not replicate paper figures or sigma selection. BASAL bridge presence does not imply that the original EVOKED notebook runs unchanged."
+}

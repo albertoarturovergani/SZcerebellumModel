@@ -94,7 +94,7 @@ def scale_weights(connection_models: dict, k: float, listConns: list, effect='up
         if conn_name in listConns:
             weight = conn_data['synapse'].get('weight', 1.0)
             if effect == 'noregulation':
-                new_weight = weight             
+                new_weight = weight
             if effect == 'upregulation':
                 new_weight = weight * (1 + k ** par) * zero
             #if effect == 'downregulation':
@@ -129,7 +129,7 @@ def structural_compensation(connectivity_block, k, threshold=0.999, compensation
                 new_val = round(old_val * factor, 6)
                 connectivity_block['contacts'][subkey] = new_val
                 print(f"   🔧 contacts.{subkey}: {old_val:.4f} → {new_val:.4f}")
-                
+
 def structural_compensation_v2(connectivity_block, k, threshold=0.999, compensation=0):
     if k >= threshold or compensation == 0.0:
         return
@@ -259,10 +259,10 @@ def filter_connections(hypothesis):
             continue
         filtered.append(conn)
     return filtered, conn_properties
-    
-def writeYAML_cerebellum_cx(k, 
-                            do_basal=True, 
-                            do_dcnio=True,  
+
+def writeYAML_cerebellum_cx(k,
+                            do_basal=True,
+                            do_dcnio=True,
                             reserve={'k0': 0.75, 'sharpness': 1},
                             compensation={'state': 1.0, 'trasmitter': ['glutamate','gaba'], 'neurons': 'all'},
                             sz_hyphothesis={'trasmitter': 'glutamate', 'neurons': 'all'}):
@@ -274,7 +274,7 @@ def writeYAML_cerebellum_cx(k,
             'neurons': 'all'
         }
 
-    base_path = "/home/alberto/cerebellum/cerebellum/"
+    base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..")) + os.sep
     morpho_path = os.path.join(base_path, "morphologies/")
     config_path = os.path.join(base_path, "configurations/mouse/")
     sim_path = os.path.join(base_path, "configurations/mouse/nest/")
@@ -400,7 +400,7 @@ def writeYAML_cerebellum_cx(k,
         dcn_io_yaml = os.path.join(config_path_dcn, "dcn_io.yaml")
         if os.path.exists(dcn_io_yaml):
             config_io = safe_load_yaml(dcn_io_yaml)
-            
+
             # 5. RIDUZIONE NEURONI
             if 'cell_types' in config_io:
                 for cell, props in config_io['cell_types'].items():
@@ -423,7 +423,7 @@ def writeYAML_cerebellum_cx(k,
                 config_io['connectivity']['io_to_dcn_p']['outdegree'] = max(1, int(np.round(float(value * k_modulated**3), 6)))
                 value = config_io['connectivity']['io_to_dcn_i']['outdegree']
                 config_io['connectivity']['io_to_dcn_i']['outdegree'] = max(1, int(np.round(float(value * k_modulated**3), 6)))
-                
+
             if '$import' in config_io:
                 config_io['$import']['ref'] = f"./dcn_{k_str}.yaml#/"
             config_io['storage']['root'] = f"mouse_cereb_dcn_io_{k_str}.hdf5"

@@ -210,39 +210,39 @@ def plot_firing_rate_panels(m_mean, p_mean, mossy_fibers, purk, stim, dt, start,
 def printSynTime():
     import yaml
     from pathlib import Path
-    
+
     # Percorso al file YAML
     yaml_path = Path("/home/alberto/cerebellum/cerebellum_APRIL25/saccades1_results_2025-04-17_19-10-58-exp/results_1.000/reconstruction/basal_vitro_1.000.yaml")
-    
+
     with open(yaml_path, "r") as f:
         data = yaml.safe_load(f)
-    
+
     # Estrai la sezione delle connessioni
     conn_models = data["simulations"]["basal_activity"]["connection_models"]
-    
+
     # Definizione del cammino MF → PC
     path = [
         "mossy_fibers_fibers_to_glomerulus",
         "glomerulus_to_granule",
         "parallel_fiber_to_purkinje"
     ]
-    
+
     # Estrazione dei delay lungo il cammino
     total_delay = 0.0
     detailed_path = []
-    
+
     for conn in path:
         if conn not in conn_models:
             raise ValueError(f"❌ Connessione mancante nel file: {conn}")
         delay = conn_models[conn]["synapse"].get("delay", 0.0)
         total_delay += delay
         detailed_path.append((conn, delay))
-    
+
     # Output
     print("Cammino MF → PC funzionale:")
     for conn, d in detailed_path:
         print(f" - {conn} → {d} ms")
-    
+
     print(f"Delay totale MF → PC = {total_delay:.2f} ms")
 
 
@@ -338,9 +338,9 @@ from collections import Counter
 import numpy as np
 #bins = int(np.sqrt(len(source)))  # regola di Sturges modificata
 def compute_transfer_entropy_binned(source, target, bins=None, normalize=True):
-    
+
     if bins is None: bins = int(np.sqrt(len(source)))  # Regola empirica adattiva (sqrt(N))
-        
+
     s_d = np.digitize(source, np.histogram(source, bins=bins)[1]) - 1
     t_d = np.digitize(target, np.histogram(target, bins=bins)[1]) - 1
     x_t, y_t, y_t1 = s_d[:-1], t_d[:-1], t_d[1:]
@@ -374,19 +374,19 @@ def plot_tf(df_all):
     import seaborn as sns
     from scipy.stats import pearsonr, wilcoxon
     from pathlib import Path
-    
+
     # Calcolo Atrophy Factor se non presente
     if "Atrophy Factor (%)" not in df_all.columns:
         df_all["Atrophy Factor (%)"] = (1 - df_all["k"]) * 100
-    
+
     # Colori distinti per le due direzioni
     color_m2p = "#1f77b4"  # blu
     color_p2m = "#ff7f0e"  # arancio
     color_diff = "#2ca02c"  # verde per Δ
-    
+
     sns.set(style="whitegrid", context="paper", font_scale=1.2)
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5), sharex=True)
-    
+
     # ========= LEFT PANEL: MF→PC vs PC→MF ========= #
     for cond, group in df_all.groupby("condition"):
         # MF → PC
@@ -412,7 +412,7 @@ def plot_tf(df_all):
             line_kws={"linestyle": "--", "alpha": 0.5},
             ax=ax1
         )
-    
+
         # PC → MF
         r2, p2 = pearsonr(group["Atrophy Factor (%)"], group["te_purk_to_mossy_fibers"])
         label2 = f"{cond} PC→MF (r={r2:.2f}, p={p2:.1e})"
@@ -436,7 +436,7 @@ def plot_tf(df_all):
             line_kws={"linestyle": "--", "alpha": 0.5},
             ax=ax1
         )
-    
+
     # Test statistico tra le due distribuzioni (paired)
     try:
         stat_w, pval_w = wilcoxon(
@@ -455,17 +455,17 @@ def plot_tf(df_all):
         )
     except Exception as e:
         print("⚠️ Errore test statistico:", e)
-    
+
     ax1.set_title("Transfer Entropy MF↔PC", fontsize=13)
     ax1.set_xlabel("Atrophy Factor (%)")
     ax1.set_ylabel("Transfer Entropy (bits)")
     ax1.legend(title="Condition | Direction", fontsize=9)
     ax1.grid(True, linestyle='--', alpha=0.7)
-    
+
     # ========= RIGHT PANEL: DIFFERENCE ========= #
     df_all["ΔTE"] = df_all["te_mossy_fibers_to_purk"] - df_all["te_purk_to_mossy_fibers"]
     r_diff, p_diff = pearsonr(df_all["Atrophy Factor (%)"], df_all["ΔTE"])
-    
+
     sns.scatterplot(
         data=df_all,
         x="Atrophy Factor (%)",
@@ -484,15 +484,15 @@ def plot_tf(df_all):
         line_kws={"linestyle": "--", "alpha": 0.6},
         ax=ax2
     )
-    
+
     ax2.axhline(0, linestyle="--", color="black", linewidth=1, alpha=0.5)
     ax2.set_title("Δ Transfer Entropy (MF→PC − PC→MF)", fontsize=13)
     ax2.set_ylabel("ΔTE (bits)")
     ax2.set_xlabel("Atrophy Factor (%)")
     ax2.grid(True, linestyle='--', alpha=0.7)
-    
+
     plt.tight_layout()
-    
+
     # Salvataggio
     output_path = Path(f"./{base_dir}/TE_comparison_with_diff.png")
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -505,28 +505,28 @@ def plot_cross_correlation(df_all):
     import matplotlib.pyplot as plt
     import seaborn as sns
     from scipy.stats import pearsonr
-    
+
     # Calcolo Atrophy Factor
     if "Atrophy Factor (%)" not in df_all.columns:
         df_all["Atrophy Factor (%)"] = (1 - df_all["k"]) * 100
-    
+
     # Setup stile
     sns.set(style="whitegrid", context="paper", font_scale=1.2)
     fig, ax1 = plt.subplots(figsize=(10, 5))
-    
+
     # Secondo asse Y
     ax2 = ax1.twinx()
-    
+
     # Colori
     color1 = "k"
     color2 = "r"
-    
+
     # Cross-correlation (asse sinistro)
     for cond, group in df_all.groupby("condition"):
         # Escludi punto con atrofia massima
         max_atrophy = group["Atrophy Factor (%)"].max()
         group_filtered = group[group["Atrophy Factor (%)"] < max_atrophy]
-    
+
         r1, p1 = pearsonr(group_filtered["Atrophy Factor (%)"], group_filtered["cross_corr"])
         label1 = f"{cond} – Corr (r={r1:.2f}, p={p1:.1e})"
         sns.lineplot(
@@ -539,12 +539,12 @@ def plot_cross_correlation(df_all):
             label=label1,
             ax=ax1
         )
-    
+
     # Optimal lag (asse destro)
     for cond, group in df_all.groupby("condition"):
         max_atrophy = group["Atrophy Factor (%)"].max()
         group_filtered = group[group["Atrophy Factor (%)"] < max_atrophy]
-    
+
         r2, p2 = pearsonr(group_filtered["Atrophy Factor (%)"], group_filtered["optimal_lag_ms"])
         label2 = f"{cond} – Lag (r={r2:.2f}, p={p2:.1e})"
         sns.lineplot(
@@ -557,7 +557,7 @@ def plot_cross_correlation(df_all):
             label=label2,
             ax=ax2
         )
-    
+
     # Regressione globale (facoltativa)
     sns.regplot(
         data=df_all,
@@ -581,7 +581,7 @@ def plot_cross_correlation(df_all):
         color=color2,
         line_kws={"linestyle": "--", "alpha": 0}
     )
-    
+
     # Linee di riferimento
     ax2.axhline(y=7, color='r', linestyle='-', linewidth=1)
     ax2.axhline(y=0, color='k', linestyle='--', linewidth=1)
@@ -603,20 +603,20 @@ def plot_cross_correlation(df_all):
         bbox=dict(facecolor="white", alpha=0.7, edgecolor="gray")
     )
 
-    
+
     # Assi e titolo
     ax1.set_ylabel("Cross-Correlation (MF → PC)", color=color1)
     ax1.tick_params(axis='y', labelcolor=color1)
-    
+
     ax2.set_ylabel("Optimal Lag (MF → PC) [ms]", color=color2)
     ax2.tick_params(axis='y', labelcolor=color2)
-    
+
     ax1.set_xlabel("Atrophy Factor (%)")
     ax1.set_title("Cross-Correlation & Optimal Lag (MF → PC) vs Atrophy (excl. max atrophy)")
-    
+
     ax1.grid(True)
     plt.tight_layout()
-    
+
     # Salvataggio
     output_path = f"./{base_dir}/twin_corr_lag_plot_excl_max.png"
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
@@ -725,26 +725,26 @@ def plot_stimulus_profile(df_all):
     import matplotlib.pyplot as plt
     import seaborn as sns
     import numpy as np
-    
+
     # Setup stile
     sns.set(style="whitegrid", context="talk", font_scale=1.1)
-    
+
     # Estrai stimolo
     stim = np.array(df_all["stim_profile"].iloc[0])
-    
+
     # Plot
     fig, ax = plt.subplots(figsize=(10, 4))
     ax.plot(stim, color="orange", linewidth=2)
-    
+
     # Titoli e assi
     ax.set_title("Stimulus Profile", fontsize=16)
     ax.set_xlabel("Time (ms)", fontsize=12)
     ax.set_ylabel("Stimulus rate (Hz)", fontsize=12)
     ax.grid(True, linestyle="--", alpha=0.6)
-    
+
     # Togli i margini bianchi inutili
     plt.tight_layout()
-    
+
     output_path = f"./{base_dir}/stim_profile.png"
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(output_path, bbox_inches="tight")
@@ -984,7 +984,7 @@ def average_psth(df, pop="mossy_fibers", event_times=None, window=(-200, 200), b
     plt.show()
 
 def plot_epoched_firing_rate(df, trace_column, pop_name="Population", stim_column=None,
-                              onset_column="burst_onsets_ms", group_column=None, 
+                              onset_column="burst_onsets_ms", group_column=None,
                               window_ms=(-200, 200), dt=0.1, cmap="viridis",
                               operator=np.mean,
                               sort_by_group=True, save_path=None):
@@ -1003,7 +1003,7 @@ def plot_epoched_firing_rate(df, trace_column, pop_name="Population", stim_colum
         df = df.sort_values(group_column).reset_index(drop=True)
         group_vals = df[group_column].values
         norm = mcolors.Normalize(vmin=group_vals.min(), vmax=group_vals.max())
-        cmap = cm.get_cmap(cmap)
+        cmap = plt.get_cmap(cmap)
     else:
         norm = None
         cmap = None
@@ -1031,7 +1031,7 @@ def plot_epoched_firing_rate(df, trace_column, pop_name="Population", stim_colum
             mean_trace = np.mean(epochs, axis=0)
             lower = np.percentile(epochs, 25, axis=0)
             upper = np.percentile(epochs, 75, axis=0)
-            
+
             color = cmap(norm(group_val)) if cmap else "black"
 
             ax.plot(time_axis, mean_trace, linewidth=2, color=color, alpha=0.9)
@@ -1315,7 +1315,7 @@ def plotFRglobal(data_path: Path, df_summary):
     import pandas as pd
     import numpy as np
     from scipy.stats import spearmanr, pearsonr
-    
+
     # Mappa dei colori (non usata perché tutti i plot sono in nero)
     cell_color_map = {
     "mossy_fibers": "purple",
@@ -1325,7 +1325,7 @@ def plotFRglobal(data_path: Path, df_summary):
     "stellate": "pink",
     "purkinje": "brown",
     }
-    
+
     # Ordine desiderato
     ordered_cells = ["mossy_fibers", "granule", "golgi", "glomerulus", "basket", "stellate", "purkinje"]
     # add dcn-io
@@ -1334,10 +1334,10 @@ def plotFRglobal(data_path: Path, df_summary):
     # Categorie
     excitatory = ["granule"]
     inhibitory = ["golgi", "basket", "stellate", "purkinje"]
-    
+
     # Colonna coerente per asse X
     #df_summary["Atrophy Level (%)"] = 100 - df_summary["k"] * 100
-    
+
     # Funzione per aggregare per sottogruppo
     def compute_summary(df, subset):
         filtered = df[df["pop"].isin(subset)]
@@ -1346,18 +1346,18 @@ def plotFRglobal(data_path: Path, df_summary):
             fr_sem=("firing_rate_sem", "mean")
         ).reset_index()
         return grp
-    
+
     df_all = compute_summary(df_summary, cell_types)
     df_exc = compute_summary(df_summary, excitatory)
     df_inh = compute_summary(df_summary, inhibitory)
     df_ratio = pd.merge(df_exc, df_inh, on="Atrophy Level (%)", suffixes=("_exc", "_inh"))
     df_ratio["ratio_EI"] = df_ratio["fr_mean_exc"] / df_ratio["fr_mean_inh"]
-    
+
     # Layout: 4 metriche principali + 1 per tipo cellulare
     fig, axes = plt.subplots(nrows=3, ncols=4, figsize=(18, 12))
     axes = axes.flatten()
 
-    """    
+    """
     # Funzione di plot
     def plot_with_corr(ax, df, x_col, y_col, yerr_col=None, label=""):
         x = df[x_col].values
@@ -1380,19 +1380,19 @@ def plotFRglobal(data_path: Path, df_summary):
     from scipy.stats import pearsonr, spearmanr
     import seaborn as sns
     import matplotlib.pyplot as plt
-    
+
     def plot_with_corr(ax, df, x_col, y_col, yerr_col=None, label=""):
         x = df[x_col].values
         y = df[y_col].values
         yerr = df[yerr_col].values if yerr_col and yerr_col in df.columns else None
-    
+
         # Plot base con barre di errore
         ax.errorbar(x, y, yerr=yerr, fmt='o', color="black", ecolor="black", capsize=4, alpha=1)
-    
+
         # Regressione di supporto (linea trasparente)
         sns.regplot(x=x, y=y, ax=ax, scatter=False, order=2,
                     line_kws={"color": "black", "linewidth": 0, 'alpha': 0.15}, ci=None)
-    
+
         # Calcolo delle correlazioni solo se ci sono almeno due punti
         if len(x) >= 2 and len(y) >= 2:
             rho, p_rho = spearmanr(x, y)
@@ -1400,31 +1400,31 @@ def plotFRglobal(data_path: Path, df_summary):
             title_corr = f"\nρ={rho:.2f}, p={p_rho:.1e} | r={r:.2f}, p={p_r:.1e}"
         else:
             title_corr = "\n⚠️ not enough data for correlation"
-    
+
         # Titolo e labels
         ax.set_title(f"{label}{title_corr}")
         ax.set_xlabel(x_col)
         ax.set_ylabel(y_col.replace("_", " ").capitalize())
-    
+
         # Styling
         ax.spines["top"].set_visible(False)
         ax.spines["right"].set_visible(False)
-    
+
         # Linea di riferimento per baseline (x == 0)
         if 0 in x:
             baseline_y = y[x == 0][0]
             ax.axhline(y=baseline_y, color="black", linestyle="--", linewidth=1.5, alpha=0.5)
 
-    
+
     # Plot aggregati
     plot_with_corr(axes[0], df_all, "Atrophy Level (%)", "fr_mean", "fr_sem", "All cells")
     #plot_with_corr(axes[1], df_exc, "Atrophy Level (%)", "fr_mean", "fr_sem", "Excitatory")
     #plot_with_corr(axes[2], df_inh, "Atrophy Level (%)", "fr_mean", "fr_sem", "Inhibitory")
     plot_with_corr(axes[1], df_ratio, "Atrophy Level (%)", "ratio_EI", label="E/I ratio")
-    
+
     # Indici dei plot effettivamente usati
     used_slots = [0, 1]  # all cells + E/I ratio
-    
+
     # Plot per tipo cellulare
     for i, cell in enumerate(cell_types):
         cell_df = df_summary[df_summary["pop"] == cell]
@@ -1446,11 +1446,11 @@ def plotFRglobal(data_path: Path, df_summary):
     # Salvataggio
     out_dir = Path(data_path) / "B_collective_results/2.functions"
     out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / "fr_summary_plot.png"    
+    out_path = out_dir / "fr_summary_plot.png"
     fig.savefig(out_path, dpi=300)
     plt.close()
     print(f"💾 Plot salvato in: {out_path}")
-    
+
 def plotFOOOFglobal(data_path: Path,df_summary):
     import matplotlib.pyplot as plt
     import seaborn as sns
@@ -1525,7 +1525,7 @@ def plotFOOOFglobal(data_path: Path,df_summary):
     # Salvataggio
     out_dir = Path(data_path) / "B_collective_results/2.functions"
     out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / "fooof_summary_plot.png"    
+    out_path = out_dir / "fooof_summary_plot.png"
     fig.savefig(out_path, dpi=300)
     plt.close()
     print(f"💾 Plot salvato in: {out_path}")
@@ -1585,14 +1585,14 @@ def loadData(data_path: Path, sigma: float = 10.0, downsample_target_rate_hz: fl
         for pop_name, g in grouped_pop:
             stats_row = {
                 "k": k,
-                "Atrophy Level (%)": 100*(1-k), 
+                "Atrophy Level (%)": 100*(1-k),
                 "firing_rate_mean": float(g["firing_rate"].mean()),
                 "firing_rate_std": float(g["firing_rate"].std()),
                 "firing_rate_sem": float(sem(g["firing_rate"], nan_policy="omit")) if len(g) > 1 else 0.0,
                 "isi": float(g["isi"].mean()),
                 "n_cells": int(len(g))
             }
-        
+
             try:
                 sel = df["pop"] == pop_name
                 df_pop = df[sel]
@@ -1611,12 +1611,12 @@ def loadData(data_path: Path, sigma: float = 10.0, downsample_target_rate_hz: fl
                         min_width = max(2 * resolution, 1.0)  # raccomandato >= 2x risoluzione
                         fm = FOOOF(peak_width_limits=[min_width, 12], max_n_peaks=6)
                         fm.fit(fvals, psd, freq_range)
-                        
+
                         # 🔽 Salva il report PDF FOOOF
                         report_name = f"fooof_report_k{k:.3f}_{pop_name}.pdf"
                         report_path = path / report_name
                         fm.save_report(str(report_path), save_format='pdf')
-                    
+
                         # 🔽 Salva i parametri nel dizionario
                         stats_row.update({
                             "FOOOF_aperiodic": list(map(float, fm.aperiodic_params_)),
@@ -1626,7 +1626,7 @@ def loadData(data_path: Path, sigma: float = 10.0, downsample_target_rate_hz: fl
                 """
             except Exception as e:
                 print(f"⚠️ Errore FOOOF per {pop_name} (k={k:.3f}): {e}")
-            
+
             summary_rows.append({"k": k, "pop": pop_name, **stats_row})
             stats_dict[pop_name] = stats_row
 

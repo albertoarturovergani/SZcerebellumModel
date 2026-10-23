@@ -1,0 +1,18 @@
+# Extra packages for the quick notebook and legacy post-processing.
+# Check versions against the scientific analysis environment before publication.
+jupyterlab
+ipykernel
+pandas
+matplotlib
+h5py
+neo
+nixio
+scipy
+pyyaml
+seaborn
+fooof
+pylatex
+fooof==1.1.1
+PyLaTeX==1.4.2
+nbconvert>=7,<8
+ipykernel>=6,<7

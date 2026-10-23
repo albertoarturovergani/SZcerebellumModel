@@ -33,12 +33,12 @@ def main():
     parser.add_argument('--path', type=str, required=True, help='Percorso alla cartella dati')
     args = parser.parse_args()
     # root_dir = Path(args.root)
-    root_path = Path(args.path)  
+    root_path = Path(args.path)
 
 
     t_pre = 0.1
     t_post = 15
-    
+
     #for result_dir in sorted(root_dir.glob('*_deg_*/3.function')):
     for result_dir in sorted(root_path.glob('*_deg_*/3.function')):
 
@@ -234,7 +234,7 @@ def main():
             all_sums[k_val] = np.load(weighted_path)
 
     cmap = plt.colormaps.get_cmap('viridis_r')
-    norm = mcolors.Normalize(vmin=min(k for kd in all_currents.values() for k in kd), 
+    norm = mcolors.Normalize(vmin=min(k for kd in all_currents.values() for k in kd),
                              vmax=max(k for kd in all_currents.values() for k in kd))
 
     for name, kdict in all_currents.items():

@@ -219,7 +219,7 @@ def plot_firing_rate_panels(m_mean, p_mean, mossy_fibers, purk, stim, dt, start,
     ax1.set_xlim(500, total_time - 500)
 
     plt.tight_layout()
-    out_path = f"./{base_dir}/fr_vs_time_k{k:.3f}.png"
+    out_path = f"{base_dir}/fr_vs_time_k{k:.3f}.png"
     fig.savefig(out_path, dpi=300)
     plt.close()
     print(f"[INFO] Salvato: {out_path}")
@@ -227,39 +227,39 @@ def plot_firing_rate_panels(m_mean, p_mean, mossy_fibers, purk, stim, dt, start,
 def printSynTime(stimName='basal_activity'):
     import yaml
     from pathlib import Path
-    
+
     # Percorso al file YAML
     yaml_path = Path("/home/alberto/cerebellum/cerebellum_APRIL25/saccades1_results_2025-04-17_19-10-58-exp/results_1.000/reconstruction/basal_vitro_1.000.yaml")
-    
+
     with open(yaml_path, "r") as f:
         data = yaml.safe_load(f)
-    
+
     # Estrai la sezione delle connessioni
     conn_models = data["simulations"][stimName]["connection_models"]
-    
+
     # Definizione del cammino MF → PC
     path = [
         "mossy_fibers_to_glomerulus",
         "glomerulus_to_granule",
         "parallel_fiber_to_purkinje"
     ]
-    
+
     # Estrazione dei delay lungo il cammino
     total_delay = 0.0
     detailed_path = []
-    
+
     for conn in path:
         if conn not in conn_models:
             raise ValueError(f"❌ Connessione mancante nel file: {conn}")
         delay = conn_models[conn]["synapse"].get("delay", 0.0)
         total_delay += delay
         detailed_path.append((conn, delay))
-    
+
     # Output
     print("Cammino MF → PC funzionale:")
     for conn, d in detailed_path:
         print(f" - {conn} → {d} ms")
-    
+
     print(f"Delay totale MF → PC = {total_delay:.2f} ms")
 
 
@@ -380,9 +380,9 @@ from collections import Counter
 import numpy as np
 #bins = int(np.sqrt(len(source)))  # regola di Sturges modificata
 def compute_transfer_entropy_binned(source, target, bins=None, normalize=True):
-    
+
     if bins is None: bins = int(np.sqrt(len(source)))  # Regola empirica adattiva (sqrt(N))
-        
+
     s_d = np.digitize(source, np.histogram(source, bins=bins)[1]) - 1
     t_d = np.digitize(target, np.histogram(target, bins=bins)[1]) - 1
     x_t, y_t, y_t1 = s_d[:-1], t_d[:-1], t_d[1:]
@@ -409,6 +409,49 @@ def compute_transfer_entropy_binned(source, target, bins=None, normalize=True):
     else:
         return TE
 
+
+
+def _sz_safe_regplot(*args, **kwargs):
+    """Regression plot robust to a 3-point smoke test; do not change raw metrics."""
+    import numpy as _np
+    import pandas as _pd
+
+    data = kwargs.get("data")
+    xcol = kwargs.get("x")
+    ycol = kwargs.get("y")
+    if not isinstance(data, _pd.DataFrame) or not isinstance(xcol, str) or not isinstance(ycol, str):
+        return sns.regplot(*args, **kwargs)
+    if xcol not in data.columns or ycol not in data.columns:
+        return sns.regplot(*args, **kwargs)
+
+    x = _pd.to_numeric(data[xcol], errors="coerce")
+    y = _pd.to_numeric(data[ycol], errors="coerce")
+    valid = _np.isfinite(x.to_numpy(dtype=float)) & _np.isfinite(y.to_numpy(dtype=float))
+    subset = data.loc[valid]
+    n = len(subset)
+    unique_x = x.loc[valid].nunique()
+    degree = int(kwargs.get("order", 1))
+
+    # At 3 SZ values (0%, 24%, 40%) optional regression confidence bands
+    # are not meaningful; bootstrap resamples may be rank-deficient.
+    if n < max(5, degree + 3) or unique_x <= degree:
+        print(f"[SMOKE PLOT] optional regression skipped: {ycol} vs {xcol} "
+              f"(n={n}, distinct x={unique_x}, polynomial order={degree})")
+        return None
+
+    options = dict(kwargs)
+    options["data"] = subset
+    if n < 8:
+        # Disable only the unstable bootstrap CI in very small data sets.
+        options["ci"] = None
+    try:
+        return sns.regplot(*args, **options)
+    except (_np.linalg.LinAlgError, ValueError) as exc:
+        # Plot fits are optional, data plots and scientific metrics remain.
+        print(f"[SMOKE PLOT] optional regression skipped for {ycol}: {exc}")
+        return None
+
+
 def plot_tf(df_all, base_dir):
 
     import pandas as pd
@@ -416,19 +459,19 @@ def plot_tf(df_all, base_dir):
     import seaborn as sns
     from scipy.stats import pearsonr, wilcoxon
     from pathlib import Path
-    
+
     # Calcolo Atrophy Factor se non presente
     if "Atrophy Factor (%)" not in df_all.columns:
         df_all["Atrophy Factor (%)"] = (1 - df_all["k"]) * 100
-    
+
     # Colori distinti per le due direzioni
     color_m2p = "#1f77b4"  # blu
     color_p2m = "#ff7f0e"  # arancio
     color_diff = "#2ca02c"  # verde per Δ
-    
+
     sns.set(style="whitegrid", context="paper", font_scale=1.2)
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5), sharex=True)
-    
+
     # ========= LEFT PANEL: MF→PC vs PC→MF ========= #
     for cond, group in df_all.groupby("condition"):
         # MF → PC
@@ -447,7 +490,7 @@ def plot_tf(df_all, base_dir):
             color=color_m2p,
             ax=ax1
         )
-        sns.regplot(
+        _sz_safe_regplot(
             data=group,
             x="Atrophy Factor (%)",
             y="te_mossy_fibers_to_purk",
@@ -457,7 +500,7 @@ def plot_tf(df_all, base_dir):
             line_kws={"linestyle": "--", "alpha": 0.5},
             ax=ax1
         )
-    
+
         # PC → MF
         if len(group) >= 2:
             r2, p2 = pearsonr(group["Atrophy Factor (%)"], group["te_purk_to_mossy_fibers"])
@@ -474,7 +517,7 @@ def plot_tf(df_all, base_dir):
             color=color_p2m,
             ax=ax1
         )
-        sns.regplot(
+        _sz_safe_regplot(
             data=group,
             x="Atrophy Factor (%)",
             y="te_purk_to_mossy_fibers",
@@ -484,7 +527,7 @@ def plot_tf(df_all, base_dir):
             line_kws={"linestyle": "--", "alpha": 0.5},
             ax=ax1
         )
-    
+
     # Test statistico tra le due distribuzioni (paired)
     try:
         stat_w, pval_w = wilcoxon(
@@ -503,13 +546,13 @@ def plot_tf(df_all, base_dir):
         )
     except Exception as e:
         print("⚠️ Errore test statistico:", e)
-    
+
     ax1.set_title("Transfer Entropy MF↔PC", fontsize=13)
     ax1.set_xlabel("Atrophy Factor (%)")
     ax1.set_ylabel("Transfer Entropy (bits)")
     ax1.legend(title="Condition | Direction", fontsize=9)
     ax1.grid(True, linestyle='--', alpha=0.7)
-    
+
     # ========= RIGHT PANEL: DIFFERENCE ========= #
     df_all["ΔTE"] = df_all["te_mossy_fibers_to_purk"] - df_all["te_purk_to_mossy_fibers"]
     if len(df_all) >= 2:
@@ -526,7 +569,7 @@ def plot_tf(df_all, base_dir):
         marker="D",
         label=label,
     )
-    sns.regplot(
+    _sz_safe_regplot(
         data=df_all,
         x="Atrophy Factor (%)",
         y="ΔTE",
@@ -535,17 +578,17 @@ def plot_tf(df_all, base_dir):
         line_kws={"linestyle": "--", "alpha": 0.6},
         ax=ax2
     )
-    
+
     ax2.axhline(0, linestyle="--", color="black", linewidth=1, alpha=0.5)
     ax2.set_title("Δ Transfer Entropy (MF→PC − PC→MF)", fontsize=13)
     ax2.set_ylabel("ΔTE (bits)")
     ax2.set_xlabel("Atrophy Factor (%)")
     ax2.grid(True, linestyle='--', alpha=0.7)
-    
+
     plt.tight_layout()
-    
+
     # Salvataggio
-    output_path = Path(f"./{base_dir}/TE_comparison_with_diff.png")
+    output_path = Path(f"{base_dir}/TE_comparison_with_diff.png")
     output_path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(output_path, bbox_inches="tight", dpi=300)
 
@@ -557,22 +600,22 @@ def plot_cross_correlation(df_all, base_dir: Union[str, Path]):
     import matplotlib.pyplot as plt
     import seaborn as sns
     from scipy.stats import pearsonr
-    
+
     # Calcolo Atrophy Factor
     if "Atrophy Factor (%)" not in df_all.columns:
         df_all["Atrophy Factor (%)"] = (1 - df_all["k"]) * 100
-    
+
     # Setup stile
     sns.set(style="whitegrid", context="paper", font_scale=1.2)
     fig, ax1 = plt.subplots(figsize=(10, 5))
-    
+
     # Secondo asse Y
     ax2 = ax1.twinx()
-    
+
     # Colori
     color1 = "k"
     color2 = "r"
-    
+
     # Cross-correlation (asse sinistro)
     for cond, group in df_all.groupby("condition"):
         # Escludi punto con atrofia massima
@@ -593,7 +636,7 @@ def plot_cross_correlation(df_all, base_dir: Union[str, Path]):
             label=label1,
             ax=ax1
         )
-    
+
     # Optimal lag (asse destro)
     for cond, group in df_all.groupby("condition"):
         max_atrophy = group["Atrophy Factor (%)"].max()
@@ -613,9 +656,9 @@ def plot_cross_correlation(df_all, base_dir: Union[str, Path]):
             label=label2,
             ax=ax2
         )
-    
+
     # Regressione globale (facoltativa)
-    sns.regplot(
+    _sz_safe_regplot(
         data=df_all,
         x="Atrophy Factor (%)",
         y="cross_corr",
@@ -626,7 +669,7 @@ def plot_cross_correlation(df_all, base_dir: Union[str, Path]):
         color=color1,
         line_kws={"linestyle": "--", "alpha": 0}
     )
-    sns.regplot(
+    _sz_safe_regplot(
         data=df_all,
         x="Atrophy Factor (%)",
         y="optimal_lag_ms",
@@ -637,7 +680,7 @@ def plot_cross_correlation(df_all, base_dir: Union[str, Path]):
         color=color2,
         line_kws={"linestyle": "--", "alpha": 0}
     )
-    
+
     # Linee di riferimento
     ax2.axhline(y=7, color='r', linestyle='-', linewidth=1)
     ax2.axhline(y=0, color='k', linestyle='--', linewidth=1)
@@ -659,22 +702,22 @@ def plot_cross_correlation(df_all, base_dir: Union[str, Path]):
         bbox=dict(facecolor="white", alpha=0.7, edgecolor="gray")
     )
 
-    
+
     # Assi e titolo
     ax1.set_ylabel("Cross-Correlation (MF → PC)", color=color1)
     ax1.tick_params(axis='y', labelcolor=color1)
-    
+
     ax2.set_ylabel("Optimal Lag (MF → PC) [ms]", color=color2)
     ax2.tick_params(axis='y', labelcolor=color2)
-    
+
     ax1.set_xlabel("Atrophy Factor (%)")
     ax1.set_title("Cross-Correlation & Optimal Lag (MF → PC) vs Atrophy (excl. max atrophy)")
-    
+
     ax1.grid(True)
     plt.tight_layout()
-    
+
     # Salvataggio
-    output_path = f"./{base_dir}/twin_corr_lag_plot_excl_max.png"
+    output_path = f"{base_dir}/twin_corr_lag_plot_excl_max.png"
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(output_path, bbox_inches="tight")
     plt.close()
@@ -711,7 +754,7 @@ def plot_firing_rate_vs_k(df_all, save_path=None):
         )
 
         # Fit lineare
-        sns.regplot(
+        _sz_safe_regplot(
             data=sub_df,
             x="Atrophy Factor (%)",
             y="firing_rate",
@@ -781,27 +824,27 @@ def plot_stimulus_profile(df_all):
     import matplotlib.pyplot as plt
     import seaborn as sns
     import numpy as np
-    
+
     # Setup stile
     sns.set(style="whitegrid", context="talk", font_scale=1.1)
-    
+
     # Estrai stimolo
     stim = np.array(df_all["stim_profile"].iloc[0])
-    
+
     # Plot
     fig, ax = plt.subplots(figsize=(10, 4))
     ax.plot(stim, color="orange", linewidth=2)
-    
+
     # Titoli e assi
     ax.set_title("Stimulus Profile", fontsize=16)
     ax.set_xlabel("Time (ms)", fontsize=12)
     ax.set_ylabel("Stimulus rate (Hz)", fontsize=12)
     ax.grid(True, linestyle="--", alpha=0.6)
-    
+
     # Togli i margini bianchi inutili
     plt.tight_layout()
-    
-    output_path = f"./{base_dir}/stim_profile.png"
+
+    output_path = f"{base_dir}/stim_profile.png"
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(output_path, bbox_inches="tight")
     plt.close()
@@ -844,7 +887,7 @@ def plot_time_series(df_all, pop="mossy_fibers", base_dir=Union[str, Path], dt=0
     cbar = fig.colorbar(sm, ax=ax, pad=0.01)
     cbar.set_label("Atrophy (%)", fontsize=10)
 
-    output_path = f"./{base_dir}/{pop}_timeseries.png"
+    output_path = f"{base_dir}/{pop}_timeseries.png"
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(output_path, bbox_inches="tight", dpi=dpi)
     plt.close()
@@ -1042,7 +1085,7 @@ def average_psth(df, pop="mossy_fibers", event_times=None, window=(-200, 200), b
     plt.close()
 
 def plot_epoched_firing_rate(df, trace_column, pop_name="Population", stim_column=None,
-                              onset_column="burst_onsets_ms", group_column=None, 
+                              onset_column="burst_onsets_ms", group_column=None,
                               window_ms=(-200, 200), dt=0.1, cmap="viridis",
                               operator=np.mean,
                               sort_by_group=True, save_path=None):
@@ -1061,7 +1104,7 @@ def plot_epoched_firing_rate(df, trace_column, pop_name="Population", stim_colum
         df = df.sort_values(group_column).reset_index(drop=True)
         group_vals = df[group_column].values
         norm = mcolors.Normalize(vmin=group_vals.min(), vmax=group_vals.max())
-        cmap = cm.get_cmap(cmap)
+        cmap = plt.get_cmap(cmap)
     else:
         norm = None
         cmap = None
@@ -1089,7 +1132,7 @@ def plot_epoched_firing_rate(df, trace_column, pop_name="Population", stim_colum
             mean_trace = np.mean(epochs, axis=0)
             lower = np.percentile(epochs, 25, axis=0)
             upper = np.percentile(epochs, 75, axis=0)
-            
+
             color = cmap(norm(group_val)) if cmap else "black"
 
             ax.plot(time_axis, mean_trace, linewidth=2, color=color, alpha=0.9)
@@ -1247,7 +1290,7 @@ def plot_cosine_similarity_vs_atrophy(df_all, column_name="cosine_similarity", s
         label=column_name.replace("_", " ").capitalize()
     )
 
-    sns.regplot(
+    _sz_safe_regplot(
         data=df_all,
         x="Atrophy Factor (%)",
         y=column_name,
@@ -1307,7 +1350,7 @@ def plot_stim_vs_mossy_fibers_rate(df_all, stim_column="stim_profile", mossy_fib
         label="mossy_fibers vs Stim"
     )
 
-    sns.regplot(
+    _sz_safe_regplot(
         data=df_all,
         x="stim_mean_rate",
         y=mossy_fibers_column,
@@ -1481,7 +1524,7 @@ def exp_rise(t, A, tau, C):
 def plot_tau_fits_mean_rise_decay(trace, onsets, dt=0.1, window=(-50, 150), title="", savepath="tau_fit_mean.png", color='blue'):
     """
     Plotta la media di epoche allineate all'onset con fit esponenziale di salita e decadimento.
-    
+
     Args:
         trace (np.ndarray): segnale 1D.
         onsets (list): lista di onset (in ms).
@@ -1563,8 +1606,8 @@ def plot_tau_fits_mean_rise_decay(trace, onsets, dt=0.1, window=(-50, 150), titl
 
 
 
-def loadData(data_path: Path, mainEventKey: str, 
-             stimName: str, 
+def loadData(data_path: Path, mainEventKey: str,
+             stimName: str,
              condition_name: str, use_top_quartile: bool = False, THR=50,
              selection_mode: str = "percentile", selection_percentile: float = 0.99, method: str = "mean",
              sigma: float = 10.0, downsample_target_rate_hz: float = None) -> pd.DataFrame:
@@ -1574,10 +1617,10 @@ def loadData(data_path: Path, mainEventKey: str,
     trim_start = 0 #0.10
     trim_end = 0 #0.10
     base_dir = str(data_path)
-    
+
     def cosine_similarity(a, b):
         return float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b)))
-    
+
     summary_rows = []
     spike_dfs = {}  # oppure assicurati che sia già stato eseguito
 
@@ -1596,7 +1639,7 @@ def loadData(data_path: Path, mainEventKey: str,
         """
         atrophy = 100 * (1 - k)
         print(f"📁 {condition_name} – Analisi per k={k:.3f}")
-    
+
         burst_onsets_ms, burst_durations_ms = [], []
         stim_profile = []
         yaml_file = path.parent / "2.stimulus" / f"{stimName}_{k:.3f}.yaml"
@@ -1606,7 +1649,7 @@ def loadData(data_path: Path, mainEventKey: str,
                 yaml_data = yaml.safe_load(f)
             #devices = yaml_data.get("simulations", {}).get("basal_activity", {}).get("devices", {})
             devices = yaml_data.get("simulations", {}).get(stimName, {}).get("devices", {})
-            
+
             burst_rates_hz = []
             for name, props in devices.items():
                 if name.startswith(mainEventKey) and props.get("device") == "poisson_generator":
@@ -1681,7 +1724,7 @@ def loadData(data_path: Path, mainEventKey: str,
         n = len(data["time"][0])
         start = int(n * trim_start)
         end = int(n * (1 - trim_end))
-        
+
         # Applica lo stesso trimming anche allo stimolo, se esiste
         if stim_profile:
             stim_profile = stim_profile[start:end]
@@ -1703,11 +1746,11 @@ def loadData(data_path: Path, mainEventKey: str,
 
         mossy_fibers_quantile_value = float(np.quantile(m_mean, selection_percentile))
         purkinje_quantile_value = float(np.quantile(p_mean, selection_percentile))
-        
+
         if stim_profile:
             stim_profile = np.array(stim_profile)
             stim = stim_profile[start:end]
-        
+
             # Allinea le lunghezze con m_mean
             if method == "mean":
                 m_mean = mossy_fibers[:, start:end].mean(0)
@@ -1721,13 +1764,13 @@ def loadData(data_path: Path, mainEventKey: str,
                 p_mean = np.quantile(purk[:, start:end], q, axis=0)
             else:
                 raise ValueError("Metodo non valido per la stima temporale")
-        
+
             # Allinea tutte le serie alla lunghezza minima
             min_len = min(len(stim), len(m_mean))
             stim = stim[:min_len]
             m_mean = m_mean[:min_len]
             p_mean = p_mean[:min_len]
-        
+
             stim_to_mossy_fibers_cosine = cosine_similarity(m_mean, stim)
             stim_to_purk_cosine = cosine_similarity(p_mean, stim)
         else:
@@ -1759,7 +1802,7 @@ def loadData(data_path: Path, mainEventKey: str,
             "te_purk_to_mossy_fibers": compute_transfer_entropy_binned_old(p_mean, m_mean),
             "te_std_mossy_fibers_to_purk": te_bootstrap_std(m_mean, p_mean, n_boot=200, block=200, bins=16, seed=0),
             "te_std_purk_to_mossy_fibers": te_bootstrap_std(p_mean, m_mean, n_boot=200, block=200, bins=16, seed=1),
-            
+
             "plv": compute_plv(m_mean, p_mean),
             "intra_corr_mossy_fibers": mean_pairwise_corr(mossy_fibers[:, start:end]),
             "intra_corr_purk": mean_pairwise_corr(purk[:, start:end]),
@@ -1774,21 +1817,21 @@ def loadData(data_path: Path, mainEventKey: str,
         summary_rows.append(row)
         df_summary = pd.DataFrame(summary_rows)
         df_summary = df_summary[df_summary["atrophy_percent"] < THR].reset_index(drop=True)
-        
-        
+
+
         """
         import matplotlib.pyplot as plt
 
         t = np.arange(len(m_mean)) * dt
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 6), sharex=True, sharey=True)
-        
+
         # Parametri quantili
         q_low, q_high = 0.25, 0.75
-        
+
         # --- mossy_fibers ---
         m_min = np.quantile(mossy_fibers[:, start:end], q_low, axis=0)[:len(m_mean)]
         m_max = np.quantile(mossy_fibers[:, start:end], q_high, axis=0)[:len(m_mean)]
-        
+
         ax1.plot(t, m_mean, color="black", label="Mean firing rate", linestyle='--', linewidth=0.75)
         ax1.fill_between(
             t, m_min, m_max,
@@ -1797,15 +1840,15 @@ def loadData(data_path: Path, mainEventKey: str,
         )
         if stim is not None:
             ax1.plot(t, stim, color="red", alpha=0.1, linestyle='--', linewidth=0.75, label="Stimulus profile")
-        
+
         ax1.set_title(f"mossy_fibers firing rate – Atrophy {atrophy:.1f}% – cos(stim,m)={stim_to_mossy_fibers_cosine:.2f}")
         ax1.legend()
         ax1.grid(True)
-        
+
         # --- Purkinje ---
         p_min = np.quantile(purk[:, start:end], q_low, axis=0)[:len(p_mean)]
         p_max = np.quantile(purk[:, start:end], q_high, axis=0)[:len(p_mean)]
-        
+
         ax2.plot(t, p_mean, color="black", label="Mean firing rate", linestyle='--', linewidth=0.75)
         ax2.fill_between(
             t, p_min, p_max,
@@ -1817,13 +1860,13 @@ def loadData(data_path: Path, mainEventKey: str,
         ax2.set_ylabel("Firing Rate (Hz)")
         ax2.legend()
         ax2.grid(True)
-        
+
         # ➕ Imposta xlim per rimuovere primi/ultimi 500ms
         total_time = len(m_mean) * dt
         ax1.set_xlim(500, total_time - 500)
-        
+
         plt.tight_layout()
-        out_path = f"./{base_dir}/fr_vs_time_k{k:.3f}.png"
+        out_path = f"{base_dir}/fr_vs_time_k{k:.3f}.png"
         fig.savefig(out_path, dpi=300)
         plt.close()
         print(f"📈 Salvato: {out_path}")
@@ -1832,7 +1875,7 @@ def loadData(data_path: Path, mainEventKey: str,
         plot_tau_fits_mean_rise_decay(m_mean, burst_onsets_ms, dt=0.1,
                               title="mossy_fibers - Tau Fit Examples",
                               savepath=str(Path(base_dir) / f"tau_fit_mossy_fibers_k={k:.3f}.png"), color='green')
-        
+
         plot_tau_fits_mean_rise_decay(p_mean, burst_onsets_ms, dt=0.1,
                               title="Purkinje - Tau Fit Examples",
                               savepath=str(Path(base_dir) / f"tau_fit_purkinje_k={k:.3f}.png"), color='red')
@@ -1855,32 +1898,32 @@ def loadData(data_path: Path, mainEventKey: str,
             base_dir=base_dir,
         )
 
-        
-        
+
+
         # PSTH mossy_fibers
         average_psth(spike_dfs[k], pop="mossy_fibers", event_times=burst_onsets_ms,
                      plot_raster=True,
-                     save_path=f"./{base_dir}/mossy_fibers_psth_{fmt_k(k)}.png",
+                     save_path=f"{base_dir}/mossy_fibers_psth_{fmt_k(k)}.png",
                      condition_name=f"k={k:.3f}",
                      df_row_with_stim=row,
                      dt=0.1)
         # PSTH Purkinje
         average_psth(spike_dfs[k], pop="purkinje", event_times=burst_onsets_ms,
-                     plot_raster=True, 
-                     save_path=f"./{base_dir}/purkinje_psth_{fmt_k(k)}.png",
+                     plot_raster=True,
+                     save_path=f"{base_dir}/purkinje_psth_{fmt_k(k)}.png",
                      condition_name=f"k={k:.3f}",
                      df_row_with_stim=row,
                      dt=0.1)
         # Raster mossy_fibers
         plot_classical_raster(spike_dfs[k], row, pop="mossy_fibers",
                               window=(-200, 200),
-                              save_path=f"./{base_dir}/mossy_fibers_raster_classic_{fmt_k(k)}.png",
+                              save_path=f"{base_dir}/mossy_fibers_raster_classic_{fmt_k(k)}.png",
                               event_times=burst_onsets_ms,
                               title=f"Raster aligned to burst – k={k:.3f}")
         # Raster Purkinje
         plot_classical_raster(spike_dfs[k], row, pop="purkinje",
                               window=(-200, 200),
-                              save_path=f"./{base_dir}/purkinje_raster_classic_{fmt_k(k)}.png",
+                              save_path=f"{base_dir}/purkinje_raster_classic_{fmt_k(k)}.png",
                               event_times=burst_onsets_ms,
                               title=f"Raster aligned to burst – k={k:.3f}")
 
@@ -1897,7 +1940,7 @@ def loadData(data_path: Path, mainEventKey: str,
         cmap="Oranges_r",
         operator=np.max,
         dt=0.1,
-        save_path=f"./{base_dir}/mossy_fibers_epoched.png"
+        save_path=f"{base_dir}/mossy_fibers_epoched.png"
     )
     plot_epoched_firing_rate(
         df=df_summary,
@@ -1909,20 +1952,20 @@ def loadData(data_path: Path, mainEventKey: str,
         cmap="Blues_r",
         operator=np.max,
         dt=0.1,
-        save_path=f"./{base_dir}/purkinje_epoched.png"
+        save_path=f"{base_dir}/purkinje_epoched.png"
     )
     #######################################
-    plot_firing_rate_vs_k(df_summary, save_path=f"./{base_dir}/fr_vs_atrophy.png")
+    plot_firing_rate_vs_k(df_summary, save_path=f"{base_dir}/fr_vs_atrophy.png")
     plot_cross_correlation(df_summary, base_dir)
 
     plot_time_series(df_summary, pop="mossy_fibers", base_dir=base_dir)
     plot_time_series(df_summary, pop="purkinje", base_dir=base_dir)
     plot_tf(df_summary,base_dir=base_dir)
     plot_stimulus_profile_per_k(df_summary, base_dir)
-    plot_cosine_similarity_vs_atrophy(df_summary, column_name="cosine_similarity_stim_mossy_fibers", save_path=f"./{base_dir}/cosine_stim_mossy_fibers.png")
-    plot_cosine_similarity_vs_atrophy(df_summary, column_name="cosine_similarity_stim_purk", save_path=f"./{base_dir}/cosine_stim_purk.png")
-    plot_cosine_similarity_vs_atrophy(df_summary, column_name="cosine_similarity_mossy_fibers_purk", save_path=f"./{base_dir}/cosine_similarity_mossy_fibers_purk.png")
-    plot_stim_vs_mossy_fibers_rate(df_summary, save_path=f"./{base_dir}/stim_vs_mf_rate.png")
+    plot_cosine_similarity_vs_atrophy(df_summary, column_name="cosine_similarity_stim_mossy_fibers", save_path=f"{base_dir}/cosine_stim_mossy_fibers.png")
+    plot_cosine_similarity_vs_atrophy(df_summary, column_name="cosine_similarity_stim_purk", save_path=f"{base_dir}/cosine_stim_purk.png")
+    plot_cosine_similarity_vs_atrophy(df_summary, column_name="cosine_similarity_mossy_fibers_purk", save_path=f"{base_dir}/cosine_similarity_mossy_fibers_purk.png")
+    plot_stim_vs_mossy_fibers_rate(df_summary, save_path=f"{base_dir}/stim_vs_mf_rate.png")
 
     sigma_fmt = fmt_sigma(sigma)
     out_dir = Path(base_dir) / "B_collective_results" / "2.functions" / f"sigma_{sigma_fmt}"
@@ -1950,11 +1993,11 @@ def main():
     parser.add_argument("--path", type=str, required=True)
     parser.add_argument("--sigma", type=float, default=100.0, help="Sigma for kernel smoothing in firing rate estimation")
     parser.add_argument("--stimName", type=str, default="basal_activity", help="Stimulation name")
-    
+
     args = parser.parse_args()
     base_dir = Path(args.path)
     process_reconstruction_yamls(base_dir, stimName=args.stimName)
-    df_summary, spike_dfs = loadData(base_dir, mainEventKey="burst", 
+    df_summary, spike_dfs = loadData(base_dir, mainEventKey="burst",
                                      sigma=args.sigma,
                                      stimName=args.stimName,
                                      condition_name="saccades", use_top_quartile=True, selection_mode="percentile", method='mean')

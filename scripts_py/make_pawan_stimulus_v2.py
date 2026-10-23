@@ -3,7 +3,7 @@ import numpy as np
 import yaml
 
 def make_pawan_stimulus(k, seed, stim_name):
-    
+
     sim_path = "./configurations/mouse/nest/"
     sim_file = os.path.join(sim_path, "basal_vitro.yaml")
     if not os.path.exists(sim_file):
@@ -18,7 +18,7 @@ def make_pawan_stimulus(k, seed, stim_name):
     resolution = 0.050 #5 instead of 0.055
     T = 1000 # 1000 ms
     simDuration = round(T/resolution)*resolution
-    
+
     # --- Modifica solo simulations ---
     new_sim = {
         stim_name: {
@@ -72,10 +72,10 @@ def make_pawan_stimulus(k, seed, stim_name):
             },
         }
 
-   
+
     # Aggiunta dei n stimoli "burst"
     # Riproduce la relazione durata saccade ↔ durata burst ↔ firing rate (Kase 1980)
-    n_bursts = 30  
+    n_bursts = 30
     burst_durations = [resolution*20] * n_bursts # instead of 0.200 ms   np.round(np.random.uniform(20.0, 120.0, size=n_bursts), 1)
     burst_rates = [10000.0] * n_bursts
 

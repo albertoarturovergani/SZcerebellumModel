@@ -1,0 +1,137 @@
+$import:
+  ref: ./dcn_0.627.yaml#/
+  values:
+  - packages
+  - storage
+  - network
+  - regions
+  - partitions
+  - morphologies
+  - cell_types
+  - placement
+  - connectivity
+  - after_connectivity
+components:
+- cerebellum/nest_models/build_models.py
+name: DBBS Mouse cerebellum w/ DCN NEST basal activity and mf stimulus for in vitro
+  state
+packages:
+- bsb-nest~=4.3
+simulations:
+  basal_activity:
+    $import:
+      ref: ../nest/basal_vitro_0.627.yaml#/simulations/basal_activity/
+      values:
+      - simulator
+      - resolution
+      - duration
+      - modules
+      - seed
+      - cell_models
+      - connection_models
+      - devices
+    cell_models:
+      dcn_i:
+        constants:
+          A1: 176.358
+          A2: 176.358
+          C_m: 56
+          E_L: -40
+          E_rev1: 0
+          E_rev2: -80
+          I_e: 2.384
+          V_m: -40
+          V_reset: -55
+          V_th: -39
+          k_1: 0.041
+          k_2: 0.044
+          k_adap: 0.079
+          lambda_0: 0.9
+          t_ref: 3
+          tau_V: 1.0
+          tau_m: 56
+          tau_syn1: 3.64
+          tau_syn2: 1.14
+        model: eglif_cond_alpha_multisyn
+      dcn_p:
+        constants:
+          A1: 13.857
+          A2: 3.477
+          C_m: 142
+          E_L: -45
+          E_rev1: 0
+          E_rev2: -80
+          I_e: 75.385
+          V_m: -45
+          V_reset: -55
+          V_th: -36
+          k_1: 0.697
+          k_2: 0.047
+          k_adap: 0.408
+          lambda_0: 1.5
+          t_ref: 1.5
+          tau_V: 1.0
+          tau_m: 33
+          tau_syn1: 1.0
+          tau_syn2: 0.7
+        model: eglif_cond_alpha_multisyn
+    connection_models:
+      mossy_fibers_to_dcn_p:
+        synapse:
+          delay: 4.0
+          model: static_synapse
+          receptor_type: 1
+          weight: 0.15675
+      purkinje_to_dcn_i:
+        synapse:
+          delay: 4.0
+          model: static_synapse
+          receptor_type: 2
+          weight: 0.06
+      purkinje_to_dcn_p:
+        synapse:
+          delay: 4.0
+          model: static_synapse
+          receptor_type: 2
+          weight: 0.8
+    devices:
+      dcn_i_record:
+        delay: 0.1
+        device: spike_recorder
+        targetting:
+          cell_models:
+          - dcn_i
+          strategy: cell_model
+      dcn_p_record:
+        delay: 0.1
+        device: spike_recorder
+        targetting:
+          cell_models:
+          - dcn_p
+          strategy: cell_model
+  mf_stimulus:
+    $import:
+      ref: '#/simulations/basal_activity'
+      values:
+      - simulator
+      - resolution
+      - duration
+      - modules
+      - seed
+      - simulator
+      - cell_models
+      - connection_models
+      - devices
+    devices:
+      $import:
+        ref: ../nest/stimulus_mossy_vitro.yaml#/simulations/mf_stimulus/devices/
+        values:
+        - stimulus
+      stimulus:
+        targetting:
+          origin:
+          - 150.0
+          - 65.0
+          - 300.0
+storage:
+  root: mouse_cereb_dcn_nest_0.627.hdf5

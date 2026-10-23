@@ -1,0 +1,111 @@
+$import:
+  ref: ./dcn_0.760.yaml#/
+  values:
+  - packages
+  - storage
+  - network
+  - regions
+  - partitions
+  - morphologies
+  - cell_types
+  - placement
+  - connectivity
+  - after_connectivity
+after_connectivity:
+  duplicate_conn_io_pc:
+    conn_strategy: io_to_purkinje
+    contacts:
+      distribution: norm
+      loc: 500
+      scale: 5
+    strategy: cerebellum.connectome.io_purkinje.DuplicateSynapses
+cell_types:
+  io:
+    plotting:
+      display_name: Inferior olivary cells
+    spatial:
+      count_ratio: 0.2
+      radius: 7.5
+      relative_to: purkinje_cell
+connectivity:
+  dcn_i_to_io:
+    indegree: 31
+    postsynaptic:
+      cell_types:
+      - io
+    presynaptic:
+      cell_types:
+      - dcn_i
+    strategy: bsb.connectivity.FixedIndegree
+  io_to_dcn_i:
+    outdegree: 31
+    postsynaptic:
+      cell_types:
+      - dcn_i
+    presynaptic:
+      cell_types:
+      - io
+    strategy: bsb.connectivity.FixedOutdegree
+  io_to_dcn_p:
+    outdegree: 56
+    postsynaptic:
+      cell_types:
+      - dcn_p
+    presynaptic:
+      cell_types:
+      - io
+    strategy: bsb.connectivity.FixedOutdegree
+  io_to_mli:
+    io_pc_connectivity: io_to_purkinje
+    mli_pc_connectivity:
+    - basket_to_purkinje
+    - stellate_to_purkinje
+    postsynaptic:
+      cell_types:
+      - basket_cell
+      - stellate_cell
+    pre_cell_pc: purkinje_cell
+    presynaptic:
+      cell_types:
+      - io
+    strategy: cerebellum.connectome.io_molecular.ConnectomeIO_MLI
+  io_to_purkinje:
+    indegree: 1
+    postsynaptic:
+      cell_types:
+      - purkinje_cell
+    presynaptic:
+      cell_types:
+      - io
+    strategy: bsb.connectivity.FixedIndegree
+name: DBBS Mouse cerebellum w/ DCN and IO
+network:
+  z: 595
+partitions:
+  dcn_layer:
+    origin:
+    - 0
+    - 0
+    - 100
+    thickness: 196.138225
+  granular_layer:
+    origin:
+    - 0
+    - 0
+    - 300
+  io_layer:
+    thickness: 98.069112
+placement:
+  io_layer_placement:
+    cell_types:
+    - io
+    partitions:
+    - io_layer
+    strategy: bsb.placement.RandomPlacement
+regions:
+  inferior_olivary:
+    children:
+    - io_layer
+    type: group
+storage:
+  root: mouse_cereb_dcn_io_0.760.hdf5

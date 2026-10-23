@@ -1,0 +1,89 @@
+$import:
+  ref: ../mouse_cerebellar_cortex_0.680.yaml#/
+  values:
+  - packages
+  - storage
+  - network
+  - regions
+  - partitions
+  - morphologies
+  - cell_types
+  - placement
+  - connectivity
+  - after_connectivity
+cell_types:
+  dcn_i:
+    plotting:
+      display_name: Deep Cerebellar Nuclei type i
+    spatial:
+      density: 5.0e-06
+      radius: 7.0
+  dcn_p:
+    plotting:
+      display_name: Deep Cerebellar Nuclei type p
+    spatial:
+      density: 9.0e-06
+      radius: 9.5
+connectivity:
+  mossy_fibers_to_dcn_p:
+    indegree: 39
+    postsynaptic:
+      cell_types:
+      - dcn_p
+    presynaptic:
+      cell_types:
+      - mossy_fibers
+    strategy: bsb.connectivity.FixedIndegree
+  purkinje_to_dcn_i:
+    outdegree: 9
+    postsynaptic:
+      cell_types:
+      - dcn_i
+    presynaptic:
+      cell_types:
+      - purkinje_cell
+      morphology_labels:
+      - axon
+    strategy: bsb.connectivity.FixedOutdegree
+  purkinje_to_dcn_p:
+    outdegree: 37
+    postsynaptic:
+      cell_types:
+      - dcn_p
+    presynaptic:
+      cell_types:
+      - purkinje_cell
+      morphology_labels:
+      - axon
+    strategy: bsb.connectivity.FixedOutdegree
+name: DBBS Mouse cerebellum w/ DCN
+network:
+  z: 495
+partitions:
+  dcn_layer:
+    thickness: 187.502067
+  granular_layer:
+    origin:
+    - 0
+    - 0
+    - 200
+placement:
+  dcn_i_layer_placement:
+    cell_types:
+    - dcn_i
+    partitions:
+    - dcn_layer
+    strategy: bsb.placement.RandomPlacement
+  dcn_p_layer_placement:
+    cell_types:
+    - dcn_p
+    partitions:
+    - dcn_layer
+    strategy: bsb.placement.RandomPlacement
+regions:
+  cerebellar_nuclei:
+    children:
+    - dcn_layer
+    type: group
+storage:
+  root: mouse_cereb_dcn_0.680.hdf5

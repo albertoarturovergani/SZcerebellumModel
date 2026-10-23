@@ -151,7 +151,7 @@ for v in "${values[@]}"; do
     echo ""
     echo "=== STEP ${current_step}/${n_steps} ($(timer_eta)) ==="
     v_normalized=$(LC_NUMERIC=C awk -v d="$v" 'BEGIN{printf "%.3f", (100 - d)/100}')
-    k_suffix="$v_normalized"  
+    k_suffix="$v_normalized"
     sz_hyphothesis_str="{'trasmitter': '${sz_transmitter}', 'neurons': '${sz_neurons}'}"
     log_and_print "Launching morphology generation for degeneration $v% (k=$v_normalized)"
 
@@ -181,21 +181,21 @@ for v in "${values[@]}"; do
     # === SEED GENERATION ===
     this_seed=$(date +%s)  # Solo secondi
     echo "  - $this_seed" >> "$global_config_file"
-    
-    # === Stimulus generation ===    
+
+    # === Stimulus generation ===
     if [[ "$stim_name" == "vbt_stim_protocol_vitro" ]]; then
         python ./scripts_py/make_vbt_stimulus.py --k "$v_normalized" --seed "$this_seed" --stim_name "${stim_name}"
         stim_file="./configurations/mouse/nest/${stim_name}_${k_suffix}.yaml"
-    
+
     elif [[ "$stim_name" == "kase_stim_vitro" ]]; then
         python ./scripts_py/make_kase_stimulus_v2.py --k "$v_normalized" --seed "$this_seed" --stim_name "${stim_name}"
         stim_file="./configurations/mouse/nest/${stim_name}_${k_suffix}.yaml"
-    
+
     elif [[ "$stim_name" == "pawan_stim_vitro" ]]; then
         python ./scripts_py/make_pawan_stimulus_v2.py --k "$v_normalized" --seed "$this_seed" --stim_name "${stim_name}"
         stim_file="./configurations/mouse/nest/${stim_name}_${k_suffix}.yaml"
     fi
-    
+
     if [[ "$stim_name" == "basal_activity" ]]; then
         if [[ "$do_dcnio" == "1" ]]; then
             stim_file="./configurations/mouse/dcn-io/dcn_io_vitro_nest_${k_suffix}.yaml"
@@ -203,7 +203,7 @@ for v in "${values[@]}"; do
             stim_file="./configurations/mouse/nest/basal_vitro_${k_suffix}.yaml"
         fi
     fi
-    
+
     # === MORPHOLOGICAL ALTERATIONS ===
     python ./scripts_py/make_morphologies_v2.py \
         --k "$v_normalized" \
@@ -229,7 +229,7 @@ for v in "${values[@]}"; do
 
 
     sim_log="${sim_dir}/simulation.log"
-    
+
     # === Compile ===
     compile_log="${recon_dir}/compile.log"
     mpirun -n "$cores_reconstruction" bsb compile ${stim_file}
@@ -237,9 +237,9 @@ for v in "${values[@]}"; do
     # === Simulation ===
     full_hdf5_path="./${hdf5_file}"
 
-    mpirun -n "$cores_simulations" bsb reconfigure "$full_hdf5_path" "$stim_file" 
-    mpirun -n "$cores_simulations" bsb simulate "$full_hdf5_path" "$stim_name" 
-    
+    mpirun -n "$cores_simulations" bsb reconfigure "$full_hdf5_path" "$stim_file"
+    mpirun -n "$cores_simulations" bsb simulate "$full_hdf5_path" "$stim_name"
+
     # === Move Files ===
     for nio_file in *.nio; do
         [ -f "$nio_file" ] && mv "$nio_file" "$sim_dir/"
@@ -249,7 +249,7 @@ for v in "${values[@]}"; do
     python ./scripts_py/report_dynamics_v4.py "$full_hdf5_path" "$stim_name" "$sim_dir" || echo -e "${RED}❌ PDF generation failed.${NC}"
 
     sleep 5
-    
+
     # === Move Files ===
     #for nio_file in *.nio; do
     #    [ -f "$nio_file" ] && mv "$nio_file" "$sim_dir/"
@@ -259,18 +259,18 @@ for v in "${values[@]}"; do
     #python ./scripts_py/report_dynamics_v4.py "$full_hdf5_path" "$stim_name" "$sim_dir" || echo -e "${RED}❌ PDF generation failed.${NC}"
     #
     #sleep 5
-    
+
     # Move YAML config + morphologies YAML
     [ -f "${config_path}${yaml_file}" ] && mv "${config_path}${yaml_file}" "$config_yaml_dir/"
     [ -f "${config_path}morphologies_${k_suffix}.yaml" ] && mv "${config_path}morphologies_${k_suffix}.yaml" "$config_yaml_dir/"
-    
+
     # Move DCN/IO YAMLs (non-vitro) into config_yaml_dir
     if [[ "$do_dcnio" == "1" ]]; then
         for dcnfile in ./configurations/mouse/nest/dcn-io/dcn_${k_suffix}.yaml ./configurations/mouse/nest/dcn-io/dcn_io_${k_suffix}.yaml; do
             [ -f "$dcnfile" ] && mv "$dcnfile" "$config_yaml_dir/"
         done
     fi
-    
+
     # === Move stimulus YAML into stimulus_dir ===
     if [[ "$stim_name" != "basal_activity" ]]; then
         stim_file_path="./configurations/mouse/nest/${stim_name}_${k_suffix}.yaml"
@@ -297,7 +297,7 @@ for v in "${values[@]}"; do
     #      --stimName "${stim_file}" \
     #      --outPath "${stimulus_dir}"
     #fi
-          
+
     [ -f "$hdf5_file" ] && mv "$hdf5_file" "$recon_dir/"
     [ -f "$pdf_orig" ] && mv "$pdf_orig" "${recon_dir}/"
     [ -f "$pdf_orig_f" ] && mv "$pdf_orig" "${recon_dir}/"

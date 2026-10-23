@@ -37,7 +37,7 @@ def collect_structure_summaries(base_path):
     info_file = os.path.join(base_path, "info.yaml")
     if not os.path.exists(info_file):
         print("❌ File info.yaml non trovato.")
-        exit(1)    
+        exit(1)
     with open(info_file, "r") as f:
         info_data = yaml.safe_load(f)
     # Default robusto
@@ -127,24 +127,7 @@ def collect_structure_summaries(base_path):
     df_cells.to_pickle(os.path.join(output_dir, "summary_cells.pkl"))
     df_conns.to_pickle(os.path.join(output_dir, "summary_connections.pkl"))
 
-    # === INTEGRA PICKLE ===
-    pkl_files = glob.glob(os.path.join(output_dir, "**", "*.pkl"), recursive=True)
-    df_list = []
-    for file_path in pkl_files:
-        try:
-            data = pd.read_pickle(file_path)
-            if isinstance(data, pd.DataFrame) and 'k' in data.columns:
-                df_list.append(data)
-        except Exception:
-            pass
-
-    if df_list:
-        merged_df = df_list[0]
-        for df in df_list[1:]:
-            merged_df = pd.merge(merged_df, df, on='k')
-    else:
-        merged_df = pd.DataFrame()
-
+    merged_df = df_summary.copy()
     merged_df.to_pickle(os.path.join(output_dir, "df_summary.pkl"))
 
     # === PLOT GLOBALI MULTIPANNELLO dal merge usando x = DCI ===
@@ -226,7 +209,11 @@ def collect_structure_summaries(base_path):
     plt.figure(figsize=(6, 5))
     sns.lineplot(data=df_summary, x="atrophy_pct", y="cell_strength", marker="o", label="Cell strength")
     x = df_summary["atrophy_pct"]
-    x_norm = 1 - (x - x.min()) / (x.max() - x.min()) * 0.5
+    x_span = float(x.max() - x.min())
+    if x_span > 0:
+        x_norm = 1 - (x - x.min()) / x_span * 0.5
+    else:
+        x_norm = pd.Series(1.0, index=x.index)
     plt.plot(x, x_norm, '--', color='gray', label="Identity")
     plt.title(f"Cell Strength vs Atrophy Level \n sigmoid(k; midpoint={reserve_k0}, sharpness={reserve_sharpness})")
     plt.xlabel("Atrophy level (%)")

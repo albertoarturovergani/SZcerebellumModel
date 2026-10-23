@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "scope": "BASAL bridge integrity and original delta-FR formula only, not original notebook/figures",
+  "cases": [
+    "HR_basal4hz",
+    "NR_basal4hz"
+  ],
+  "k_levels": [
+    0.6,
+    0.76,
+    1.0
+  ],
+  "rows": {
+    "structure": 150,
+    "weights": 144,
+    "functional": 60
+  },
+  "matched_yaml_weight_rows": 144,
+  "without_chemical_yaml_weight_connections": [
+    "gap_goc"
+  ],
+  "without_recorded_presynaptic_fr_rows": 30,
+  "without_recorded_presynaptic_fr_connections": [
+    {
+      "connection": "io_to_dcn_i",
+      "presyn_pop": "io"
+    },
+    {
+      "connection": "io_to_dcn_p",
+      "presyn_pop": "io"
+    },
+    {
+      "connection": "io_to_mli_io_to_basket_cell",
+      "presyn_pop": "io"
+    },
+    {
+      "connection": "io_to_mli_io_to_stellate_cell",
+      "presyn_pop": "io"
+    },
+    {
+      "connection": "io_to_purkinje",
+      "presyn_pop": "io"
+    }
+  ],
+  "missing_morphometric_fields": [
+    "DCI",
+    "cell_name"
+  ],
+  "historical_delta_formula_used": "compute_delta_fr_with_percent_and_zscore",
+  "method_notes": [
+    "Electrical gap_goc has no chemical YAML weight; leave missing.",
+    "IO presynaptic firing rate was not recorded; leave missing.",
+    "DCI and cell_name are not inferred from synaptic connectivity.",
+    "No fit of degree five on a three-level smoke test.",
+    "Historical transfer entropy is not changed or re-estimated."
+  ]
+}

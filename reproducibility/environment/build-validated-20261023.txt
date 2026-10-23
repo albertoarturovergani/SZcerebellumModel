@@ -1,0 +1,25 @@
+=== PYTHON ===
+Python 3.11.17
+=== NEST ===
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.7.0
+ Built: Oct 23 2026 11:43:20
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+3.7.0
+=== NEST SOURCE COMMIT ===
+0b6aea80b83023e8e778587c6a00cd6cce5cb403
+=== MPI ===
+mpirun (Open MPI) 4.1.6
+=== MODEL NESTML SHA256 ===
+f794516bd8e0deb6a2802bc5681c919a7b1e4a20b0e1ad7710a567399131a7e3  cerebellum/nest_models/eglif_cond_alpha_multisyn.nestml

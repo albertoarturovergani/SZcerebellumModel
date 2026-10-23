@@ -1,0 +1,85 @@
+{
+  "format_version": 1,
+  "created_utc": "2026-10-23T13:43:11+00:00",
+  "python": "3.11.17",
+  "git_revision": "cfe865665647a2c0799181145f2a10446d83bacf",
+  "description": "Provisional numerical baselines captured from already PASS smoke outputs; not independent evidence of agreement with original historical publications.",
+  "datasets": {
+    "BASAL": {
+      "csv_filename": "basal_delta_firing_smoke.csv",
+      "csv_sha256": "3892ba5775fe5cace130a6cc31bca87d944d606603c328321cc695b88686539f",
+      "check_json_filename": "basal_bridge_check.json",
+      "check_json_sha256": "57a27b204b780fddf1c4e0b9a6ccf5b89e62c8a6237bc878460f9d4c71334e43",
+      "source_csv": "/mnt/bsb_repro/SZ_BASAL_NOTEBOOK_CHECK/basal_delta_firing_smoke.csv",
+      "source_check_json": "/mnt/bsb_repro/SZ_BASAL_NOTEBOOK_CHECK/basal_bridge_check.json",
+      "row_count": 60,
+      "columns": [
+        "k",
+        "pop",
+        "Atrophy Level (%)",
+        "firing_rate_mean",
+        "firing_rate_std",
+        "firing_rate_sem",
+        "isi",
+        "n_cells",
+        "case",
+        "Resilience",
+        "dfType",
+        "SZ Factor (%)",
+        "Atrophy Factor (%)",
+        "delta_fr_mean",
+        "delta_fr_percent",
+        "delta_fr_std",
+        "delta_fr_sem",
+        "zscore_fr"
+      ]
+    },
+    "EVOKED": {
+      "csv_filename": "evoked_smoke_metrics.csv",
+      "csv_sha256": "7eebc41e748aa6b04691500afa92d77fc3a85f67b12531a9bd09dba7887a9012",
+      "check_json_filename": "evoked_bridge_check.json",
+      "check_json_sha256": "20fe0933b832551b9aac248d1cd7e7ee916ac75e0489c0bce9ae6b5ba21dc40d",
+      "source_csv": "/mnt/bsb_repro/SZ_EVOKED_NOTEBOOK_CHECK/evoked_smoke_metrics.csv",
+      "source_check_json": "/mnt/bsb_repro/SZ_EVOKED_NOTEBOOK_CHECK/evoked_bridge_check.json",
+      "row_count": 6,
+      "columns": [
+        "case",
+        "k",
+        "sz_percent",
+        "optimal_lag_ms",
+        "te_mf_pc_legacy",
+        "te_pc_mf_legacy",
+        "delta_te_mf_pc_legacy_vs_k1",
+        "te_directionality_legacy",
+        "n_bursts"
+      ]
+    },
+    "AUTOR": {
+      "csv_filename": "autor_smoke_delta_firing.csv",
+      "csv_sha256": "10ebb52095b89d361fa9c553dae4e5fcd9c8ae0980ddd4bb5c861c34b2b0effc",
+      "check_json_filename": "autor_smoke_check.json",
+      "check_json_sha256": "03504d758b092a1f887fa75fedb8b6d08eedd6c76c04644860cf26c9b6812ede",
+      "source_csv": "/mnt/bsb_repro/SZ_AUTOR_NOTEBOOK_CHECK/autor_smoke_delta_firing.csv",
+      "source_check_json": "/mnt/bsb_repro/SZ_AUTOR_NOTEBOOK_CHECK/autor_smoke_check.json",
+      "row_count": 36,
+      "columns": [
+        "k",
+        "pop",
+        "Atrophy Level (%)",
+        "firing_rate_mean",
+        "firing_rate_std",
+        "firing_rate_sem",
+        "isi",
+        "n_cells",
+        "delta_fr_mean",
+        "delta_fr_percent",
+        "delta_fr_std",
+        "delta_fr_sem",
+        "zscore_fr",
+        "case",
+        "resilience",
+        "SZ Factor (%)"
+      ]
+    }
+  }
+}

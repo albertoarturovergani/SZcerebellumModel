@@ -1,0 +1,48 @@
+{
+  "source_dir": "Historical local paperModelingSZ1_reproducibility archive (absolute path withheld)",
+  "notebooks": {
+    "autor": {
+      "filename": "META_PAPER_MODELING_AUTOR_PREFIXED.ipynb",
+      "source_sha256": "e85ed9989ef501f089eee8abb0d4add8d0492bdbff14164ff11e6b2d3fd04b3f",
+      "code_cells": 46,
+      "code_sha256": "07d9d6f787badb23a796864dbe492665b3000c29799e4054d37dd39e886e03da",
+      "outputs_removed": 38,
+      "pkl_references": 2,
+      "path_examples": [
+        "/home/<USER>/cerebellum/cerebellum/20250625142436_basal_activity_1_0_glutamate_all",
+        "{path}/1.structures/df_summary.pkl",
+        "{path}/2.functions/df_summary.pkl"
+      ]
+    },
+    "basal": {
+      "filename": "META_PAPER_MODELING_BASAL_PREFIXED.ipynb",
+      "source_sha256": "caa3967b4de0d14534b2b6ef4f4344f18e3c7ad4460b95cc7282807e7e8b5c22",
+      "code_cells": 44,
+      "code_sha256": "b1844e64f33a83a438d09173d55154d473a3b84d50bd2a4dda1c1c73e8b76924",
+      "outputs_removed": 40,
+      "pkl_references": 4,
+      "path_examples": [
+        "/home/<USER>/cerebellum/cerebellum/20250625142436_basal_activity_1_0_glutamate_all",
+        "tempPlots/df_all_str.pkl",
+        "tempPlots/df_all_weights.pkl",
+        "{path}/1.structures/df_summary.pkl",
+        "{path}/2.functions/df_summary.pkl"
+      ]
+    },
+    "evoked": {
+      "filename": "META_PAPER_MODELING_EVOKED_v5_PREFIXED.ipynb",
+      "source_sha256": "203c1f89e6b35afa9b81f6498e446adc355d64e003aecde4598d2248c6ca41b9",
+      "code_cells": 79,
+      "code_sha256": "268f3e3dbe0dcced28aa09f8580cee405e82a92a8cafa28293fee22353019c41",
+      "outputs_removed": 139,
+      "pkl_references": 5,
+      "path_examples": [
+        "spikes_k{k_target:.3f}.pkl",
+        "tempPlots/basal_df_all_str.pkl",
+        "tempPlots/basal_df_all_weights.pkl",
+        "{sigma_value}_df.pkl"
+      ]
+    }
+  },
+  "note": "Original code cell sources preserved; execution outputs and execution counts cleared for sharing."
+}

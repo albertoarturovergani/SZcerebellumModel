@@ -58,14 +58,14 @@ def make_kase_stimulus(k, seed, stim_name):
         'weight': 1,
         'delay': 0.1
     }
-    
+
     # Aggiunta dei n stimoli "burst"
     # Riproduce la relazione durata saccade ↔ durata burst ↔ firing rate (Kase 1980)
-    n_bursts = 8*2       
+    n_bursts = 8*2
     # Durate dei burst tra 20 e 120 ms
     #burst_durations = np.round(np.random.uniform(20.0, 120.0, size=n_bursts), 1)
     burst_durations = np.round(np.random.uniform(20.0, 25.0, size=n_bursts), 1) # for DCP but use above for naturalistic but take care about the average rate because not reproducibile for comparison
-    
+
     # Firing rate inversamente proporzionale alla durata, clip tra 50 e 300 Hz
     # Esempio: 10 spike = 10_000 µs → rate = 10_000 / durata (ms)
     burst_rates = np.round(6000.0 / burst_durations, 1)  # senza clip!

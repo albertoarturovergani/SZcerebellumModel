@@ -1,7 +1,7 @@
 import numpy as np
 from neurom import load_morphology
 from neurom.core import Morphology
-from neurom import * 
+from neurom import *
 import neurom as nm
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -51,7 +51,7 @@ def save_swc_custom(morphology, output_path):
 
 def adaptSWC(cell, file_path):
     cell_labels = {
-        'PurkinjeCell': ['soma', 'axon_basal_AIS', 'axon_basal_AIS_K', 'axon_apical_myelin', 'axon_apical_nodes', 
+        'PurkinjeCell': ['soma', 'axon_basal_AIS', 'axon_basal_AIS_K', 'axon_apical_myelin', 'axon_apical_nodes',
                          'dend_basal', 'dend_apical_pf_sc_targets', 'dend_apical_aa_sc_targets'],
         'GolgiCell': ['soma', 'axon_basal', 'dend_basal', 'dend_apical', 'axon_apical'],
         'BasketCell': ['soma', 'axon_distal', 'dend', 'axon_initial'],
@@ -68,7 +68,7 @@ def adaptSWC(cell, file_path):
         raise ValueError("Numero di etichette non corrisponde.")
     mapping = {num: name for num, name in zip(unique_labels, labels)}
     swc_df['txt_labels'] = swc_df['id_labels'].map(mapping)
-    
+
     def map_label(label):
         if 'soma' in label:
             return 1
@@ -77,20 +77,20 @@ def adaptSWC(cell, file_path):
         elif 'dend' in label:
             return 3
         return 0
-    
+
     swc_df['id_labels'] = swc_df['txt_labels'].map(map_label)
     output_path = file_path.replace('.swc', '_adapted.swc')
     with open(output_path, 'w') as f:
         #f.write("# ID TYPE X Y Z RADIUS PARENT\n")
         for _, row in swc_df.iterrows():
             f.write(f"{int(row['i'])} {int(row['id_labels'])} {row['x']:.3f} {row['y']:.3f} {row['z']:.3f} {row['r']:.3f} {int(row['j'])}\n")
-    
+
     # Rimuovi la colonna 'txt_labels' prima di salvare
     swc_k = swc_k.drop(columns=['txt_labels'])
     swc_k[['i', 'id_labels', 'j']] = swc_k[['i', 'id_labels', 'j']].astype(int)
     swc_k_output_path = f'./morphologies/{cell}/{cell}_{k:.3f}_ext.swc'
     swc_k.to_csv(swc_k_output_path, sep=' ', header=False, index=False)
-    
+
     return output_path
 
 def save_swc_custom(morphology, output_path):
@@ -120,7 +120,7 @@ def adaptSWC_v2(cell, file_path, k):
 
     # Mappatura delle etichette per ciascun tipo di cellula
     cell_labels = {
-        'PurkinjeCell': ['soma', 'axon_basal_AIS', 'axon_basal_AIS_K', 'axon_apical_myelin', 'axon_apical_nodes', 
+        'PurkinjeCell': ['soma', 'axon_basal_AIS', 'axon_basal_AIS_K', 'axon_apical_myelin', 'axon_apical_nodes',
                          'dend_basal', 'dend_apical_pf_sc_targets', 'dend_apical_aa_sc_targets'],
         'GolgiCell': ['soma', 'axon_basal', 'dend_basal', 'dend_apical', 'axon_apical'],
         'BasketCell': ['soma', 'axon_distal', 'dend', 'axon_initial'],
@@ -154,7 +154,7 @@ def adaptSWC_v2(cell, file_path, k):
         elif 'dend' in label:
             return 3
         return 0
-    
+
     # Creazione del file **con rimappatura degli ID**
     swc_adapted = swc_df.copy()
     swc_adapted['id_labels'] = swc_adapted['txt_labels'].map(map_label)
@@ -179,20 +179,20 @@ def adaptSWC_v2(cell, file_path, k):
 def count_branch_tips(morphology):
     """
     Counts the number of branch tips in a morphology.
-    
+
     :param morphology: Morphology object loaded using Neurom.
     :return: Total number of branch tips.
     """
     return sum(
         1 for _ in iter_sections(morphology, iterator_type=Section.ibifurcation_point)
     )
-    
+
 
 
 def branch_tip_orders(morphology):
     """
     Computes the branch tip orders for all branch tips in a morphology.
-    
+
     :param morphology: Morphology object loaded using Neurom.
     :return: List of branch tip orders.
     """
@@ -217,7 +217,7 @@ def extract_morphometric_data_v2(morphology, do_plot=True, do_save=True):
         np.mean([p[COLS.R] for p in morphology.soma.iter()])
         if morphology.soma else np.nan
     )
-    
+
     axon_radius = np.mean(
         [p[COLS.R] for sec in iter_sections(morphology, neurite_filter=tree_type_checker(AXON)) for p in sec.points]
     ) if any(tree_type_checker(AXON)(sec) for sec in iter_sections(morphology)) else 0
@@ -249,7 +249,7 @@ def extract_morphometric_data_v2(morphology, do_plot=True, do_save=True):
 def save_plots(morphology, save_path, base_name, do_show=False):
     """
     Generates and saves plots for the morphology.
-    
+
     :param morphology: Morphology object loaded with Neurom.
     :param save_path: Directory where plots will be saved.
     :param base_name: Base name for saving plot files.
@@ -272,7 +272,7 @@ def save_plots(morphology, save_path, base_name, do_show=False):
 def scale_radius_morphology(swc_df, scale_factor):
     """
     Scales the radius of all nodes in the morphology DataFrame.
-    
+
     :param swc_df: DataFrame representing the SWC file.
     :param scale_factor: Scaling factor for the radius.
     :return: Updated DataFrame with scaled radii.
@@ -285,7 +285,7 @@ def scale_radius_morphology_v2(swc_df, scale_factor):
     Scales the radius of nodes in the morphology DataFrame conditionally:
     - Soma (id_labels == 1) and Dendrites (id_labels == 3): radius *= scale_factor
     - Axon (id_labels == 2): radius *= (1 + scale_factor)
-    
+
     :param swc_df: DataFrame representing the SWC file.
     :param scale_factor: Scaling factor for the radius.
     :return: Updated DataFrame with scaled radii.
@@ -295,7 +295,7 @@ def scale_radius_morphology_v2(swc_df, scale_factor):
 
     # Scale axon
     #swc_df.loc[swc_df['id_labels'] == 2, 'r'] *= (1 + abs((1-scale_factor)))
-    
+
     return swc_df
 
 def prune_morphology(swc_df, scale_factor):
@@ -341,9 +341,9 @@ def prune_morphology_v2(swc_df, scale_factor):
     graph = nx.Graph()
     for _, row in swc_df.iterrows():
         if row['j'] > 0:  # Only consider valid parent-child connections
-            graph.add_edge(row['i'], row['j'], 
+            graph.add_edge(row['i'], row['j'],
                            weight=np.linalg.norm(
-                               swc_df.loc[swc_df['i'] == row['i'], ['x', 'y', 'z']].values[0] - 
+                               swc_df.loc[swc_df['i'] == row['i'], ['x', 'y', 'z']].values[0] -
                                swc_df.loc[swc_df['i'] == row['j'], ['x', 'y', 'z']].values[0]
                            ))
 
@@ -376,7 +376,7 @@ def shrink_morphology(swc_df, shrink_factor):
     :return: Updated DataFrame with shrunk morphology.
     """
     swc_df[['x', 'y', 'z']] *= shrink_factor
-    
+
     return swc_df
 
 def save_plots(input_file, morphology, save_path, base_name, do_show=False):

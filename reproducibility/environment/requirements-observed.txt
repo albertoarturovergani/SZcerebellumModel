@@ -1,0 +1,19 @@
+# Versions detected in the Python interpreter running the staging tool.
+# Install cerebellum from this repository with: python -m pip install -e .
+# NEST 3.7 and cerebmodule are C++ components and MUST be configured separately.
+
+bsb==4.4.2
+bsb-core==5.0.2
+bsb-nest==4.3.2
+bsb-hdf5==5.0.4
+bsb-yaml==4.2.3
+mpi4py==3.1.6
+nestml==7.0.2
+neo==0.13.3
+nixio==1.5.4
+numpy==1.26.4
+scipy==1.17.1
+pyyaml==6.0.3
+matplotlib==3.11.2
+packaging==24.2
+odetoolbox==2.5.8

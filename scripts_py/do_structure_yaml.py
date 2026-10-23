@@ -5,10 +5,11 @@ from bsb.core import from_storage
 import yaml
 import os
 
-def extract_structure_summary(hdf5_path):
+def extract_structure_summary(hdf5_path, output_dir=None):
     scaffold = from_storage(hdf5_path)
 
-    output_dir = os.path.dirname(hdf5_path)
+    output_dir = os.path.abspath(output_dir) if output_dir is not None else os.path.dirname(hdf5_path)
+    os.makedirs(output_dir, exist_ok=True)
     basename = os.path.splitext(os.path.basename(hdf5_path))[0]
 
     ### PLACEMENT ###
@@ -104,6 +105,7 @@ def extract_structure_summary(hdf5_path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Estrai riassunto strutturale da un file scaffold HDF5")
     parser.add_argument("--path", required=True, help="Percorso del file .hdf5 dello scaffold")
+    parser.add_argument("--output-dir", default=None, help="Directory for the generated YAML, separate from the original HDF5")
     args = parser.parse_args()
 
-    extract_structure_summary(args.path)
+    extract_structure_summary(args.path, args.output_dir)
