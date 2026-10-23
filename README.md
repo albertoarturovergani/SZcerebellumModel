@@ -19,16 +19,26 @@ The framework supports cerebellar neuronal populations and pathways involving **
 
 ## Repository Structure
 
-The repository provides two main directories that integrate with the existing `cerebellum` framework:
+The repository includes the integrated 2026 source snapshot and historical
+simulation and analysis workflows:
 
 ```text
 SZcerebellumModel/
-├── scripts_sh/
-│   └── Shell scripts for workflow automation
-├── scripts_py/
-│   └── Python modules for network processing and analysis
+├── cerebellum/         # Cerebellar model source snapshot
+├── configurations/     # Archived simulation configurations
+├── morphologies/       # Neuronal morphologies
+├── notebooks/          # Historical analysis notebooks
+├── reproducibility/    # Environment, replay tools and manifests
+├── validation/         # Smoke tests and numerical baselines
+├── scripts_py/         # Python processing and analysis tools
+├── scripts_sh/         # Simulation workflow scripts
+├── pyproject.toml
 └── README.md
 ```
+
+See [reproducibility](reproducibility/README.md),
+[Ubuntu installation](reproducibility/environment/INSTALL_UBUNTU.md), and
+[validation](validation/README.md) for the current workflow and its limits.
 
 ### `scripts_sh/` — Shell Automation Scripts
 
@@ -89,6 +99,8 @@ For reproducing the analyses described in the associated manuscript, the reporte
 ---
 
 ## 2. Installation and Integration
+
+**2026 integrated snapshot:** The instructions below describe the legacy integration of scripts into a separate upstream `cerebellum` checkout. For the integrated 2026 source snapshot, consult the [Ubuntu installation guide](reproducibility/environment/INSTALL_UBUNTU.md). Independent installation on a completely fresh Ubuntu system remains to be verified.
 
 The scripts provided by `SZcerebellumModel` are designed to operate within the root directory of the upstream `cerebellum` repository.
 
@@ -173,6 +185,8 @@ These parameters can be modified directly in `scripts_sh/run_test.sh`.
 ---
 
 ## 4. Reproducibility
+
+**Validation status (23 October 2026):** BASAL, EVOKED and AUTOR smoke checks passed. A repeat run matched 1,398 numerical entries against the versioned smoke-test baselines with maximum absolute difference zero on the tested three-level dataset. This demonstrates repeatability of these tests in the validated environment, not independent reproduction of all manuscript figures, complete 16-level curves or sigma sweeps.
 
 ### Reproducing the simulations reported in the paper
 
