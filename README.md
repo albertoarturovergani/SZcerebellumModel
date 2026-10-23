@@ -1,288 +1,221 @@
 # SZcerebellumModel
 
-A computational framework for investigating **schizophrenia-like structural and synaptic alterations** in a biologically grounded, spiking **cerebellar microcircuit model**.
+Code and reproducibility inputs for **Cerebellar Degeneration Induces Timeliness Disruption,
+Paradoxical Information Flow and Network Overdrive in a Digital Model of Schizophrenia**.
 
-This repository extends the [Brain Scaffold Builder (BSB)](https://github.com/dbbs-lab/bsb) and [cerebellum](https://github.com/dbbs-lab/cerebellar-models/tree/v0.4.0) computational frameworks to investigate how progressive neuronal degeneration and resilience mechanisms influence cerebellar network dynamics.
+This repository contains the historical source implementation of the cerebellum model,
+configuration files, archived morphology inputs and Python/Bash analysis/generation scripts.
+Large outputs (HDF5/NIO) are hosted separately: **[Zenodo record 23391996](https://zenodo.org/records/23391996)**.
 
-## Key Features
+## Archived scientific experiments
 
-- **Progressive neuronal degeneration:** Morphological shrinking, dendritic pruning, and thinning.
-- **Synaptic alterations:** Configurable modifications of synaptic connectivity and transmission.
-- **Resilience mechanisms:** Computational implementations of mechanisms that may mitigate network dysfunction.
-- **Automated workflows:** End-to-end pipelines for network construction, simulation, and analysis.
-- **Multiple degeneration levels:** Systematic simulations across different degrees of schizophrenia-like alterations.
-- **Multiscale analyses:** Firing rates, cross-correlation, transfer entropy (TE), phase-locking value (PLV), local field potentials (LFP), and structural network metrics.
+Six historical experiments, 16 degeneration levels each (96 network reconstructions plus NEST simulations):
 
-The framework supports cerebellar neuronal populations and pathways involving **mossy fibers, granule cells, Golgi cells, basket cells, stellate cells, Purkinje cells, deep cerebellar nuclei (DCN), and inferior olive (IO)**, depending on the simulation configuration.
+| Case | Original 2025 experiment | Protocol | Resilience | Levels |
+|---|---|---|---|---:|
+| HR_auto | `20251120193505_basal_activity_15_0_glutamate_all` | auto | HR | 16 |
+| NR_auto | `20251120172014_basal_activity_2_0_glutamate_all` | auto | NR | 16 |
+| HR_basal4hz | `20250628122534_basal_activity_15_0_glutamate_all` | basal4hz | HR | 16 |
+| NR_basal4hz | `20251004180523_basal_activity_2_0_glutamate_all` | basal4hz | NR | 16 |
+| HR_kase | `20251113214858_kase_stim_vitro_15_0_glutamate_all` | kase | HR | 16 |
+| NR_kase | `20251113161643_kase_stim_vitro_2_0_glutamate_all` | kase | NR | 16 |
 
----
+`k=1.000` denotes no degeneration; `k=0.600` denotes 40% degeneration.
 
-## Repository Structure
+- **Auto-Rhythm / 0 Hz:** Poisson input to mossy fibers set to 0 Hz, weight 0; 5 s.
+- **Basal 4 Hz:** Poisson mossy-fiber input at 4 Hz, weight 1; 5 s.
+- **Kase:** 4 Hz mossy-fiber baseline and explicitly archived saccadic burst times/rates; 10 s.
 
-The repository includes the integrated 2026 source snapshot and historical
-simulation and analysis workflows:
+The two Basal experiment families are different. Auto-Rhythm is not the 4 Hz Basal protocol.
 
-```text
-SZcerebellumModel/
-├── cerebellum/         # Cerebellar model source snapshot
-├── configurations/     # Archived simulation configurations
-├── morphologies/       # Neuronal morphologies
-├── notebooks/          # Historical analysis notebooks
-├── reproducibility/    # Environment, replay tools and manifests
-├── validation/         # Smoke tests and numerical baselines
-├── scripts_py/         # Python processing and analysis tools
-├── scripts_sh/         # Simulation workflow scripts
-├── pyproject.toml
-└── README.md
-```
+## Software and randomness
 
-See [reproducibility](reproducibility/README.md),
-[Ubuntu installation](reproducibility/environment/INSTALL_UBUNTU.md), and
-[validation](validation/README.md) for the current workflow and its limits.
+The scientific package corresponds to **cerebellum (cerebellar-models) v0.5.0**.
+The 2026 replay was performed with NEST 3.7 and a BSB 4.4-family distribution in Python 3.11.
+The exact Python package inventory was captured during staging, if the correct environment was active.
+Review `reproducibility/environment/python_package_inventory.json` before citing a complete software lock.
 
-### `scripts_sh/` — Shell Automation Scripts
+**Structural generation:** archived BSB configurations do not contain a global structural RNG seed,
+so independent stochastic neuron placement and connectivity will not be bitwise identical.
+BSB 8.0 introduces a reproducibility-oriented global RNG configuration, but this does not
+retroactively determine the unrecorded structural random state of the BSB 4.4 experiments.
 
-Contains Bash scripts for orchestrating the computational workflow, including:
+**NEST simulations:** archived Basal/Auto YAML use seed `1234`; Kase YAML use individual saved seeds.
+A fixed NEST seed does not imply the same spikes when the structural network or environment differs.
+Newer cerebellar-models releases, including 0.12.1, were **not** used for the historical replay.
 
-- Generation of morphologically altered neuronal networks
-- Network construction using BSB
-- Simulation configuration and execution
-- Batch processing across degeneration levels
-- Post-simulation analysis
-- Automated end-to-end workflows
+The upstream `v0.5.0` structural YAML mistakenly declared `cerebellum~=0.4.0`. The operational
+GitHub inputs update **only that dependency metadata** to `cerebellum~=0.5.0`, while preserving
+scientific parameters. Changes and file hashes are documented under `reproducibility/manifests/`.
 
-### `scripts_py/` — Python Processing Modules
+## Quick start: recreate networks and NEST outputs
 
-Contains Python scripts and utilities for:
-
-- Neuronal morphology transformations
-- Synaptic and connectivity scaling
-- YAML configuration generation
-- Network construction and simulation setup
-- Electrophysiological and structural analyses
-- Extraction and aggregation of simulation results
-- Visualization and comparison across degeneration levels
-
----
-
-## 1. Prerequisites
-
-The workflow builds upon the BSB and `cerebellum` frameworks and requires a compatible Python environment, MPI, and the NEST simulation backend.
-
-### 1.1 Brain Scaffold Builder (BSB)
-
-Official repository: [dbbs-lab/bsb](https://github.com/dbbs-lab/bsb)
-
-The simulations described in the manuscript used **BSB 4.4** ([release `v4.4.0`](https://github.com/dbbs-lab/bsb/tree/v4.4.0)). In a dedicated Python environment, install the version-matched BSB core:
+1. Use Linux/Ubuntu, Python 3.11, MPI, NEST 3.7 with matching PyNEST, and a compiled `cerebmodule`.
+   See **[Ubuntu environment instructions](reproducibility/environment/INSTALL_UBUNTU.md)**.
+2. Create/activate a virtual environment and install the package from this checkout:
 
 ```bash
-python -m pip install "bsb-core[parallel]==4.4.0"
-```
-
-Additional dependencies may be required depending on the simulation backend and analysis scripts.
-
-### 1.2 Cerebellum Framework
-
-Official repository: [dbbs-lab/cerebellar-models](https://github.com/dbbs-lab/cerebellar-models)
-
-Clone the **cerebellum 0.4.0** release, which contains the upstream `cerebellum` package and directory structure used in the paper:
-
-```bash
-git clone --branch v0.4.0 https://github.com/dbbs-lab/cerebellar-models.git cerebellum
-cd cerebellum
+python3.11 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip setuptools wheel
 python -m pip install -e .
-cd ..
+python -m pip check
 ```
 
-For reproducing the analyses described in the associated manuscript, the reported software versions are **BSB 4.4** and **cerebellum 0.4.0**. Compatibility with newer releases should be verified.
-
----
-
-## 2. Installation and Integration
-
-**2026 integrated snapshot:** The instructions below describe the legacy integration of scripts into a separate upstream `cerebellum` checkout. For the integrated 2026 source snapshot, consult the [Ubuntu installation guide](reproducibility/environment/INSTALL_UBUNTU.md). Independent installation on a completely fresh Ubuntu system remains to be verified.
-
-The scripts provided by `SZcerebellumModel` are designed to operate within the root directory of the upstream `cerebellum` repository.
-
-### Step 1 — Clone SZcerebellumModel
-
-From the parent directory containing your `cerebellum` installation, run:
+3. **Default: three-level smoke test.** This runs exactly `k=1.000`, `0.760`, and `0.600` for each of the six cases (18 simulations, not 96). Keep output files outside the Git checkout:
 
 ```bash
-git clone https://github.com/albertoarturovergani/SZcerebellumModel.git
+python reproducibility/scripts/replay.py --case all --output "$HOME/SZ_replay_outputs" --mpi 8
 ```
 
-### Step 2 — Copy the Scripts
+For just one case, replace `--case all` with `--case NR_basal4hz` (3 simulations).
+For a different subset, use `--levels 1.000,0.760,0.600`.
+For a **configuration-only check**, add `--prepare-only` (no HDF5/NIO simulation).
 
-Copy both directories into the upstream `cerebellum` repository:
+4. Generate diagnostic results from the new HDF5/NIO files:
 
 ```bash
-cp -r SZcerebellumModel/scripts_sh cerebellum/
-cp -r SZcerebellumModel/scripts_py cerebellum/
+python reproducibility/scripts/analyze_quick_results.py \
+  --input "$HOME/SZ_replay_outputs" --strict
 ```
 
-Alternatively, move the directories:
+The script writes population firing rates and three diagnostic plots to `~/SZ_replay_outputs/analysis_smoke/`.
+Open [`notebooks/quick_smoke_test.ipynb`](notebooks/quick_smoke_test.ipynb) to explore the same results interactively.
+
+5. **Full published parameter sweep (explicit opt-in):** all 16 levels in all six cases, 96 simulations:
 
 ```bash
-mv SZcerebellumModel/scripts_sh SZcerebellumModel/scripts_py cerebellum/
+python reproducibility/scripts/replay.py --case all --full --output "$HOME/SZ_replay_outputs" --mpi 8
 ```
 
-### Step 3 — Verify the Directory Structure
+A default three-level test is sufficient for environment/pipeline verification but **not** for reproducing complete manuscript curves or their inferential statistics.
 
-After integration, the working directory should have the following structure:
+**The smoke test must be run on each target installation; package installation does not build NEST itself.**
+The replay script copies configurations and a *working* set of morphologies and source code to a
+separate output directory before calling `bsb compile`, `bsb reconfigure`, and `bsb simulate`.
+It never edits the archived inputs or overwrites an existing unfinished run automatically.
 
-```text
-cerebellum/
-├── cerebellum/
-├── scripts_sh/
-├── scripts_py/
-└── ...
-```
+## Reproduce analyses and explore notebooks
 
-All workflow commands should be executed from the **root of the upstream `cerebellum` repository**, unless otherwise specified.
+### New simulations (fast diagnostic)
 
----
+[`notebooks/quick_smoke_test.ipynb`](notebooks/quick_smoke_test.ipynb) and
+[`reproducibility/scripts/analyze_quick_results.py`](reproducibility/scripts/analyze_quick_results.py)
+read newly generated HDF5/NIO directly, combine the **eight MPI NIO partitions** correctly,
+and plot raw mean firing rates for Purkinje and DCN-P in each experimental protocol.
+They require no previous `stats.yaml` or historical `.pkl` cache.
+The 3-point outputs are useful for **installation verification**, not a substitute for
+reproducing the full published analyses.
 
-## 3. Running the Workflow
+### Original 2025 manuscript analysis notebooks
 
-The repository includes a Bash script for executing an automated computational workflow covering:
+Three real Jupyter notebooks used in the study are included under
+[`notebooks/historical/`](notebooks/historical/) from the 2025
+[Zenodo reproducibility archive](https://zenodo.org/records/23391996):
 
-1. Morphological degeneration
-2. Network construction
-3. Simulation configuration and execution
-4. Post-simulation analysis
-
-### Example Execution
-
-Navigate to the upstream `cerebellum` directory:
-
-```bash
-cd cerebellum
-```
-
-Execute the provided workflow:
-
-```bash
-bash scripts_sh/run_test.sh
-```
-
-The `run_test.sh` script invokes `scripts_sh/sim_setup_v5.sh` with predefined simulation parameters.
-
-The current example configuration uses:
-
-- **Stimulation protocol:** `kase_stim_vitro`
-- **Degeneration level:** 30% (`start=30`, `stop=40`, and `n_steps=1` select only the start value)
-- **Degeneration steps:** 1
-- **Synaptic alteration:** `glutamate:all`
-- **Compensation flag:** `0`
-- **DCN–IO flag:** `0`
-- **Resilience parameters:** `k0 = 0.5`, `sharpness = 2`
-
-These parameters can be modified directly in `scripts_sh/run_test.sh`.
-
-**Note:** This workflow launches computational simulations rather than a lightweight unit test. Execution time and computational requirements depend on the selected network configuration, degeneration range, and simulation backend.
-
----
-
-## 4. Reproducibility
-
-**Validation status (23 October 2026):** BASAL, EVOKED and AUTOR smoke checks passed. A repeat run matched 1,398 numerical entries against the versioned smoke-test baselines with maximum absolute difference zero on the tested three-level dataset. This demonstrates repeatability of these tests in the validated environment, not independent reproduction of all manuscript figures, complete 16-level curves or sigma sweeps.
-
-### Reproducing the simulations reported in the paper
-
-To reproduce the main simulation conditions described in the associated manuscript, execute the following Bash scripts from the **root directory of the upstream `cerebellum` framework**, after completing the installation and integration steps above.
-
-The experiments combine two stimulation protocols, **basal activity** and **Kase-inspired saccadic stimulation**, with two resilience configurations: **HR (with resilience)** and **NR (no resilience)**.
-
-| Stimulation protocol | Resilience configuration | Script |
+| Notebook | Experiment pair | Purpose |
 | --- | --- | --- |
-| Basal activity | HR (with resilience) | [`scripts_sh/batch_setups_HR_base.sh`](scripts_sh/batch_setups_HR_base.sh) |
-| Basal activity | NR (no resilience) | [`scripts_sh/batch_setups_NR_base.sh`](scripts_sh/batch_setups_NR_base.sh) |
-| Kase stimulation | HR (with resilience) | [`scripts_sh/batch_setups_HR_kase.sh`](scripts_sh/batch_setups_HR_kase.sh) |
-| Kase stimulation | NR (no resilience) | [`scripts_sh/batch_setups_NR_kase.sh`](scripts_sh/batch_setups_NR_kase.sh) |
+| `META_PAPER_MODELING_AUTOR_PREFIXED.ipynb` | `HR_auto` / `NR_auto` | Auto-Rhythm and supplements |
+| `META_PAPER_MODELING_BASAL_PREFIXED.ipynb` | `HR_basal4hz` / `NR_basal4hz` | Basal responses and Fig. 2 |
+| `META_PAPER_MODELING_EVOKED_v5_PREFIXED.ipynb` | `HR_kase` / `NR_kase` | Evoked Fig. 3–4 analyses |
 
-Run the simulations using:
+The original notebook inputs include `B_collective_results/1.structures/df_summary.pkl`
+and `B_collective_results/2.functions/df_summary.pkl`. The **original**
+`scripts_py/do_network_analysis.py` and `scripts_py/do_completeAnalysis_v2.py`
+generate these files; the Kase processor generates `sigma_*/<sigma>_df.pkl`.
+The historical BASAL notebook itself creates `tempPlots/basal_df_all_str.pkl` and
+`tempPlots/basal_df_all_weights.pkl`, which EVOKED subsequently reads.
+
+**These intermediates can be rebuilt; they are not mandatory downloads.** The portable
+`replay.py` stops after HDF5/NIO. The optional adapter below makes an analysis-only
+workspace with the historical `1.structure`, `2.stimulus`, `3.function` folder layout,
+links the generated HDF5/NIO without duplicating them, and calls the original processing
+scripts to recreate intermediate `.pkl` files:
 
 ```bash
-bash scripts_sh/batch_setups_HR_base.sh
-bash scripts_sh/batch_setups_NR_base.sh
-bash scripts_sh/batch_setups_HR_kase.sh
-bash scripts_sh/batch_setups_NR_kase.sh
+python reproducibility/scripts/rebuild_intermediates.py \
+  --input "$HOME/SZ_replay_outputs" --require-smoke
+python reproducibility/scripts/rebuild_intermediates.py \
+  --input "$HOME/SZ_replay_outputs" --require-smoke --execute
 ```
 
-Each launcher calls [`scripts_sh/sim_setup_v5.sh`](scripts_sh/sim_setup_v5.sh), which automatically performs morphological alterations, network construction, stimulus generation, simulation execution, and structural and functional analyses across the specified degeneration levels.
+The first command only stages the layout; the second executes legacy analysis. It
+writes to `$HOME/SZ_replay_outputs/legacy_analysis/`, never modifying the repository's
+archived configurations or the original Zenodo datasets. This legacy post-processing
+path is **not yet validated end-to-end against a fresh 18-simulation NEST run**, so
+inspect its logs and resulting DataFrame schemas before claiming exact reproduction
+of the published plots.
 
-The HR and NR configurations use different resilience parameters (`reserve_sharpness = 15` and `2`, respectively, with `reserve_k0 = 0.5`). The basal simulations assess spontaneous network activity, whereas the Kase simulations assess responses to saccadic-like mossy-fiber stimulation. The basal HR and NR scripts cover 0–40% degeneration in 32 steps; Kase HR uses 32 steps and Kase NR uses 16 steps over the same range.
+The historical notebooks are copied into the legacy workspace if staged with
+`python reproducibility/scripts/import_historical_notebooks.py`. Run BASAL there
+before EVOKED so the `basal_*.pkl` dependencies are generated in the right order.
+For the complete Fig. 2–4 analyses, run all 16 k levels plus the Kase sigma sweep
+used in the original analysis. The 3-level smoke run is only for pipeline checks.
+See [notebooks/README.md](notebooks/README.md) for exact steps and caveats.
 
-These launchers reproduce the main **simulation setups**. Exact numerical replication additionally depends on using the same random seeds, simulation environment, and analysis settings as in the original experiments. The current pipeline generates seeds at runtime, so repeated executions may differ numerically.
+Download original 2025 datasets and historical analysis resources from
+[Zenodo record 23391996](https://zenodo.org/records/23391996).
+Missing historical records must remain marked missing, never filled with new-simulation NIO.
 
-### Reproducibility Archive
+## Repository layout
 
-The source code for network construction, simulation, and analysis is publicly available in this GitHub repository.
+- `cerebellum/`: one local source snapshot of the v0.5.0 package (includes NESTML models).
+- `configurations/SZ_repro_2025/experiments/`: 96 complete YAML configuration trees.
+- `morphologies/SZ_repro_2025/`: 80 deduplicated SWCs plus morphology YAMLs.
+- `reproducibility/`: portable runner (three-level default / full 16-level opt-in), raw-NIO diagnostic analysis, environment inventory and checksums.
+- `notebooks/`: quick diagnostic notebook plus unchanged-code historical notebooks used for the paper.
+- `data/`: instructions and ignore rules for optional data downloaded separately from Zenodo.
+- `scripts_py/`, `scripts_sh/`: scientific generation and analysis pipelines from the SZ project.
+- `validation/`: research validation materials; see availability notes.
 
-A dedicated **Zenodo reproducibility archive** is currently being prepared and will be made publicly available shortly.
+The original scientific workflow scripts may generate new random Kase bursts;
+**the archival replay above does not regenerate any burst or any YAML seed**.
 
-The archive is intended to provide:
+## Source, data and citation
 
-- Simulation configurations and parameter settings
-- Numerical datasets underlying the main and supplementary figures
-- Additional scripts and metadata required to reproduce the reported results
-- Supporting materials for independent verification of the computational analyses
+- **Cerebellar model code:** [dbbs-lab/cerebellar-models, version 0.5.0](https://github.com/dbbs-lab/cerebellar-models/tree/v0.5.0).
+- **Brain Scaffold Builder (BSB):** [dbbs-lab/bsb](https://github.com/dbbs-lab/bsb).
+- **Original simulation datasets (HDF5 and NIO):** [Zenodo reproducibility record 23391996](https://doi.org/10.5281/zenodo.23391996).
+- **Scientific preprint:** [Zenodo preprint, version 1.0 (2026)](https://doi.org/10.5281/zenodo.18813588).
 
-**Reproducibility Archive (Zenodo):** https://doi.org/10.5281/zenodo.23391996
+### Cite the scientific preprint
 
-The reproducibility archive will be maintained as a separate record from the manuscript preprint.
+If you use this model, reproduce its computational experiments, or build upon its results, please cite:
 
-Until the archive is released, users can access the source code through this repository and consult the associated manuscript for a detailed description of the computational methods.
-
----
-
-## 5. Preprint and Citation
-
-The scientific methodology, computational framework, and main findings associated with this repository are described in the following preprint, publicly available on Zenodo:
-
-**Vergani, A. A., Faris, P., De Grazia, M., Fusar-Poli, P., Casellato, C., & D'Angelo, E. U. (2026).** *Cerebellar Degeneration Induces Timeliness Disruption, Paradoxical Information Flow and Network Overdrive in a Digital Model of Schizophrenia* (Version 1.0). Zenodo.
-
-**DOI:** https://doi.org/10.5281/zenodo.18813588
-
-**Preprint:** [Access on Zenodo](https://zenodo.org/records/18813588)
-
-### How to Cite
-
-If you use this computational framework, its implementation, or its associated methodology in your research, please cite the preprint above.
+**Vergani, A. A., Faris, P., De Grazia, M., Fusar-Poli, P., Casellato, C., & D'Angelo, E. U. (2026).** *Cerebellar Degeneration Induces Timeliness Disruption, Paradoxical Information Flow and Network Overdrive in a Digital Model of Schizophrenia* (Version 1.0) [Preprint]. Zenodo. https://doi.org/10.5281/zenodo.18813588
 
 **BibTeX:**
 
 ```bibtex
 @misc{Vergani2026SZcerebellum,
-  author = {Vergani, Alberto Arturo and Faris, Pawan and De Grazia, Marialaura and Fusar-Poli, Paolo and Casellato, Claudia and D'Angelo, Egidio Ugo},
-  title = {Cerebellar Degeneration Induces Timeliness Disruption, Paradoxical Information Flow and Network Overdrive in a Digital Model of Schizophrenia},
-  year = {2026},
-  publisher = {Zenodo},
-  version = {1.0},
-  doi = {10.5281/zenodo.18813588},
-  url = {https://doi.org/10.5281/zenodo.18813588},
-  note = {Preprint}
+  author       = {Vergani, Alberto Arturo and Faris, Pawan and De Grazia, Marialaura and Fusar-Poli, Paolo and Casellato, Claudia and D'Angelo, Egidio Ugo},
+  title        = {Cerebellar Degeneration Induces Timeliness Disruption, Paradoxical Information Flow and Network Overdrive in a Digital Model of Schizophrenia},
+  year         = {2026},
+  publisher    = {Zenodo},
+  version      = {1.0},
+  note         = {Preprint},
+  doi          = {10.5281/zenodo.18813588},
+  url          = {https://doi.org/10.5281/zenodo.18813588}
 }
 ```
 
----
+The [Zenodo dataset](https://doi.org/10.5281/zenodo.23391996) and the [scientific preprint](https://doi.org/10.5281/zenodo.18813588) are separate records. Cite the dataset when using archived original simulation outputs, in addition to citing the preprint when referring to the scientific study.
 
-## 6. Acknowledgments
+The source is distributed under this repository's GPL-3.0 license, with upstream authorship and licensing information in `reproducibility/UPSTREAM_NOTICE.md`.
 
-This work was supported by the **Virtual Brain Twin project**, which received funding from the European Union's Horizon Europe research and innovation programme under Grant Agreement No. **101137289**.
+## Funding and acknowledgments
 
-Project information: [Virtual Brain Twin — CORDIS](https://cordis.europa.eu/project/id/101137289)
+The following funding acknowledgments concern the work of **Alberto Arturo Vergani (AAV)** and follow the attribution used in the manuscript's financial-disclosure draft:
 
----
+- **EBRAINS 2.0:** This research received funding from the European Union's Horizon Europe Programme under Specific Grant Agreement No. **101147319** (*EBRAINS 2.0: A Research Infrastructure to Advance Neuroscience and Brain Health*; attributed in the manuscript to **Egidio D'Angelo (ED), Claudia Casellato (CC), and Alberto Arturo Vergani (AAV)**).
+- **Virtual Brain Twin:** Work by **Alberto Arturo Vergani (AAV)** was supported by the European Union's Horizon Europe Research and Innovation Programme under Grant Agreement No. **101137289** (*Virtual Brain Twin for personalised treatment of Psychiatric Disorders*; project support attributed in the manuscript to **Egidio D'Angelo (ED)**).
 
-## 7. Contact
+European Commission project records: [EBRAINS 2.0 (101147319)](https://cordis.europa.eu/project/id/101147319) and [Virtual Brain Twin (101137289)](https://cordis.europa.eu/project/id/101137289).
 
-**Alberto Arturo Vergani, PhD**
+Funding specific to other manuscript coauthors is detailed in the manuscript's Financial Disclosure. The final author/grant attribution should be consistent with the approved submission statement.
 
-Department of Brain and Behavioral Sciences  
-University of Pavia, Italy
+## Contact
 
-Email: [albertoarturo.vergani@unipv.it](mailto:albertoarturo.vergani@unipv.it)
+Alberto Arturo Vergani — University of Pavia, Italy.
 
-GitHub: [albertoarturovergani](https://github.com/albertoarturovergani)
+For questions about scientific reproducibility: albertoarturo.vergani@unipv.it.
