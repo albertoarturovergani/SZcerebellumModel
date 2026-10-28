@@ -95,6 +95,64 @@ The replay script copies configurations and a *working* set of morphologies and 
 separate output directory before calling `bsb compile`, `bsb reconfigure`, and `bsb simulate`.
 It never edits the archived inputs or overwrites an existing unfinished run automatically.
 
+## Run the VBT stimulation protocol
+
+The VBT stimulus is implemented in `scripts_py/make_vbt_stimulus.py`.
+To run it, use the dedicated `scripts_sh/batch_setups_NR_vbt.sh` launcher,
+which selects `vbt_stim_protocol_vitro` (not the Kase stimulus).
+
+Run from a **prepared cerebellum working directory**, after activating the
+compatible BSB/NEST/PyNEST environment with MPI and `cerebmodule`. This legacy
+pipeline requires the original `configurations/mouse/` templates (including
+`nest/basal_vitro.yaml` and `mouse_cerebellar_cortex.yaml`),
+`morphologies/morphologies.yaml`, and the source SWC morphologies. The scripts
+alone are not a standalone simulation installation. The updated
+`scripts_py/make_network_v9.py` resolves its working root from the parent of
+`scripts_py/`; keep the scripts and required inputs in the same working directory.
+
+For the existing layout with this repository inside the working directory,
+copy the updated scripts and launch from the parent directory:
+
+```bash
+# Start in the SZcerebellumModel repository root.
+cp -r scripts_sh scripts_py ../
+cd ..
+bash scripts_sh/batch_setups_NR_vbt.sh
+```
+
+The dedicated launcher performs **one NR run at 30% degeneration (`k=0.700`)**,
+with compensation off, `glutamate:all`, `do_dcnio=0`, and reserve parameters
+`k0=0.5`, `sharpness=2`. With `n_steps=1`, only `start=30` is used;
+`stop=40` does not add a second run. Its explicit equivalent, from the same
+prepared working directory, is:
+
+```bash
+bash scripts_sh/sim_setup_v5.sh vbt_stim_protocol_vitro 30 40 1 0 glutamate:all 0 0.5 2
+```
+
+For a 16-level NR VBT sweep from 0% to 40% degeneration, use:
+
+```bash
+bash scripts_sh/sim_setup_v5.sh vbt_stim_protocol_vitro 0 40 16 0 glutamate:all 0 0.5 2
+```
+
+Each simulation lasts **25 seconds**: 0–5 s baseline at 4 Hz; 5–13 s eight
+one-second steps with rates drawn uniformly from 5–100 Hz; 13–21 s eight
+localized bursts with durations drawn from 20–120 ms and rates `6000/duration`
+Hz, superimposed on a 4 Hz baseline; 21–25 s baseline only. The launcher uses
+eight MPI processes for reconstruction and simulation and writes a timestamped
+experiment directory with `1.structure`, `2.stimulus`, and `3.function`
+subdirectories for each degeneration level. It also runs legacy analysis.
+Use a dedicated working directory: the pipeline generates and moves files there.
+
+This command generates a **new realization of the VBT protocol**. The current
+stimulus generator does not seed NumPy's random draws, even though it writes a
+NEST seed into the YAML; preserve the generated stimulus YAML to reuse the
+exact step rates and burst durations. This VBT run is separate from the six
+historical Auto-Rhythm/Basal/Kase cases handled by `reproducibility/scripts/replay.py`; `--case all` does not run VBT.
+The commands above have not been validated by a complete VBT simulation in
+this update.
+
 ## Reproduce analyses and explore notebooks
 
 ### New simulations (fast diagnostic)

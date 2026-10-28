@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # === CONFIGURAZIONI ===
-stim_name="kase_stim_vitro" #"vbt_stim_protocol_vitro" #kase_stim_vitro" #"pawan_stim_vitro"
+stim_name="vbt_stim_protocol_vitro"
 start=30
 stop=40
 n_steps=1 #16
