@@ -3667,8 +3667,3824 @@
       "kase": [
         -15,
         15
+      ],
+      "basal": [
+        -15,
+        15
       ]
     },
-    "paired_cells": false
+    "paired_cells": false,
+    "structural_colours": "Fixed population identity colours; five cortical populations only."
+  },
+  "basal_and_structure_recovered_validation": {
+    "passed": true,
+    "videos": [
+      {
+        "file": "basal_sz_factor_dcnp.mp4",
+        "frames": 1001,
+        "duration_s": 40.04,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 25,
+        "sha256": "8f861c4624de1beae318648f5a1514985555f14d7e4dd23ddabd0fa2b69ed017",
+        "bytes": 19304252,
+        "passed": true,
+        "preview_visually_checked": true
+      },
+      {
+        "file": "atrofia_senza_resilienza_rotante_100.mp4",
+        "frames": 850,
+        "duration_s": 34.0,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 25,
+        "sha256": "5afb919129c1b4abbcdb7f6091debb764ef3890849cdc9edca25232106b1e7eb",
+        "bytes": 42620606,
+        "passed": true,
+        "preview_visually_checked": true
+      }
+    ],
+    "conditions": [
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/1.structure/mouse_cereb_dcn_io_nest_1.000.hdf5": "7d5cc26c5500994246003e334c9ac09829923954133d5477b9a82fd4df182939",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/34f1ac9d-62e7-4eb5-b488-e1c02c68c332.nio": "95223445d55934e16478ccff98f46565b2e2f66dbebb1baa135caf73992cd4c8",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/39390673-0267-46ee-995c-a295956a6a1d.nio": "43de89efd1d390f9de1e935c18a16adc8b7a9a55b686ffe8c8d5ac90bab7c15d",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/3cce6606-c3fa-4735-976d-91ece46f6a5b.nio": "e7711e36f8102364ed43945b3a30bdc348a1b164feabc64e83d3ee14c53d265c",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/5df2d9f6-eba4-41f7-ab25-33eea9ef5a5e.nio": "e4d3f4b300b1e885b56f0b43dbb51dd87c80b90c7d3707ad34dd1ae69b15c5e9",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/7697e64c-9973-4021-a481-819684d861b3.nio": "3dc806bb365ed94a18809970fc0c88fec22a9359935a1fcadf6ad63a09280ee6",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/886da953-cfd0-41bb-9145-62f92915bb9c.nio": "3e59ffa03038a8b778b98cfb681b4957c377fb2e056b5de13b30b0f3f9043a37",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/a00f3abf-9cb6-476e-a6dd-06d3f4493451.nio": "29acd278caa7a406264b13c1c66f8f27518a9508a0f9644b968a03dd9b0cc69d",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/ab8f4652-f149-4de1-869f-6bcfd390be67.nio": "dc0a1fe0fe524b885072640916c70ecb3c0fcd50831591272f34ef684ea8d9b7",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/2.stimulus/basal_vitro_1.000.yaml": "7ab1160eda3b1281ec72d9ea2d042376c36b8a2cbf9f022a2d7e8d6e43163e1e",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/2.stimulus/dcn_vitro_nest_1.000.yaml": "55d20942d61357c9f62514b03e5da96fb0eeae78ef0f89e938e2769a6381a6af",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/2.stimulus/dcn_io_vitro_nest_1.000.yaml": "1151efe7aa1dd7c8362c644e4e7cb1ffe4a0ed35f6949eb2211b8eb9590203e1"
+        },
+        "structural_yaml_sha256": "c60cb3adbe3addc03a8fb345947048bcfc04cc764580b9e92bd55715a5a51e07",
+        "morphometrics_sha256": "8716df3eceaefc2a7b92ae45cb5830c7ca3000371f08754078787ab9ebd59186",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_1.000.hdf5",
+            "old_sha256": "3977abb2a278c549c98966fec9ef2f6331906fc8c911f868f9508dd1919aba5a",
+            "recovered_sha256": "7d5cc26c5500994246003e334c9ac09829923954133d5477b9a82fd4df182939"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 31212,
+        "synapses": 1659002,
+        "cortical_depth_um": 295.0
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/1.structure/mouse_cereb_dcn_io_nest_0.973.hdf5": "0f11a2c15102019f183481631d653a580bff634afb4855bd220a37fb35e8aeee",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/1c541ff1-aa76-47db-bdbe-1718abdbe2ff.nio": "ded1cc6c90a7bcbc8e4a1009ec44f1afe584c9e8d84a6751b6f372d8c67d59dc",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/211d9eb6-b00a-4924-a646-4538dba610a4.nio": "ed00b3f7ff52a3dd9b579fc1f6aab833b9bc0ef8e629ee857acb871cbaa2b936",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/3829a951-bd96-4ddf-bf9e-d7076b3d643e.nio": "7084686e180ffc0d4b2f65c8f9929e7bfca0f79c5d43b6cebd7242532e6f0ea5",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/82fe7698-cc86-49f9-808a-27607e56c7d1.nio": "fb92d06b63ae73c65a2cf50e5066322b56903b91e1b00309808583c9592064ae",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/87c4a9c0-1123-46a0-a155-80866bb9d065.nio": "372f67fcb51401d578d793666182f465d31a1b4445c4ebdee79f6fd11d62b8ef",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/b989f1fe-ea6c-46a5-bc1a-e21132f366cb.nio": "88723a2eea0dfcf71c4323c07b4c999270779de2cd893ea28bbcc4498d23ef1d",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/bda5092b-11c7-49ab-b448-7e3ad555e041.nio": "e239a5a5d7f90194ca63e3d53266aba332c462661fde078c76012940a9ff61f9",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/c139d1b2-3b8f-4743-9625-844d4b266638.nio": "f8ca5aedf53f108fcc248d197753a23fd5b50fae49b8c4c7571f2767df8aa4aa",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/2.stimulus/basal_vitro_0.973.yaml": "8951633f8ec0f91084caba5262867c854fbfad80041d91b2a7e3a24df65058f2",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/2.stimulus/dcn_vitro_nest_0.973.yaml": "15076090031fa733aa42b0bd166a54e4c192033c022cf82f8e938cde9735cf2e",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/2.stimulus/dcn_io_vitro_nest_0.973.yaml": "edb8e248fd88e83b5c307964b916859844c94f274e5ce34936db534bd3aa4140"
+        },
+        "structural_yaml_sha256": "fcbf7956109e6102e8cbeb19bff64d6a084d8cc2abe855b8e161b476ad2c274d",
+        "morphometrics_sha256": "d0b2f19852c69e4ac52bff7f896effbd8a18a065060206ba715f991f7ec7ba98",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.973.hdf5",
+            "old_sha256": "717b3f8ffc2f18fc6793b0788791a7ca55d2a0e4c8032f94a2d4f210fcfb327b",
+            "recovered_sha256": "0f11a2c15102019f183481631d653a580bff634afb4855bd220a37fb35e8aeee"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 29782,
+        "synapses": 1486011,
+        "cortical_depth_um": 288.13849100000004
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/1.structure/mouse_cereb_dcn_io_nest_0.947.hdf5": "2ee1b32f7f611faa741a816030a8978826c2d332a833b97d5b3f6fb812045f5b",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/053ebb2d-ba3d-4c71-bb6f-a428debe5ef1.nio": "47a13b8906672fb4d25b4b1b4463757e37bc43d0e533d1775f3c7c764411502f",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/0577f362-9170-44da-8f34-49982bec24f2.nio": "e53d408a7609de20d5fa8413c49184323416b7ffebb9eba6ac26fe7efcd8e63b",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/1d557af7-ad55-4a49-9b29-791ca780e169.nio": "3791c8bfa4d7be3943d83a5f60e530c67a1b703bee76964fed40f35d89ddf6d8",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/2d73c1dd-a03d-4fff-acf3-eac0f963b38b.nio": "b869e4d9fc8905fde3c2a77e38e15ce67704b27152ba69b0a4f474fd38c498d7",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/3da05150-3c8e-4677-9ec6-1e637bd717af.nio": "9728bf2543707e1f2dda54d1dcbc01abf83bc0637ea8f69cfcb486f66447a81b",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/a3cd1ce7-cda0-417a-b422-de9cea688c49.nio": "84b4bf1e43f48cb0599ab0f2f16beb8053df85ab89a1ecb8dbe0a7e8d0490b8c",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/dae8ed21-cd69-4fa4-9c23-2227ee20ae10.nio": "22170c7767cca5a76050f008d91893f78e7934e83dbbd41b97027a549ffaa8f7",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/f8926340-b977-41a9-848a-38c786b34694.nio": "9193905d44325419ee344a6faaf085ce8dc32bc8ea0659d739df7f36b5a0da85",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/2.stimulus/basal_vitro_0.947.yaml": "4c58dc83506a4cd35add8cca65320e7cb82c6dab9d5887ead454fb723f2799fd",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/2.stimulus/dcn_vitro_nest_0.947.yaml": "64df70b7fb39b87efd42f3680eb3640e3b8788e6626d974d0a414b0f4671dfab",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/2.stimulus/dcn_io_vitro_nest_0.947.yaml": "d8ef979d84065f9366f4b3d72bd08a570ef60a18a0513b2c5f3b183bcd1ca097"
+        },
+        "structural_yaml_sha256": "fd08be0248407ad6b2402112be4d7d7863cdb153192484bd7faf52d58ceb95a9",
+        "morphometrics_sha256": "ce75f38151e4c0864f6c327f230a223e57788b8511f211fe334158c1544dcdf8",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.947.hdf5",
+            "old_sha256": "3c58e9446aefd60ec5c265994280e6e4492dfaf0301b8cc7ca2c01427dc619f3",
+            "recovered_sha256": "2ee1b32f7f611faa741a816030a8978826c2d332a833b97d5b3f6fb812045f5b"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 28396,
+        "synapses": 1269939,
+        "cortical_depth_um": 281.37494100000004
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/1.structure/mouse_cereb_dcn_io_nest_0.920.hdf5": "b5518590a2ca714aededb98e08b5399a173936b7ce361a92b37831d7fb08d38e",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/0265cf7b-9545-485d-98d0-1e93e396093f.nio": "d36df55e36e5c6bf44c0c167112e9aa00d8a33aa3a81fd2b5435207ede1a55d2",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/0a36b039-0e81-4234-bd22-03f82dfeab16.nio": "dc530d0cabca2906e894feeceb7668964728a11d5c6082a9dbdacf4e7fd6c9c4",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/0bcb14a9-8516-468f-ba5d-870e11864821.nio": "cb4763529ff068147e3f932d47f546815947c58b41d1a0499c2248c043a89dc1",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/271d1ca4-52e4-4b2f-8170-09f7273d7760.nio": "48fb30326d2c90f32ea920ae600908a2c9f260d99a11facf8aff0abd55fa14a6",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/59f08332-f9c0-4e35-a8c5-d36200490e5f.nio": "ebc18b1f3408c6e1782716904b5b1aa41324883f7b8d3540e0b49b5189a9e023",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/c2e06c1a-a4c3-41f7-b912-b54647cc4958.nio": "404fbdc615ac04a1767897d686b02fff397055cac504e7aa4f820ced16667ef5",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/c3731447-9f02-4410-8207-42db27977a88.nio": "eadc07c07927d8bf22cca38bc70eebe5c516b3e6b0a1ed5b26f33b1785fc0c5c",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/e0c93091-1eda-4baf-b449-657b10513aae.nio": "c8c6ecbc36d39dd066a8bb03f1cfe4c6fcf513fd195dcd6dfc95ed2512cb9f2a",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/2.stimulus/basal_vitro_0.920.yaml": "d4e3c5729027a8a9d028ffecbe9b57288c65bb6bd32f7348ec5fc9d995eea4fe",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/2.stimulus/dcn_vitro_nest_0.920.yaml": "8b64209f01e3a13e1d5e5c95f0389f079db389e66cf68abf646d67878bfa1fcf",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/2.stimulus/dcn_io_vitro_nest_0.920.yaml": "b7417dadd569e49e40b9a04e81f895e44db7f69f8a81d53beaf47569b2912236"
+        },
+        "structural_yaml_sha256": "a6bf928f4d07af47cbc626303c40d2ab14aa14753dd0dc5907ee2c45fc83566e",
+        "morphometrics_sha256": "85b27d97f65638e6b0433a2151099992100c24eccf1e2cb46540543b6f031285",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.920.hdf5",
+            "old_sha256": "6080c409cc5a75d6a68552226ae722e5a8f6ce3e00276d3d636236a3991447ec",
+            "recovered_sha256": "b5518590a2ca714aededb98e08b5399a173936b7ce361a92b37831d7fb08d38e"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 26957,
+        "synapses": 1038221,
+        "cortical_depth_um": 274.193496
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/1.structure/mouse_cereb_dcn_io_nest_0.893.hdf5": "983b22fb2524ab187490f73bffd1fe1311ba66e171de31ca0415498f83c07805",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/04bfe129-9145-4be9-b47d-ed7f9f8807cd.nio": "9de5edea1eb07f03316e41cc651ef62da1a7f0fa9bbc10f6ef7ff3842e18ff2e",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/06c06795-4706-4e2f-8f1a-e80a366876af.nio": "0cfce6b8f76b87637c00ae73c862c94ee255b5d5dc0b50848ddbe7656db3ab0b",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/112f452a-0a65-4637-bf3e-a87760ab6815.nio": "7d853b7e06a37c3746858f7ac645f38671fa9cb728e0c5099d4b41f5e3a826d9",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/29bcd61c-a376-4df9-8d6c-595c9be62c89.nio": "3d5ac42e6dffcb80069906c0b9fbb7784e3b2ba4c62cf406618158541608f6a5",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/65798dae-1afe-46f9-a893-da5bbbb4c3be.nio": "cc0829e6a13d388412b669eb86230f6f24acd69b746cd7cfcb58f7fa1594bc2a",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/97826493-1e7c-4b46-a6bc-485a5aac2127.nio": "ef5568a1fe010e673cdac0c636c04f7786c54425c761937a0c8255291c059a82",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/e447e190-6d70-4cd4-8986-7ca71f8ffe99.nio": "a5790cb3d0621b90b1366e47278c15721c1a41f95c7f51db05e6c652de4ac2f6",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/ecfb7f3d-269e-48fb-88e3-666350681195.nio": "6b0dfa1df66e3392a768250590d1805a38534089fb1febc5b5df955fe4dbf902",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/2.stimulus/basal_vitro_0.893.yaml": "0500f993e8f2221a6432049e3388c3ec650a3c1f9124e9ae871921c37f22ba8e",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/2.stimulus/dcn_vitro_nest_0.893.yaml": "7c6a521a06870710ccb0241b759fe82f4738275d5f806b97b56ae13a4ee22385",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/2.stimulus/dcn_io_vitro_nest_0.893.yaml": "0ac1f6f737595126980da866ae7e9198ae487b74edf3558f42186a3406dff8f0"
+        },
+        "structural_yaml_sha256": "712a92513c5c39c5632ff9bd51798c03bb15c6633588df49f89376add7576211",
+        "morphometrics_sha256": "3cb788682bbaec7cecee93e19101a2b8f295d61a69386c6881bf1509769ff968",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.893.hdf5",
+            "old_sha256": "a9267770be0a1cbf1ae5bf3ad1d361d3b8645a2784e52b6e49c00191a6825aa8",
+            "recovered_sha256": "983b22fb2524ab187490f73bffd1fe1311ba66e171de31ca0415498f83c07805"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 25541,
+        "synapses": 901969,
+        "cortical_depth_um": 266.856493
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/1.structure/mouse_cereb_dcn_io_nest_0.867.hdf5": "2b9ecad16b19cdf34eccd548b3ad56f1981b616d38816c59dddbfc33dca767ab",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/270263d9-b1e3-441c-af3a-7007351e1111.nio": "2a1ad80e6e8e375bb7faf80ec5fcf25e34b6b2656672f3ca719eff6382b6b6b6",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/54a0536a-2f43-434a-8b42-c24642ca8796.nio": "78fa52e72284a6b1f00851bd641610d90a5e97b6a44066054eadbae2255e3c15",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/921c17ea-087d-4646-ac9f-f92e09dac8a0.nio": "f44ba3339f3707ffa8dbca50bd87a5d79579efd91cdb61ae57f4e0d45900c395",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/96b10a37-9d96-4874-b90f-16a68efe7eef.nio": "0eadbd9b1072c2b21f656882f3fd2b808adf912e2e138bad656f7e8420bafd64",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/a1b192c6-7173-4129-ab7f-28077779428c.nio": "45043c8a46eac5343be4d1e87fe1b4d901a863c2d9d78bf598f6b8dd727021d4",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/cfc6be15-9121-4232-8072-1f3d6cfd2e67.nio": "cbc020e840dada26782fa15cf5d365104a3ac2cff1a9a116ce83fbf13b48a0a1",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/ea927534-78ee-4c09-a5f0-c27f5fd1fd3d.nio": "fce94e7bb72d8ddfa91d8fd728f544ec52c159be9e54bff8ba30af39a9628925",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/ec55337e-ec52-451d-93c5-2c3a841eb613.nio": "bf46c6f295f0e372273cb397f5137e322af8e284719a50c0657fdfd9ff4a8e36",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/2.stimulus/basal_vitro_0.867.yaml": "6a0a76d58c7d6c1930f2e62a1608e65a12a4fa9237150156777aca10a80fda70",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/2.stimulus/dcn_vitro_nest_0.867.yaml": "1634e2082004231daf8e71c99ebc766942ed92588c001ffc479006529ffe0d98",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/2.stimulus/dcn_io_vitro_nest_0.867.yaml": "f03f01ad116e442f6fd910162c8786a257d4cf35a1f947816c9bf8ebe1af140e"
+        },
+        "structural_yaml_sha256": "74a1d723be008661747e025a759f67bc1bc7c05f5223fe5904e8bf490fe3b1f8",
+        "morphometrics_sha256": "5d576324c79af8881a3abac608bb7e07cee5614320ebc55440853795fa477da6",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.867.hdf5",
+            "old_sha256": "bbaa496610f44974b9a2109239279b78ef22c9c261957182e3065ea7e28b62a8",
+            "recovered_sha256": "2b9ecad16b19cdf34eccd548b3ad56f1981b616d38816c59dddbfc33dca767ab"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 24190,
+        "synapses": 779066,
+        "cortical_depth_um": 259.64973499999996
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/1.structure/mouse_cereb_dcn_io_nest_0.840.hdf5": "098d579fd1706ef757f0ea355f934992793fbaaddcfbbef1e074b9d2144734f7",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/1b7acff4-ec3f-43f3-bcae-7e065821c066.nio": "9a567070508407c20b153e8a6a7b02daf086b97371143cdc7a63014ced6b5264",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/2d5cd8b1-c750-4626-aa11-2717ab6e483a.nio": "7f353da615212349331eea863f0b941fcc8cee07c22819dffe1686118ecd79b8",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/33ceee0b-c413-42bd-a977-1a6c870b3c48.nio": "61a19488759de09d2b548d3c6a434e117ed1d417b5f28af5f69e51ba63a7c2c0",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/4006a231-6b0f-4559-9c96-1705ed8abf99.nio": "90d2cf2f8da860d88a803f631cd52406ba5084865ed4b4277af48682abb6121c",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/6e9e885f-cd4c-4428-a282-4b74d8e2028e.nio": "a5182f33610867ea84dcc2e466e18187c7df2b0cd2406e192e2c3b8e666ae8eb",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/8f5fc6e8-dcef-440f-89d0-c77faaad259d.nio": "fc010b2211509656bc06bab3ab91998e5abcb4d36371ec3bf065b71e8651ad90",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/a6c6d516-08c5-4b0c-b31f-37cecef5655a.nio": "e4823266b7a7e9c173984aaa9bc06f785892c100e895dedca8a8b8aaba744a00",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/e8732097-4e79-466f-af57-3ddf44cf2aef.nio": "4982dbcdc33e5e089677e0353b32c4b4436d6a3d3149125587d54fef478487b4",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/2.stimulus/basal_vitro_0.840.yaml": "2dce0aba8df0c089611c9f4bf96956bac6ea0b9395b51bd78a98021789c7262f",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/2.stimulus/dcn_vitro_nest_0.840.yaml": "f6419e7419571c1d749a629c7cce2946d2db9399f860abfd6d0998fa3cdd9eca",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/2.stimulus/dcn_io_vitro_nest_0.840.yaml": "f91f35f51fc25fb650651835ae1fad9391eae9030d4618ab5c02d76ba515cbb2"
+        },
+        "structural_yaml_sha256": "56b416751b51aaaf7165ed8fbf9c579b95e36c35d63037402d767344b6ef1546",
+        "morphometrics_sha256": "199c916fa528ec31e3821473a49ac41c0a909c119f6812c66bcb788f2b38779c",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.840.hdf5",
+            "old_sha256": "c3c16e3f282fcefc8d9957517a65b35545b45ada29d196bf885849a153ace09d",
+            "recovered_sha256": "098d579fd1706ef757f0ea355f934992793fbaaddcfbbef1e074b9d2144734f7"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 22789,
+        "synapses": 676711,
+        "cortical_depth_um": 252.025259
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/1.structure/mouse_cereb_dcn_io_nest_0.813.hdf5": "5ba106b9d838ead0d8ced08b8c9456c56dba16745b741e00d07ef74ed0d7dda0",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/0511107e-169e-474a-b879-19bab371dd69.nio": "ee3d1ed4789dd0b9bf7ac931b408074d98de0e97fabbbd31d1daa681597e8b57",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/3e101550-9726-413c-82e3-a18e24398e09.nio": "8dd0e62d1215a9e6709774995c781110e7701b79656dd2103cb9a569bda8317c",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/4be2f005-e493-4fc2-a3b0-59059209c109.nio": "0eb455e28c953ed6c47070ae8e1338fc62f3802d834da3105b33ef57dd842b29",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/83b98aa1-747f-493d-a570-49abf50b2834.nio": "a8629220a5c800b5886469fc2cb0cdc6d94d683903ca8425682aac0c0ab940da",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/9c0f6d92-e9b4-490f-a15f-f584c107867a.nio": "d82fb2f957dd9af83a70bdcc5a91556f592ffb7a0e35eabcd9f39aed652e0f1e",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/b66a734a-cb23-4018-8dac-181b2bd1ab7d.nio": "38b1391382dd2e28b6026148dc98484216bdf34996d4175fe283a183d8020614",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/c14a340f-ac3c-4e6a-8637-d788e02427ee.nio": "89150b0effa8f9e6d4337c771725b3c3727db4a24c59e610eaffb3f6ba689876",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/f39315cc-858c-4e56-ac20-f359f14bd41e.nio": "86a345c06b6453c14beed93c7506090d5918ee9e0466de0cdf015a7f399cd53f",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/2.stimulus/basal_vitro_0.813.yaml": "c459cbe034dce42d0e592b66f854a6c690a073bc2b32e5967a65fc1a86b99f63",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/2.stimulus/dcn_vitro_nest_0.813.yaml": "124db4810fa2749df68dbb3ed87df30b27a600b8fd0c4c23a819831e3af64a3a",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/2.stimulus/dcn_io_vitro_nest_0.813.yaml": "b83ec55ffd32664bda75cf1b0ab47211666ee00e200fd172059d41cc6dc29118"
+        },
+        "structural_yaml_sha256": "c54fd7618354501c71b96f91543519c2ef1d7ef2c544df7e5ebc98ca3bee22b7",
+        "morphometrics_sha256": "e5a5db8329844513999798eb1b2e6350d5a91e73887c9338b333161aa7582d97",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.813.hdf5",
+            "old_sha256": "650b7b4eab70cbd98e46f9287237cd531a5a63bdb18a796eb47e68b1cee78336",
+            "recovered_sha256": "5ba106b9d838ead0d8ced08b8c9456c56dba16745b741e00d07ef74ed0d7dda0"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 21404,
+        "synapses": 549177,
+        "cortical_depth_um": 244.26478399999996
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/1.structure/mouse_cereb_dcn_io_nest_0.787.hdf5": "5c0a99eeebe9841b8ef0f38a5a987fee605c194f24d7b7a893cc1b0a0f5532c1",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/0b6069bf-0a93-4fcc-9b9b-3e9b5bf897ce.nio": "5ed239eb8d6e21f6064f03a93b29621c45f51042f88b83caab8d857722d5b2e3",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/650ae604-9c10-4cfa-806a-70e68bdb1e8f.nio": "076e2c853df93da9022be1e640b579be0341267e9866ffdcc017b4a11d39c803",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/777ef5a5-f513-4f80-a429-5b7119bee234.nio": "380c4dcbbfa18466e3d1728582b4034a8ecef614792b292c6a997423dadf748d",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/8c8513d6-ff55-41b5-bfb9-f882d474830b.nio": "bd64e0b95b70d13224baf2dbb4b50f240c8627eb697d1613af1ca60a7f4df004",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/9d5bc8bc-80d3-4e6f-8f2d-bba83afbbea8.nio": "e98eacd81eecc801b01ddafac83431b503bb1594ff3714a3ebafdf3930c97532",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/bb816085-cf60-44be-b61b-4f54de6f6397.nio": "2053e042dc6557a48d749f2ff319585b388ca8c2888dcd8114442822bfceb4c1",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/c4e01f4c-0220-43a0-9bba-fd2e1bce0cb2.nio": "d62ea95f6a9f24ef5b02929d9e15413c57248407fc748f6640b2244c39c44156",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/e4f2325e-3c9b-4956-aebf-5e97a531d14f.nio": "81afa5889811de17c36d1e3170b591692e554f532486c3f2c46125a8e4997a99",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/2.stimulus/basal_vitro_0.787.yaml": "8e737ea2123845cb4c81fda0bc8e5f940352cb7298a5bd62c973640671252689",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/2.stimulus/dcn_vitro_nest_0.787.yaml": "3e956cb7ce3ce359013b2c6d63a72492689e0dc81b432aa7c70e84c5bb2b5bb8",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/2.stimulus/dcn_io_vitro_nest_0.787.yaml": "80a284b392ab20591a2d043e3edaa18501d145b155b7f7099c843992e048292a"
+        },
+        "structural_yaml_sha256": "ea325e5d7a8e292f8f259b0776a358cd4a9327eabfce1ff4a24d981d8179f9be",
+        "morphometrics_sha256": "ffb02791b3f36614d9c9822506b597e95af39485b7010219c117abcd474c96e2",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.787.hdf5",
+            "old_sha256": "e6d0fc53afc7665834e53299275bfe9a77a2b8c7eb7b4e0879eab653aa2412ae",
+            "recovered_sha256": "5c0a99eeebe9841b8ef0f38a5a987fee605c194f24d7b7a893cc1b0a0f5532c1"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 20094,
+        "synapses": 479937,
+        "cortical_depth_um": 236.67059899999992
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/1.structure/mouse_cereb_dcn_io_nest_0.760.hdf5": "3ec521dc440cb97e8f00716aac35e6e1c176f38049053f77b843bccc312a78e2",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/56474557-3271-4953-9db4-197b117c3be4.nio": "5aa07979bf4db849c9f05ab93eb82d450dc83c91b87b5042be33b5104748c7a8",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/628aff85-8414-4bc6-921e-d04aa82d6c19.nio": "a811c45f7c03fca94a2583f69e5eb306cca433fd000af8693abb81f341ab210a",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/6309de30-7e47-43f0-9629-fff5dab8c713.nio": "6184b5681ca09b73a89596439e15176ec8f3d229214b089f210756a80a45f39c",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/75834240-983d-4b69-8fc3-62a5c26c919d.nio": "552c97533424f8e06eee783577e88618e6a78e9e75d3d6aadc6f22841b3b7667",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/88315b8c-ed5c-47ee-b84a-95400cb14a66.nio": "b0ed5a808cbef281b9f6b422e0e04371d4322f59f1a8b1fd74d023ab049b1903",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/99c89e8c-4349-4a10-9228-f0d5b8ff5fcb.nio": "e3b3bcb4cb1b16e4eeee151a3eb1237a08893ba6a3927c2bd403a114499e6e24",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/d56fff32-87d9-414f-aa45-d6316ce2760b.nio": "b98a40f96107c3b1233a97d7bd3b3bd37e018285ff6d0ab83ae134e6fc37628a",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/d604b6d3-dcc9-4866-bbdb-02ef1c4e5ef9.nio": "7cdd100ae5d85f7aca2ae0948d0944b05042096f034880cc193a26e8b0a23a3c",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/2.stimulus/basal_vitro_0.760.yaml": "64ef8636faecbbdcbfebb07b10ad54da9656425a2bb5b316d1fa99cd8a5b932e",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/2.stimulus/dcn_vitro_nest_0.760.yaml": "74a99defdc4fab0fd8a31d16836a3cee69d09477ecf1e0d7d3198e5678ede46f",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/2.stimulus/dcn_io_vitro_nest_0.760.yaml": "e46d5d8590158e0a2a568f1ccad8070f3244bef630f4beee9830d5b6b0fd7beb"
+        },
+        "structural_yaml_sha256": "ce7e051292b353f0785eaf8d0ccd5cf266dbfa00aea9f283be5c55b45972c167",
+        "morphometrics_sha256": "5258fbd1d6c4ccd669c7684962d4ab6e578494c20093d43ccd2e4e8e20d9526e",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.760.hdf5",
+            "old_sha256": "641b4da775f8252fdf5e4c35ca885ae781996d22aebb797bf715adb050fcfa3f",
+            "recovered_sha256": "3ec521dc440cb97e8f00716aac35e6e1c176f38049053f77b843bccc312a78e2"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 18768,
+        "synapses": 428612,
+        "cortical_depth_um": 228.66684299999997
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/1.structure/mouse_cereb_dcn_io_nest_0.733.hdf5": "58ffca42f207050b60bc1fb5d90fcf4c242d907b5772a95cab77ff5055dcc7ff",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/071342be-98d7-462b-9a6a-c8b0bb746bbd.nio": "04594611311c89394a21e76fbdf6a4b6c5eabd41655748facda7f687549da8f7",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/1473ea4f-a997-4ea1-964e-de5615a58487.nio": "f67f737bacef7d8da09d5c19bd648248bfb6e4c945624d058551ce1fe312e30d",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/19d7c4f0-2903-43b1-b3ee-27ae2f63d135.nio": "2e471e9a498cfb50cba475fd405b43e9ff8307dfd4254905563499b54032f293",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/28bb47eb-2f80-4c2a-b188-4403b1af8812.nio": "94c89950dbfcb01979e931015a4f178367e12fa110b4d820dba632d80461698e",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/3af68609-a318-49c0-b5da-59ef2e503890.nio": "a819d03ea1050ea801d157d99cb22cf27ca5fbd009b660d4edd844a950d69bff",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/447bc4df-62be-429f-8f9e-80b1838d6b3a.nio": "eddc3ad460d4f691e03e6a908d97a5ab9d5171d5ee8e8e2e1be8d6a4c273604e",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/4b6d851c-6dc8-4ea2-ba42-ac69f7019bc4.nio": "8b06ec318c8db4ec8976f26a90dbe8ca3f02a2861ffe5b2d6a837b1daf06b63a",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/db6071d2-55dd-4710-8f8d-029510d87230.nio": "6aa913b9da55636322ed1bbb6e2fcdde1501b00602d9549f94a2aa7960232517",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/2.stimulus/basal_vitro_0.733.yaml": "00cf71e3ea3c1bf92a9e6e762ad20a9c1f96d316b25a686232efd5bfba3654ef",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/2.stimulus/dcn_vitro_nest_0.733.yaml": "58a35e659ab1fcd5b55068512aed40db2f06e12686c767c7834a55a9b0983131",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/2.stimulus/dcn_io_vitro_nest_0.733.yaml": "d85d2006c20555b80068b77700b50c4c1cf23fc804a06cb39e562060a0bead4b"
+        },
+        "structural_yaml_sha256": "3866adbd831a10906b1605d4e2d214b356e7c55132d84faf5a882771b7507dc4",
+        "morphometrics_sha256": "b6c5832cfaef51ac184a32444e855cd2b8e84a8d2e710517618a9e95c1f5863a",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.733.hdf5",
+            "old_sha256": "d45a9397889face0d9e7c0cde328c28753f5b900a3a8aa5b9791bff8964fcdf5",
+            "recovered_sha256": "58ffca42f207050b60bc1fb5d90fcf4c242d907b5772a95cab77ff5055dcc7ff"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 17454,
+        "synapses": 378257,
+        "cortical_depth_um": 220.55244700000003
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/1.structure/mouse_cereb_dcn_io_nest_0.707.hdf5": "336941fcc304d83cf70c25b4fcd1e5ec0c02ace91eb63c9beb473f8a5f0e6e5f",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/023c5e56-7827-4c5f-8f0c-b6167e9b3f86.nio": "bfc00c0aaf5f2a40cf33608025478836d23920e2da696bc9e3406dbe36531b9e",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/16d40bef-6a78-4881-b6af-254f36bc6100.nio": "45c209b973a939fd0638f5a718de9a67e9e371ec90adf273c7bbbce38addc05a",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/3262b521-dd11-4859-8fc4-cc59911913ac.nio": "994e6d79025207102cb5bc1aabe389011935e2ade4e6422f6ce81f85b59f6c32",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/662cd522-1982-406a-b053-1010f06beeac.nio": "4ca987ad3d873e94a546a23e182c50e611b095213cb0704e55eb90468b3367d5",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/bffa388f-81a2-44b2-a1a0-8c3d6b9085b8.nio": "d0d2a258c78118c5b032df8e5ae5ef335d787438c9c481bcf838eddafd672df8",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/c01b396d-d998-4845-871d-5456306d95de.nio": "536e4b856297b93c47b4554105db8c10e0ecc0fb6009ff12f00d4feecc39057f",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/e4f0f15a-41d2-41c5-85cd-d642c19c2a27.nio": "e91f76f6c5eb3ec8c13fbd141467baf4de4c223f5cbd87a87f6764a2e6880633",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/fa252fce-3813-436e-8508-e7d9a84aa721.nio": "1d3c0aa12d70d6dcca56b92c276991583de71486ccac3e3a05e20541c1a7bdd8",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/2.stimulus/basal_vitro_0.707.yaml": "d4a30742cacc99d648ca7091bca43dfbcceeea57c24074680a8fb34a70152487",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/2.stimulus/dcn_vitro_nest_0.707.yaml": "6d8e65d8e2d8427e7b8be868dd6cc724e2647321d166cef577204dd9d9f1f0d4",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/2.stimulus/dcn_io_vitro_nest_0.707.yaml": "bb26fe7aae27803d0e2a42ad001e1ce9109ebce440be15e826436f17cf38a6c9"
+        },
+        "structural_yaml_sha256": "5c0e51060409b8eb21fce91ebedcd8f274f65edc3bd4397eba0a54c44e67be36",
+        "morphometrics_sha256": "971412ed25213a14e18952dd84ae7c9125e90000426b3895f93046c624fc1532",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.707.hdf5",
+            "old_sha256": "2714da6113069211c517be8a7b2b1b4ac01394df030064527da96341e5a82758",
+            "recovered_sha256": "336941fcc304d83cf70c25b4fcd1e5ec0c02ace91eb63c9beb473f8a5f0e6e5f"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 16233,
+        "synapses": 309724,
+        "cortical_depth_um": 212.64311499999997
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/1.structure/mouse_cereb_dcn_io_nest_0.680.hdf5": "bca0ba5b3de23e08299c632b71a37dff3eb08646179c8bd55548c5f5e522bdbd",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/03cc4732-f43f-49f7-a455-962998d02d8d.nio": "a05846c98c09d8c6d555047a308f8157718f2c3f48b1dee5de52e36da3ae35ea",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/0744c6fa-6305-4404-a5cc-fd2b6dae65cd.nio": "7ac01e67c624b6ec616e934548c7021702bc047f701b427be5a4549bd96655b6",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/17e009aa-eaac-4647-b2bc-576c618156f3.nio": "8a41f24d74cd1027ab7a76446d3f13b7f2919fbad1e800800044dbc7a1d294f4",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/89d6150e-1c6b-494d-84cf-614a45da9206.nio": "43c3b338b4db2943072e0a09d19e89ec16ebff96e8a8a35dfde626fcf4b5043d",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/a0a2787f-c8e3-4bcf-b059-dfaf6eec2165.nio": "15d1f5d500e12d7e6605d563ae1100ada49c33e3f1b71a285d96691b8639b30b",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/db7479b4-f980-48fd-82ba-d4cf00935a10.nio": "c3534c2e71f61d518f37a9ee70b8fd9646efbf47dfca54194a70ba80cb2eb560",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/dbbeafd8-77e2-4bbe-8f76-caa0bfac1733.nio": "5474d11a9d62b48e1d7be19a481e328744454aac06c246cf2a421c6d4770eb37",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/fdfa1b9e-119a-4bac-9ec8-caaa9fa52d04.nio": "5e26faf35bb54640273035459a1db6b2d2a85add3f3eb7b107e543d98161e410",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/2.stimulus/basal_vitro_0.680.yaml": "16d602013a61d155a90d3618c84fa8b33b4a55175204d8d634858a8119abdddb",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/2.stimulus/dcn_vitro_nest_0.680.yaml": "d1651870cea6bf5afad64588d170c928caa95e156788c92ec7fd66a5cc9e8a9e",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/2.stimulus/dcn_io_vitro_nest_0.680.yaml": "44b0e637fc93f7d017de3ce2c7f61a74b5a24781d0d99df2b872b1eb96476384"
+        },
+        "structural_yaml_sha256": "3dcdcd6ff772b6f8442f3d173f9062a5465af486e81ff5e4c87b099752fa1d67",
+        "morphometrics_sha256": "80ce1b5a3974d3d5b3ee86f93765fffacf3daf25507890bf802b0280989c561c",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.680.hdf5",
+            "old_sha256": "059d10c941a8064bb3621d3feca97bf31457a4ccfaaa6c99ed65a7a065dac0d0",
+            "recovered_sha256": "bca0ba5b3de23e08299c632b71a37dff3eb08646179c8bd55548c5f5e522bdbd"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 14996,
+        "synapses": 263396,
+        "cortical_depth_um": 204.34040700000003
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/1.structure/mouse_cereb_dcn_io_nest_0.653.hdf5": "d8e3dac33a2d6eb16012a32b705a7ab3440f84e4f82e3b0c707d6fa35dc51fa7",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/1afe21af-fd71-4f02-a98b-dd99bc6c17e7.nio": "b1705d6f0651e202f67efcfc51a9a4000b6e507cf45c30f4e1e6d55e76f57bd5",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/1ee634c2-6842-4c70-8213-68881a30ce77.nio": "abdf0e066e2044e3fd0d2d8fb7a6e646624b5a21596ab3d36927856c1b072121",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/2682d6e1-d134-4229-97db-340737f6cf30.nio": "b32a89d5909462cf13139d4cb0715fd2e3c05b6f0e922cc8268be53c157fbd7a",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/32af7e5e-822d-46bc-a58d-aa452aad21da.nio": "e50144cb50c50bd34fc3fbf068585cef39d579f3094d98250896d6ada6c9f735",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/68706a58-8610-4cbe-9636-53020caa10b9.nio": "878f90a859da6450883743ac37a4cbe63d602b4a8c257c0ad7b83bc0c353bcbf",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/92ed4ccd-cfce-44cc-a409-1788dfea503a.nio": "e228d357e875462e80f7f8c46b79b08cb2aaada37f091eb9bc3a594f21f3a36d",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/a3d16024-5111-47e0-a8e7-f6393d94f2f2.nio": "8c733b9db9a8fb02405c1487ff629e7165ffed6ace25e51011278b618281d076",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/d84a2202-a866-43b7-8ade-c66c47c94a89.nio": "3e84fb99e35b6cf9ec8ecfcee203211039a3dc40b8a011a7920d48013c1e113c",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/2.stimulus/basal_vitro_0.653.yaml": "68f53d7593e4aacaa16e5108728da369245ad7426137e218f19ee7b2e0f9a43e",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/2.stimulus/dcn_vitro_nest_0.653.yaml": "4f4c844f1c6cc6ea8b6b52468b4128970213de493baa01b3334fc04cefa53b5e",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/2.stimulus/dcn_io_vitro_nest_0.653.yaml": "aaf2e46c5bbe00d34ce8af78086fe45f62ef20a7e0721b5521f53fde8afbe6c6"
+        },
+        "structural_yaml_sha256": "306e86491f1cba92dadccc442a8d6a2333c0834799f8c4107681e9ceb54a1816",
+        "morphometrics_sha256": "06fb5b49bae74098b8b590855604a3f53a4f680ec321a1120ea4bfe5c79e613a",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.653.hdf5",
+            "old_sha256": "ce96e00c94ac5f6338c1e2e2becf3b0df0a8e2819097e77f5984c9d8d1b302de",
+            "recovered_sha256": "d8e3dac33a2d6eb16012a32b705a7ab3440f84e4f82e3b0c707d6fa35dc51fa7"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 13795,
+        "synapses": 241517,
+        "cortical_depth_um": 195.95749299999994
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/1.structure/mouse_cereb_dcn_io_nest_0.627.hdf5": "bd12952eb59d3a57c439862345e7c9809859b5c43dfa1ebb01d417b8c4a391a8",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/0d91745a-9a88-46b2-87c9-eaad25436248.nio": "13577d6cd9319954c25e121045afce38506d698371f74626e7fc24402856dd09",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/0fa8ff12-84ce-4438-96c4-33a47de4ab9f.nio": "1ae15659e8db71d1ef0851d13a7d245de447647665766409b21f8102ed6cd1fd",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/1e31b027-fd4a-4f01-8d58-a31b5eebbb52.nio": "701ec295b8195cc5c3aa587713e4f69893b2a806d28563b0ef4ecfe025042dbb",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/2641a47e-991d-4dd4-91e1-9a79b3e2486b.nio": "716c9e0eae581e33af46364f0c74d28857b7e7e64040e43a24b6036691b5b9b4",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/2f9c4ce6-c6eb-4c4b-8fb4-a767a383304f.nio": "701de2e747830bc52afd6e80513cce40ce3e07e6411267e6aece12ccd394cabb",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/5a0b2ead-f4c2-4e38-ad1e-dd79eac8ba9f.nio": "1eee28384ce672e967ac9d071cbc7a824dac2845697d62454b00043e60bb464d",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/9ec9913a-cc66-4cae-b2e9-1d1ceb590ab6.nio": "725d5ce92efb13f61c26fdff627ed66c716060ec1b2d129f8370babf55462302",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/d0f1990e-22bf-4838-9ee7-946366e583e1.nio": "6aff8257798c72ad39509f6488fc4ae7b5783fb6db90dd679b283113d1cc0f4f",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/2.stimulus/basal_vitro_0.627.yaml": "bc772cdab972ac496a32ef42ba5c248b2789652163aa3fb0a0f25458ec8f9dbf",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/2.stimulus/dcn_vitro_nest_0.627.yaml": "8cb6ee9c62b40b935add1bc5773c33205dd7803779992d799a62b53e106bdec1",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/2.stimulus/dcn_io_vitro_nest_0.627.yaml": "6649d96af9b814401466b1cfed305c4566b8d9459cf22e577a6e3c75a41913f8"
+        },
+        "structural_yaml_sha256": "8505c69d3630db0fc8e080d32b9efa76f832657d089bf51dd42a084dc80093ac",
+        "morphometrics_sha256": "b2e9b4ecf17c8d44a2c0a16e553e9ca725d584b154fd4eaddc25fe44e68117ef",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.627.hdf5",
+            "old_sha256": "161f31bd13f30380fc2537451364cacba8c69345aaeeb6a41bcfd8da7f95d2bb",
+            "recovered_sha256": "bd12952eb59d3a57c439862345e7c9809859b5c43dfa1ebb01d417b8c4a391a8"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 12672,
+        "synapses": 220002,
+        "cortical_depth_um": 187.81971700000003
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "current_source_hashes": {
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/1.structure/mouse_cereb_dcn_io_nest_0.600.hdf5": "d026c1d72b4cc9f56bd1d61f44b3e34f82ed80efc63928230a80f42a364ea5f1",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/05d53df3-aa75-4446-8e32-b98a1e52f986.nio": "e6ccf903dbb9ffd831a297da9f988d6afa2c936702b5db3df19928e1d2cabdda",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/10900c0c-718f-44e4-bc62-96d534f83b85.nio": "4de582cbc5d0a6078fafbbb5440a31154602f3189c40a33df40e58418a38377f",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/167bc222-485f-4991-a53a-4470fa2be163.nio": "21574feaaa907e8dd7b3ca1418e240d54b5162d73b6f0b26e5af93dee2859282",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/3f22d0fa-b644-4f68-b950-4c6199610f52.nio": "cdca4cb837b52f3446c39a04da58177abd2385f79b0ba483bb669389c3ab2643",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/6d75bb79-8f75-4597-b169-94250809df30.nio": "0e45d437f97c7560e9a105f4b90e50ae6b2c771e4b4bb38ca915926fd2ee0636",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/819d0b80-2398-448b-8e75-9f84e1a6a7b3.nio": "67b7aee0f27cd9b4018c76c478ecfd681d0fab48af595f1eb47dbcd11a124b07",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/b26b033f-d841-41eb-8726-d387f06ffa29.nio": "b8045f345ce21dfc32bd638b4b6d63d5bf9981ea18bee3b41d4ddd7815424ff8",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/d1d6ed68-70ae-4d67-b3b9-8ff411ed243e.nio": "a825018ff6da2155a5f9d9a8ccf22f1dbbf00fb86a0d28906e3872fad090c7b8",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/2.stimulus/basal_vitro_0.600.yaml": "8126cdbbd93ba1ac609522eba98c2792027029202ddee28ca97081da81446d92",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/2.stimulus/dcn_vitro_nest_0.600.yaml": "f2a51b7fb20e1fc7e0fca4e5c13a3488947efedb12c93c423fe8614138a8f01b",
+          "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/2.stimulus/dcn_io_vitro_nest_0.600.yaml": "cc7b99d20f2faf5a9aa033dfdfef8860cd4765c559b4c36ea4d6418eb831e51c"
+        },
+        "structural_yaml_sha256": "c4b084326ba51ca9bccebb03ba4b3858eada498e76764075600fcd6fceba9659",
+        "morphometrics_sha256": "8f083f749a45931881d0cd086e96069e3b6b27e10a9bef44bc1c3a1e16afd08a",
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.600.hdf5",
+            "old_sha256": "6c3b67b06b594b0e0a851250b1252104da55f9aaa74d5956929a5a178b51c872",
+            "recovered_sha256": "d026c1d72b4cc9f56bd1d61f44b3e34f82ed80efc63928230a80f42a364ea5f1"
+          }
+        ],
+        "exact_basal_geometry_spikes_rates_stimuli": true,
+        "raw_nio_and_yaml_hashes_match": true,
+        "exact_structural_geometry_rotations_morphology_assignment": true,
+        "cell_parameters_density_thickness_and_14_weight_ratios_verified": true,
+        "neurons": 11542,
+        "synapses": 177655,
+        "cortical_depth_um": 179.312342
+      }
+    ],
+    "archived_parameter_source_hash_checks": [
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/2.stimulus/basal_vitro_1.000.yaml",
+        "sha256": "7ab1160eda3b1281ec72d9ea2d042376c36b8a2cbf9f022a2d7e8d6e43163e1e"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/2.stimulus/dcn_vitro_nest_1.000.yaml",
+        "sha256": "55d20942d61357c9f62514b03e5da96fb0eeae78ef0f89e938e2769a6381a6af"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/2.stimulus/dcn_io_vitro_nest_1.000.yaml",
+        "sha256": "1151efe7aa1dd7c8362c644e4e7cb1ffe4a0ed35f6949eb2211b8eb9590203e1"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/2.stimulus/basal_vitro_0.973.yaml",
+        "sha256": "8951633f8ec0f91084caba5262867c854fbfad80041d91b2a7e3a24df65058f2"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/2.stimulus/dcn_vitro_nest_0.973.yaml",
+        "sha256": "15076090031fa733aa42b0bd166a54e4c192033c022cf82f8e938cde9735cf2e"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/2.stimulus/dcn_io_vitro_nest_0.973.yaml",
+        "sha256": "edb8e248fd88e83b5c307964b916859844c94f274e5ce34936db534bd3aa4140"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/2.stimulus/basal_vitro_0.947.yaml",
+        "sha256": "4c58dc83506a4cd35add8cca65320e7cb82c6dab9d5887ead454fb723f2799fd"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/2.stimulus/dcn_vitro_nest_0.947.yaml",
+        "sha256": "64df70b7fb39b87efd42f3680eb3640e3b8788e6626d974d0a414b0f4671dfab"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/2.stimulus/dcn_io_vitro_nest_0.947.yaml",
+        "sha256": "d8ef979d84065f9366f4b3d72bd08a570ef60a18a0513b2c5f3b183bcd1ca097"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/2.stimulus/basal_vitro_0.920.yaml",
+        "sha256": "d4e3c5729027a8a9d028ffecbe9b57288c65bb6bd32f7348ec5fc9d995eea4fe"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/2.stimulus/dcn_vitro_nest_0.920.yaml",
+        "sha256": "8b64209f01e3a13e1d5e5c95f0389f079db389e66cf68abf646d67878bfa1fcf"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/2.stimulus/dcn_io_vitro_nest_0.920.yaml",
+        "sha256": "b7417dadd569e49e40b9a04e81f895e44db7f69f8a81d53beaf47569b2912236"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/2.stimulus/basal_vitro_0.893.yaml",
+        "sha256": "0500f993e8f2221a6432049e3388c3ec650a3c1f9124e9ae871921c37f22ba8e"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/2.stimulus/dcn_vitro_nest_0.893.yaml",
+        "sha256": "7c6a521a06870710ccb0241b759fe82f4738275d5f806b97b56ae13a4ee22385"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/2.stimulus/dcn_io_vitro_nest_0.893.yaml",
+        "sha256": "0ac1f6f737595126980da866ae7e9198ae487b74edf3558f42186a3406dff8f0"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/2.stimulus/basal_vitro_0.867.yaml",
+        "sha256": "6a0a76d58c7d6c1930f2e62a1608e65a12a4fa9237150156777aca10a80fda70"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/2.stimulus/dcn_vitro_nest_0.867.yaml",
+        "sha256": "1634e2082004231daf8e71c99ebc766942ed92588c001ffc479006529ffe0d98"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/2.stimulus/dcn_io_vitro_nest_0.867.yaml",
+        "sha256": "f03f01ad116e442f6fd910162c8786a257d4cf35a1f947816c9bf8ebe1af140e"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/2.stimulus/basal_vitro_0.840.yaml",
+        "sha256": "2dce0aba8df0c089611c9f4bf96956bac6ea0b9395b51bd78a98021789c7262f"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/2.stimulus/dcn_vitro_nest_0.840.yaml",
+        "sha256": "f6419e7419571c1d749a629c7cce2946d2db9399f860abfd6d0998fa3cdd9eca"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/2.stimulus/dcn_io_vitro_nest_0.840.yaml",
+        "sha256": "f91f35f51fc25fb650651835ae1fad9391eae9030d4618ab5c02d76ba515cbb2"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/2.stimulus/basal_vitro_0.813.yaml",
+        "sha256": "c459cbe034dce42d0e592b66f854a6c690a073bc2b32e5967a65fc1a86b99f63"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/2.stimulus/dcn_vitro_nest_0.813.yaml",
+        "sha256": "124db4810fa2749df68dbb3ed87df30b27a600b8fd0c4c23a819831e3af64a3a"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/2.stimulus/dcn_io_vitro_nest_0.813.yaml",
+        "sha256": "b83ec55ffd32664bda75cf1b0ab47211666ee00e200fd172059d41cc6dc29118"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/2.stimulus/basal_vitro_0.787.yaml",
+        "sha256": "8e737ea2123845cb4c81fda0bc8e5f940352cb7298a5bd62c973640671252689"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/2.stimulus/dcn_vitro_nest_0.787.yaml",
+        "sha256": "3e956cb7ce3ce359013b2c6d63a72492689e0dc81b432aa7c70e84c5bb2b5bb8"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/2.stimulus/dcn_io_vitro_nest_0.787.yaml",
+        "sha256": "80a284b392ab20591a2d043e3edaa18501d145b155b7f7099c843992e048292a"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/2.stimulus/basal_vitro_0.760.yaml",
+        "sha256": "64ef8636faecbbdcbfebb07b10ad54da9656425a2bb5b316d1fa99cd8a5b932e"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/2.stimulus/dcn_vitro_nest_0.760.yaml",
+        "sha256": "74a99defdc4fab0fd8a31d16836a3cee69d09477ecf1e0d7d3198e5678ede46f"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/2.stimulus/dcn_io_vitro_nest_0.760.yaml",
+        "sha256": "e46d5d8590158e0a2a568f1ccad8070f3244bef630f4beee9830d5b6b0fd7beb"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/2.stimulus/basal_vitro_0.733.yaml",
+        "sha256": "00cf71e3ea3c1bf92a9e6e762ad20a9c1f96d316b25a686232efd5bfba3654ef"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/2.stimulus/dcn_vitro_nest_0.733.yaml",
+        "sha256": "58a35e659ab1fcd5b55068512aed40db2f06e12686c767c7834a55a9b0983131"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/2.stimulus/dcn_io_vitro_nest_0.733.yaml",
+        "sha256": "d85d2006c20555b80068b77700b50c4c1cf23fc804a06cb39e562060a0bead4b"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/2.stimulus/basal_vitro_0.707.yaml",
+        "sha256": "d4a30742cacc99d648ca7091bca43dfbcceeea57c24074680a8fb34a70152487"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/2.stimulus/dcn_vitro_nest_0.707.yaml",
+        "sha256": "6d8e65d8e2d8427e7b8be868dd6cc724e2647321d166cef577204dd9d9f1f0d4"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/2.stimulus/dcn_io_vitro_nest_0.707.yaml",
+        "sha256": "bb26fe7aae27803d0e2a42ad001e1ce9109ebce440be15e826436f17cf38a6c9"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/2.stimulus/basal_vitro_0.680.yaml",
+        "sha256": "16d602013a61d155a90d3618c84fa8b33b4a55175204d8d634858a8119abdddb"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/2.stimulus/dcn_vitro_nest_0.680.yaml",
+        "sha256": "d1651870cea6bf5afad64588d170c928caa95e156788c92ec7fd66a5cc9e8a9e"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/2.stimulus/dcn_io_vitro_nest_0.680.yaml",
+        "sha256": "44b0e637fc93f7d017de3ce2c7f61a74b5a24781d0d99df2b872b1eb96476384"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/2.stimulus/basal_vitro_0.653.yaml",
+        "sha256": "68f53d7593e4aacaa16e5108728da369245ad7426137e218f19ee7b2e0f9a43e"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/2.stimulus/dcn_vitro_nest_0.653.yaml",
+        "sha256": "4f4c844f1c6cc6ea8b6b52468b4128970213de493baa01b3334fc04cefa53b5e"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/2.stimulus/dcn_io_vitro_nest_0.653.yaml",
+        "sha256": "aaf2e46c5bbe00d34ce8af78086fe45f62ef20a7e0721b5521f53fde8afbe6c6"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/2.stimulus/basal_vitro_0.627.yaml",
+        "sha256": "bc772cdab972ac496a32ef42ba5c248b2789652163aa3fb0a0f25458ec8f9dbf"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/2.stimulus/dcn_vitro_nest_0.627.yaml",
+        "sha256": "8cb6ee9c62b40b935add1bc5773c33205dd7803779992d799a62b53e106bdec1"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/2.stimulus/dcn_io_vitro_nest_0.627.yaml",
+        "sha256": "6649d96af9b814401466b1cfed305c4566b8d9459cf22e577a6e3c75a41913f8"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/2.stimulus/basal_vitro_0.600.yaml",
+        "sha256": "8126cdbbd93ba1ac609522eba98c2792027029202ddee28ca97081da81446d92"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/2.stimulus/dcn_vitro_nest_0.600.yaml",
+        "sha256": "f2a51b7fb20e1fc7e0fca4e5c13a3488947efedb12c93c423fe8614138a8f01b"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/2.stimulus/dcn_io_vitro_nest_0.600.yaml",
+        "sha256": "cc7b99d20f2faf5a9aa033dfdfef8860cd4765c559b4c36ea4d6418eb831e51c"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/1.structure/mouse_cerebellar_cortex_1.000.yaml",
+        "sha256": "c60cb3adbe3addc03a8fb345947048bcfc04cc764580b9e92bd55715a5a51e07"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/1.structure/morphologies/morphometrics_1.000.csv",
+        "sha256": "8716df3eceaefc2a7b92ae45cb5830c7ca3000371f08754078787ab9ebd59186"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/1.structure/mouse_cerebellar_cortex_0.973.yaml",
+        "sha256": "fcbf7956109e6102e8cbeb19bff64d6a084d8cc2abe855b8e161b476ad2c274d"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/1.structure/morphologies/morphometrics_0.973.csv",
+        "sha256": "d0b2f19852c69e4ac52bff7f896effbd8a18a065060206ba715f991f7ec7ba98"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/1.structure/mouse_cerebellar_cortex_0.947.yaml",
+        "sha256": "fd08be0248407ad6b2402112be4d7d7863cdb153192484bd7faf52d58ceb95a9"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/1.structure/morphologies/morphometrics_0.947.csv",
+        "sha256": "ce75f38151e4c0864f6c327f230a223e57788b8511f211fe334158c1544dcdf8"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/1.structure/mouse_cerebellar_cortex_0.920.yaml",
+        "sha256": "a6bf928f4d07af47cbc626303c40d2ab14aa14753dd0dc5907ee2c45fc83566e"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/1.structure/morphologies/morphometrics_0.920.csv",
+        "sha256": "85b27d97f65638e6b0433a2151099992100c24eccf1e2cb46540543b6f031285"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/1.structure/mouse_cerebellar_cortex_0.893.yaml",
+        "sha256": "712a92513c5c39c5632ff9bd51798c03bb15c6633588df49f89376add7576211"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/1.structure/morphologies/morphometrics_0.893.csv",
+        "sha256": "3cb788682bbaec7cecee93e19101a2b8f295d61a69386c6881bf1509769ff968"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/1.structure/mouse_cerebellar_cortex_0.867.yaml",
+        "sha256": "74a1d723be008661747e025a759f67bc1bc7c05f5223fe5904e8bf490fe3b1f8"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/1.structure/morphologies/morphometrics_0.867.csv",
+        "sha256": "5d576324c79af8881a3abac608bb7e07cee5614320ebc55440853795fa477da6"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/1.structure/mouse_cerebellar_cortex_0.840.yaml",
+        "sha256": "56b416751b51aaaf7165ed8fbf9c579b95e36c35d63037402d767344b6ef1546"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/1.structure/morphologies/morphometrics_0.840.csv",
+        "sha256": "199c916fa528ec31e3821473a49ac41c0a909c119f6812c66bcb788f2b38779c"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/1.structure/mouse_cerebellar_cortex_0.813.yaml",
+        "sha256": "c54fd7618354501c71b96f91543519c2ef1d7ef2c544df7e5ebc98ca3bee22b7"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/1.structure/morphologies/morphometrics_0.813.csv",
+        "sha256": "e5a5db8329844513999798eb1b2e6350d5a91e73887c9338b333161aa7582d97"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/1.structure/mouse_cerebellar_cortex_0.787.yaml",
+        "sha256": "ea325e5d7a8e292f8f259b0776a358cd4a9327eabfce1ff4a24d981d8179f9be"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/1.structure/morphologies/morphometrics_0.787.csv",
+        "sha256": "ffb02791b3f36614d9c9822506b597e95af39485b7010219c117abcd474c96e2"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/1.structure/mouse_cerebellar_cortex_0.760.yaml",
+        "sha256": "ce7e051292b353f0785eaf8d0ccd5cf266dbfa00aea9f283be5c55b45972c167"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/1.structure/morphologies/morphometrics_0.760.csv",
+        "sha256": "5258fbd1d6c4ccd669c7684962d4ab6e578494c20093d43ccd2e4e8e20d9526e"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/1.structure/mouse_cerebellar_cortex_0.733.yaml",
+        "sha256": "3866adbd831a10906b1605d4e2d214b356e7c55132d84faf5a882771b7507dc4"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/1.structure/morphologies/morphometrics_0.733.csv",
+        "sha256": "b6c5832cfaef51ac184a32444e855cd2b8e84a8d2e710517618a9e95c1f5863a"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/1.structure/mouse_cerebellar_cortex_0.707.yaml",
+        "sha256": "5c0e51060409b8eb21fce91ebedcd8f274f65edc3bd4397eba0a54c44e67be36"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/1.structure/morphologies/morphometrics_0.707.csv",
+        "sha256": "971412ed25213a14e18952dd84ae7c9125e90000426b3895f93046c624fc1532"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/1.structure/mouse_cerebellar_cortex_0.680.yaml",
+        "sha256": "3dcdcd6ff772b6f8442f3d173f9062a5465af486e81ff5e4c87b099752fa1d67"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/1.structure/morphologies/morphometrics_0.680.csv",
+        "sha256": "80ce1b5a3974d3d5b3ee86f93765fffacf3daf25507890bf802b0280989c561c"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/1.structure/mouse_cerebellar_cortex_0.653.yaml",
+        "sha256": "306e86491f1cba92dadccc442a8d6a2333c0834799f8c4107681e9ceb54a1816"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/1.structure/morphologies/morphometrics_0.653.csv",
+        "sha256": "06fb5b49bae74098b8b590855604a3f53a4f680ec321a1120ea4bfe5c79e613a"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/1.structure/mouse_cerebellar_cortex_0.627.yaml",
+        "sha256": "8505c69d3630db0fc8e080d32b9efa76f832657d089bf51dd42a084dc80093ac"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/1.structure/morphologies/morphometrics_0.627.csv",
+        "sha256": "b2e9b4ecf17c8d44a2c0a16e553e9ca725d584b154fd4eaddc25fe44e68117ef"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/1.structure/mouse_cerebellar_cortex_0.600.yaml",
+        "sha256": "c4b084326ba51ca9bccebb03ba4b3858eada498e76764075600fcd6fceba9659"
+      },
+      {
+        "file": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/1.structure/morphologies/morphometrics_0.600.csv",
+        "sha256": "8f083f749a45931881d0cd086e96069e3b6b27e10a9bef44bc1c3a1e16afd08a"
+      }
+    ],
+    "structural_visible_populations": [
+      "granule_cell",
+      "golgi_cell",
+      "purkinje_cell",
+      "basket_cell",
+      "stellate_cell"
+    ],
+    "structural_full_network_counts": true,
+    "visible_population_scope": "100% Granule, Golgi, Purkinje, Basket and Stellate morphologies; no soma segments or subcortical dots.",
+    "structural_parameters": [
+      {
+        "index": 0,
+        "id": "paper_without_00",
+        "sz_percent": 0.0,
+        "k": 1.0,
+        "factors": {
+          "radius": 1.0,
+          "pruning": 1.0,
+          "shrinking": 1.0,
+          "density": 0.9999999978360465,
+          "thickness": 1.0,
+          "excitatory_weights": 1.0
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 5e-05,
+            "ratio": 1.0
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.0003,
+            "ratio": 1.0
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 9e-06,
+            "ratio": 1.0
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.0039,
+            "ratio": 1.0
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.001166,
+            "ratio": 1.0
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 5e-05,
+            "ratio": 1.0
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 130.0
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 15.0
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 50.0
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 100.0
+          }
+        ],
+        "cortical_depth_um": 295.0,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.82,
+            "ratio": 1.0
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.2,
+            "ratio": 1.0
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.24,
+            "ratio": 1.0
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.23,
+            "ratio": 1.0
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.25,
+            "ratio": 1.0
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.5,
+            "ratio": 1.0
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 5.0,
+            "ratio": 1.0
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 6.5,
+            "ratio": 1.0
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.6,
+            "ratio": 1.0
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.25,
+            "ratio": 1.0
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.04,
+            "ratio": 1.0
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.05,
+            "ratio": 1.0
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.05,
+            "ratio": 1.0
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.05,
+            "ratio": 1.0
+          }
+        ],
+        "excitatory_weight_range": [
+          1.0,
+          1.0
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/000_deg_1.000/1.structure/mouse_cereb_dcn_io_nest_1.000.hdf5",
+        "original_working_hdf5_sha256": "3977abb2a278c549c98966fec9ef2f6331906fc8c911f868f9508dd1919aba5a",
+        "recovered_hdf5_sha256": "7d5cc26c5500994246003e334c9ac09829923954133d5477b9a82fd4df182939"
+      },
+      {
+        "index": 1,
+        "id": "paper_without_01",
+        "sz_percent": 2.6666666666666665,
+        "k": 0.973,
+        "factors": {
+          "radius": 0.973,
+          "pruning": 0.973,
+          "shrinking": 0.973,
+          "density": 0.9767406494838957,
+          "thickness": 0.9767406474576272,
+          "excitatory_weights": 0.9729999999999999
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.9e-05,
+            "ratio": 0.9799999999999999
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000293,
+            "ratio": 0.9766666666666668
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 9e-06,
+            "ratio": 1.0
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.003809,
+            "ratio": 0.9766666666666667
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.001139,
+            "ratio": 0.976843910806175
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.9e-05,
+            "ratio": 0.9799999999999999
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 126.976284
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 14.65111
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 48.837032
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 97.674065
+          }
+        ],
+        "cortical_depth_um": 288.13849100000004,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.79786,
+            "ratio": 0.9730000000000001
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.1946,
+            "ratio": 0.973
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.23352,
+            "ratio": 0.9730000000000001
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.22379,
+            "ratio": 0.9729999999999999
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.244185,
+            "ratio": 0.97674
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.48837,
+            "ratio": 0.97674
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 4.883703,
+            "ratio": 0.9767406
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 6.348814,
+            "ratio": 0.9767406153846154
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.586044,
+            "ratio": 0.97674
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.24325,
+            "ratio": 0.973
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.03892,
+            "ratio": 0.9730000000000001
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.04865,
+            "ratio": 0.973
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.04865,
+            "ratio": 0.973
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.04865,
+            "ratio": 0.973
+          }
+        ],
+        "excitatory_weight_range": [
+          0.9729999999999999,
+          0.9767406153846154
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/001_deg_0.973/1.structure/mouse_cereb_dcn_io_nest_0.973.hdf5",
+        "original_working_hdf5_sha256": "717b3f8ffc2f18fc6793b0788791a7ca55d2a0e4c8032f94a2d4f210fcfb327b",
+        "recovered_hdf5_sha256": "0f11a2c15102019f183481631d653a580bff634afb4855bd220a37fb35e8aeee"
+      },
+      {
+        "index": 2,
+        "id": "paper_without_02",
+        "sz_percent": 5.333333333333333,
+        "k": 0.947,
+        "factors": {
+          "radius": 0.947,
+          "pruning": 0.947,
+          "shrinking": 0.947,
+          "density": 0.9538133623829113,
+          "thickness": 0.953813359322034,
+          "excitatory_weights": 0.947
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.8e-05,
+            "ratio": 0.96
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000286,
+            "ratio": 0.9533333333333335
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 9e-06,
+            "ratio": 1.0
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.00372,
+            "ratio": 0.9538461538461539
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.001112,
+            "ratio": 0.9536878216123499
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.8e-05,
+            "ratio": 0.96
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 123.995737
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 14.3072
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 47.690668
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 95.381336
+          }
+        ],
+        "cortical_depth_um": 281.37494100000004,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.77654,
+            "ratio": 0.9470000000000001
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.1894,
+            "ratio": 0.9470000000000001
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.22728,
+            "ratio": 0.9470000000000001
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.21781,
+            "ratio": 0.947
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.238453,
+            "ratio": 0.953812
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.476907,
+            "ratio": 0.953814
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 4.769067,
+            "ratio": 0.9538133999999999
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 6.199787,
+            "ratio": 0.9538133846153846
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.572288,
+            "ratio": 0.9538133333333334
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.23675,
+            "ratio": 0.947
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.03788,
+            "ratio": 0.947
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.04735,
+            "ratio": 0.9470000000000001
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.04735,
+            "ratio": 0.9470000000000001
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.04735,
+            "ratio": 0.9470000000000001
+          }
+        ],
+        "excitatory_weight_range": [
+          0.947,
+          0.953814
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/002_deg_0.947/1.structure/mouse_cereb_dcn_io_nest_0.947.hdf5",
+        "original_working_hdf5_sha256": "3c58e9446aefd60ec5c265994280e6e4492dfaf0301b8cc7ca2c01427dc619f3",
+        "recovered_hdf5_sha256": "2ee1b32f7f611faa741a816030a8978826c2d332a833b97d5b3f6fb812045f5b"
+      },
+      {
+        "index": 3,
+        "id": "paper_without_03",
+        "sz_percent": 8.0,
+        "k": 0.92,
+        "factors": {
+          "radius": 0.92,
+          "pruning": 0.92,
+          "shrinking": 0.92,
+          "density": 0.9294694796657441,
+          "thickness": 0.9294694779661017,
+          "excitatory_weights": 0.9199999999999999
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.6e-05,
+            "ratio": 0.9199999999999999
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000279,
+            "ratio": 0.93
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 8e-06,
+            "ratio": 0.8888888888888888
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.003625,
+            "ratio": 0.9294871794871796
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.001084,
+            "ratio": 0.9296740994854202
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.6e-05,
+            "ratio": 0.9199999999999999
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 120.831032
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 13.942042
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 46.473474
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 92.946948
+          }
+        ],
+        "cortical_depth_um": 274.193496,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.7544,
+            "ratio": 0.92
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.184,
+            "ratio": 0.9199999999999999
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.2208,
+            "ratio": 0.92
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.2116,
+            "ratio": 0.92
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.232367,
+            "ratio": 0.929468
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.464735,
+            "ratio": 0.92947
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 4.647347,
+            "ratio": 0.9294694
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 6.041552,
+            "ratio": 0.9294695384615385
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.557682,
+            "ratio": 0.92947
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.23,
+            "ratio": 0.92
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.0368,
+            "ratio": 0.9199999999999999
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.046,
+            "ratio": 0.9199999999999999
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.046,
+            "ratio": 0.9199999999999999
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.046,
+            "ratio": 0.9199999999999999
+          }
+        ],
+        "excitatory_weight_range": [
+          0.9199999999999999,
+          0.92947
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/003_deg_0.920/1.structure/mouse_cereb_dcn_io_nest_0.920.hdf5",
+        "original_working_hdf5_sha256": "6080c409cc5a75d6a68552226ae722e5a8f6ce3e00276d3d636236a3991447ec",
+        "recovered_hdf5_sha256": "b5518590a2ca714aededb98e08b5399a173936b7ce361a92b37831d7fb08d38e"
+      },
+      {
+        "index": 4,
+        "id": "paper_without_04",
+        "sz_percent": 10.666666666666666,
+        "k": 0.893,
+        "factors": {
+          "radius": 0.893,
+          "pruning": 0.893,
+          "shrinking": 0.893,
+          "density": 0.9045982810659251,
+          "thickness": 0.9045982813559322,
+          "excitatory_weights": 0.8929999999999999
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.5e-05,
+            "ratio": 0.9
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000271,
+            "ratio": 0.9033333333333333
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 8e-06,
+            "ratio": 0.8888888888888888
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.003528,
+            "ratio": 0.9046153846153846
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.001055,
+            "ratio": 0.9048027444253859
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.5e-05,
+            "ratio": 0.9
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 117.597777
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 13.568974
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 45.229914
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 90.459828
+          }
+        ],
+        "cortical_depth_um": 266.856493,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.73226,
+            "ratio": 0.8930000000000001
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.1786,
+            "ratio": 0.893
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.21432,
+            "ratio": 0.8930000000000001
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.20539,
+            "ratio": 0.8929999999999999
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.22615,
+            "ratio": 0.9046
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.452299,
+            "ratio": 0.904598
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 4.522991,
+            "ratio": 0.9045982
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 5.879889,
+            "ratio": 0.9045983076923078
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.542759,
+            "ratio": 0.9045983333333334
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.22325,
+            "ratio": 0.893
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.03572,
+            "ratio": 0.893
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.04465,
+            "ratio": 0.893
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.04465,
+            "ratio": 0.893
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.04465,
+            "ratio": 0.893
+          }
+        ],
+        "excitatory_weight_range": [
+          0.8929999999999999,
+          0.9046
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/004_deg_0.893/1.structure/mouse_cereb_dcn_io_nest_0.893.hdf5",
+        "original_working_hdf5_sha256": "a9267770be0a1cbf1ae5bf3ad1d361d3b8645a2784e52b6e49c00191a6825aa8",
+        "recovered_hdf5_sha256": "983b22fb2524ab187490f73bffd1fe1311ba66e171de31ca0415498f83c07805"
+      },
+      {
+        "index": 5,
+        "id": "paper_without_05",
+        "sz_percent": 13.333333333333332,
+        "k": 0.867,
+        "factors": {
+          "radius": 0.867,
+          "pruning": 0.867,
+          "shrinking": 0.867,
+          "density": 0.8801685934225362,
+          "thickness": 0.8801685932203389,
+          "excitatory_weights": 0.867
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.4e-05,
+            "ratio": 0.8799999999999999
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000264,
+            "ratio": 0.8800000000000001
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 8e-06,
+            "ratio": 0.8888888888888888
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.003433,
+            "ratio": 0.8802564102564102
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.001026,
+            "ratio": 0.8799313893653516
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.4e-05,
+            "ratio": 0.8799999999999999
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 114.421917
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 13.202529
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 44.00843
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 88.016859
+          }
+        ],
+        "cortical_depth_um": 259.64973499999996,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.71094,
+            "ratio": 0.8670000000000001
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.1734,
+            "ratio": 0.867
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.20808,
+            "ratio": 0.867
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.19941,
+            "ratio": 0.867
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.220042,
+            "ratio": 0.880168
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.440084,
+            "ratio": 0.880168
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 4.400843,
+            "ratio": 0.8801686
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 5.721096,
+            "ratio": 0.8801686153846154
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.528101,
+            "ratio": 0.8801683333333334
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.21675,
+            "ratio": 0.867
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.03468,
+            "ratio": 0.867
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.04335,
+            "ratio": 0.867
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.04335,
+            "ratio": 0.867
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.04335,
+            "ratio": 0.867
+          }
+        ],
+        "excitatory_weight_range": [
+          0.867,
+          0.8801686153846154
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/005_deg_0.867/1.structure/mouse_cereb_dcn_io_nest_0.867.hdf5",
+        "original_working_hdf5_sha256": "bbaa496610f44974b9a2109239279b78ef22c9c261957182e3065ea7e28b62a8",
+        "recovered_hdf5_sha256": "2b9ecad16b19cdf34eccd548b3ad56f1981b616d38816c59dddbfc33dca767ab"
+      },
+      {
+        "index": 6,
+        "id": "paper_without_06",
+        "sz_percent": 16.0,
+        "k": 0.84,
+        "factors": {
+          "radius": 0.84,
+          "pruning": 0.84,
+          "shrinking": 0.84,
+          "density": 0.8543229113605542,
+          "thickness": 0.8543229118644068,
+          "excitatory_weights": 0.84
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.3e-05,
+            "ratio": 0.86
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000256,
+            "ratio": 0.8533333333333334
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 8e-06,
+            "ratio": 0.8888888888888888
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.003332,
+            "ratio": 0.8543589743589743
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.000996,
+            "ratio": 0.8542024013722127
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.3e-05,
+            "ratio": 0.86
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 111.061978
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 12.814844
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 42.716146
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 85.432291
+          }
+        ],
+        "cortical_depth_um": 252.025259,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.6888,
+            "ratio": 0.84
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.168,
+            "ratio": 0.84
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.2016,
+            "ratio": 0.8400000000000001
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.1932,
+            "ratio": 0.84
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.213581,
+            "ratio": 0.854324
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.427161,
+            "ratio": 0.854322
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 4.271615,
+            "ratio": 0.8543229999999999
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 5.553099,
+            "ratio": 0.854322923076923
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.512594,
+            "ratio": 0.8543233333333333
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.21,
+            "ratio": 0.84
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.0336,
+            "ratio": 0.84
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.042,
+            "ratio": 0.84
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.042,
+            "ratio": 0.84
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.042,
+            "ratio": 0.84
+          }
+        ],
+        "excitatory_weight_range": [
+          0.84,
+          0.854324
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/006_deg_0.840/1.structure/mouse_cereb_dcn_io_nest_0.840.hdf5",
+        "original_working_hdf5_sha256": "c3c16e3f282fcefc8d9957517a65b35545b45ada29d196bf885849a153ace09d",
+        "recovered_hdf5_sha256": "098d579fd1706ef757f0ea355f934992793fbaaddcfbbef1e074b9d2144734f7"
+      },
+      {
+        "index": 7,
+        "id": "paper_without_07",
+        "sz_percent": 18.666666666666664,
+        "k": 0.813,
+        "factors": {
+          "radius": 0.813,
+          "pruning": 0.813,
+          "shrinking": 0.813,
+          "density": 0.8280162157505465,
+          "thickness": 0.8280162169491524,
+          "excitatory_weights": 0.813
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.1e-05,
+            "ratio": 0.82
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000248,
+            "ratio": 0.8266666666666668
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 7e-06,
+            "ratio": 0.7777777777777778
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.003229,
+            "ratio": 0.827948717948718
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.000965,
+            "ratio": 0.8276157804459692
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4.1e-05,
+            "ratio": 0.82
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 107.642108
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 12.420243
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 41.400811
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 82.801622
+          }
+        ],
+        "cortical_depth_um": 244.26478399999996,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.66666,
+            "ratio": 0.8130000000000001
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.1626,
+            "ratio": 0.813
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.19512,
+            "ratio": 0.813
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.18699,
+            "ratio": 0.813
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.207004,
+            "ratio": 0.828016
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.414008,
+            "ratio": 0.828016
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 4.140081,
+            "ratio": 0.8280162000000001
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 5.382105,
+            "ratio": 0.8280161538461539
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.49681,
+            "ratio": 0.8280166666666666
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.20325,
+            "ratio": 0.813
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.03252,
+            "ratio": 0.813
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.04065,
+            "ratio": 0.813
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.04065,
+            "ratio": 0.813
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.04065,
+            "ratio": 0.813
+          }
+        ],
+        "excitatory_weight_range": [
+          0.813,
+          0.8280166666666666
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/007_deg_0.813/1.structure/mouse_cereb_dcn_io_nest_0.813.hdf5",
+        "original_working_hdf5_sha256": "650b7b4eab70cbd98e46f9287237cd531a5a63bdb18a796eb47e68b1cee78336",
+        "recovered_hdf5_sha256": "5ba106b9d838ead0d8ced08b8c9456c56dba16745b741e00d07ef74ed0d7dda0"
+      },
+      {
+        "index": 8,
+        "id": "paper_without_08",
+        "sz_percent": 21.333333333333332,
+        "k": 0.787,
+        "factors": {
+          "radius": 0.787,
+          "pruning": 0.787,
+          "shrinking": 0.787,
+          "density": 0.8022732180137047,
+          "thickness": 0.8022732169491523,
+          "excitatory_weights": 0.787
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4e-05,
+            "ratio": 0.8
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000241,
+            "ratio": 0.8033333333333335
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 7e-06,
+            "ratio": 0.7777777777777778
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.003129,
+            "ratio": 0.8023076923076923
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.000935,
+            "ratio": 0.8018867924528302
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 4e-05,
+            "ratio": 0.8
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 104.295518
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 12.034098
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 40.113661
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 80.227322
+          }
+        ],
+        "cortical_depth_um": 236.67059899999992,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.64534,
+            "ratio": 0.787
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.1574,
+            "ratio": 0.787
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.18888,
+            "ratio": 0.787
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.18101,
+            "ratio": 0.787
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.200568,
+            "ratio": 0.802272
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.401137,
+            "ratio": 0.802274
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 4.011366,
+            "ratio": 0.8022731999999999
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 5.214776,
+            "ratio": 0.8022732307692307
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.481364,
+            "ratio": 0.8022733333333334
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.19675,
+            "ratio": 0.787
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.03148,
+            "ratio": 0.787
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.03935,
+            "ratio": 0.787
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.03935,
+            "ratio": 0.787
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.03935,
+            "ratio": 0.787
+          }
+        ],
+        "excitatory_weight_range": [
+          0.787,
+          0.802274
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/008_deg_0.787/1.structure/mouse_cereb_dcn_io_nest_0.787.hdf5",
+        "original_working_hdf5_sha256": "e6d0fc53afc7665834e53299275bfe9a77a2b8c7eb7b4e0879eab653aa2412ae",
+        "recovered_hdf5_sha256": "5c0a99eeebe9841b8ef0f38a5a987fee605c194f24d7b7a893cc1b0a0f5532c1"
+      },
+      {
+        "index": 9,
+        "id": "paper_without_09",
+        "sz_percent": 24.0,
+        "k": 0.76,
+        "factors": {
+          "radius": 0.76,
+          "pruning": 0.76,
+          "shrinking": 0.76,
+          "density": 0.7751418412853132,
+          "thickness": 0.775141840677966,
+          "excitatory_weights": 0.7599999999999999
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3.9e-05,
+            "ratio": 0.7799999999999999
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000233,
+            "ratio": 0.7766666666666667
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 7e-06,
+            "ratio": 0.7777777777777778
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.003023,
+            "ratio": 0.7751282051282052
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.000904,
+            "ratio": 0.7753001715265866
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3.9e-05,
+            "ratio": 0.7799999999999999
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 100.768439
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 11.627128
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 38.757092
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 77.514184
+          }
+        ],
+        "cortical_depth_um": 228.66684299999997,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.6232,
+            "ratio": 0.76
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.152,
+            "ratio": 0.7599999999999999
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.1824,
+            "ratio": 0.76
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.1748,
+            "ratio": 0.76
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.193785,
+            "ratio": 0.77514
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.387571,
+            "ratio": 0.775142
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 3.875709,
+            "ratio": 0.7751418
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 5.038422,
+            "ratio": 0.7751418461538461
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.465085,
+            "ratio": 0.7751416666666667
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.19,
+            "ratio": 0.76
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.0304,
+            "ratio": 0.76
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.038,
+            "ratio": 0.7599999999999999
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.038,
+            "ratio": 0.7599999999999999
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.038,
+            "ratio": 0.7599999999999999
+          }
+        ],
+        "excitatory_weight_range": [
+          0.7599999999999999,
+          0.775142
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/009_deg_0.760/1.structure/mouse_cereb_dcn_io_nest_0.760.hdf5",
+        "original_working_hdf5_sha256": "641b4da775f8252fdf5e4c35ca885ae781996d22aebb797bf715adb050fcfa3f",
+        "recovered_hdf5_sha256": "3ec521dc440cb97e8f00716aac35e6e1c176f38049053f77b843bccc312a78e2"
+      },
+      {
+        "index": 10,
+        "id": "paper_without_10",
+        "sz_percent": 26.666666666666664,
+        "k": 0.733,
+        "factors": {
+          "radius": 0.733,
+          "pruning": 0.733,
+          "shrinking": 0.733,
+          "density": 0.7476354136516948,
+          "thickness": 0.7476354135593222,
+          "excitatory_weights": 0.7329999999999999
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3.7e-05,
+            "ratio": 0.7399999999999999
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000224,
+            "ratio": 0.7466666666666667
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 7e-06,
+            "ratio": 0.7777777777777778
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.002916,
+            "ratio": 0.7476923076923078
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.000872,
+            "ratio": 0.7478559176672385
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3.7e-05,
+            "ratio": 0.7399999999999999
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 97.192604
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 11.214531
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 37.381771
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 74.763541
+          }
+        ],
+        "cortical_depth_um": 220.55244700000003,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.60106,
+            "ratio": 0.7330000000000001
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.1466,
+            "ratio": 0.733
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.17592,
+            "ratio": 0.733
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.16859,
+            "ratio": 0.7329999999999999
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.186909,
+            "ratio": 0.747636
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.373818,
+            "ratio": 0.747636
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 3.738177,
+            "ratio": 0.7476354
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 4.85963,
+            "ratio": 0.7476353846153846
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.448581,
+            "ratio": 0.747635
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.18325,
+            "ratio": 0.733
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.02932,
+            "ratio": 0.733
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.03665,
+            "ratio": 0.733
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.03665,
+            "ratio": 0.733
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.03665,
+            "ratio": 0.733
+          }
+        ],
+        "excitatory_weight_range": [
+          0.7329999999999999,
+          0.747636
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/010_deg_0.733/1.structure/mouse_cereb_dcn_io_nest_0.733.hdf5",
+        "original_working_hdf5_sha256": "d45a9397889face0d9e7c0cde328c28753f5b900a3a8aa5b9791bff8964fcdf5",
+        "recovered_hdf5_sha256": "58ffca42f207050b60bc1fb5d90fcf4c242d907b5772a95cab77ff5055dcc7ff"
+      },
+      {
+        "index": 11,
+        "id": "paper_without_11",
+        "sz_percent": 29.333333333333332,
+        "k": 0.707,
+        "factors": {
+          "radius": 0.707,
+          "pruning": 0.707,
+          "shrinking": 0.707,
+          "density": 0.7208241190414246,
+          "thickness": 0.7208241186440677,
+          "excitatory_weights": 0.707
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3.6e-05,
+            "ratio": 0.72
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000216,
+            "ratio": 0.7200000000000001
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 6e-06,
+            "ratio": 0.6666666666666666
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.002811,
+            "ratio": 0.7207692307692308
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.00084,
+            "ratio": 0.7204116638078903
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3.6e-05,
+            "ratio": 0.72
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 93.707135
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 10.812362
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 36.041206
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 72.082412
+          }
+        ],
+        "cortical_depth_um": 212.64311499999997,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.57974,
+            "ratio": 0.7070000000000001
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.1414,
+            "ratio": 0.707
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.16968,
+            "ratio": 0.707
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.16261,
+            "ratio": 0.707
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.180206,
+            "ratio": 0.720824
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.360412,
+            "ratio": 0.720824
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 3.604121,
+            "ratio": 0.7208242
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 4.685357,
+            "ratio": 0.7208241538461538
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.432494,
+            "ratio": 0.7208233333333334
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.17675,
+            "ratio": 0.707
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.02828,
+            "ratio": 0.707
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.03535,
+            "ratio": 0.707
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.03535,
+            "ratio": 0.707
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.03535,
+            "ratio": 0.707
+          }
+        ],
+        "excitatory_weight_range": [
+          0.707,
+          0.7208242
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/011_deg_0.707/1.structure/mouse_cereb_dcn_io_nest_0.707.hdf5",
+        "original_working_hdf5_sha256": "2714da6113069211c517be8a7b2b1b4ac01394df030064527da96341e5a82758",
+        "recovered_hdf5_sha256": "336941fcc304d83cf70c25b4fcd1e5ec0c02ace91eb63c9beb473f8a5f0e6e5f"
+      },
+      {
+        "index": 12,
+        "id": "paper_without_12",
+        "sz_percent": 32.0,
+        "k": 0.68,
+        "factors": {
+          "radius": 0.68,
+          "pruning": 0.68,
+          "shrinking": 0.68,
+          "density": 0.692679349743094,
+          "thickness": 0.692679345762712,
+          "excitatory_weights": 0.6799999999999999
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3.5e-05,
+            "ratio": 0.7
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000208,
+            "ratio": 0.6933333333333334
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 6e-06,
+            "ratio": 0.6666666666666666
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.002701,
+            "ratio": 0.6925641025641025
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.000808,
+            "ratio": 0.6929674099485421
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3.5e-05,
+            "ratio": 0.7
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 90.048315
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 10.39019
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 34.633967
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 69.267935
+          }
+        ],
+        "cortical_depth_um": 204.34040700000003,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.5576,
+            "ratio": 0.68
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.136,
+            "ratio": 0.68
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.1632,
+            "ratio": 0.68
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.1564,
+            "ratio": 0.68
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.17317,
+            "ratio": 0.69268
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.34634,
+            "ratio": 0.69268
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 3.463397,
+            "ratio": 0.6926794000000001
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 4.502416,
+            "ratio": 0.6926793846153847
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.415608,
+            "ratio": 0.69268
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.17,
+            "ratio": 0.68
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.0272,
+            "ratio": 0.6799999999999999
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.034,
+            "ratio": 0.68
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.034,
+            "ratio": 0.68
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.034,
+            "ratio": 0.68
+          }
+        ],
+        "excitatory_weight_range": [
+          0.6799999999999999,
+          0.69268
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/012_deg_0.680/1.structure/mouse_cereb_dcn_io_nest_0.680.hdf5",
+        "original_working_hdf5_sha256": "059d10c941a8064bb3621d3feca97bf31457a4ccfaaa6c99ed65a7a065dac0d0",
+        "recovered_hdf5_sha256": "bca0ba5b3de23e08299c632b71a37dff3eb08646179c8bd55548c5f5e522bdbd"
+      },
+      {
+        "index": 13,
+        "id": "paper_without_13",
+        "sz_percent": 34.666666666666664,
+        "k": 0.653,
+        "factors": {
+          "radius": 0.653,
+          "pruning": 0.653,
+          "shrinking": 0.653,
+          "density": 0.6642626887789433,
+          "thickness": 0.664262688135593,
+          "excitatory_weights": 0.6529999999999999
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3.3e-05,
+            "ratio": 0.66
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000199,
+            "ratio": 0.6633333333333334
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 6e-06,
+            "ratio": 0.6666666666666666
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.002591,
+            "ratio": 0.6643589743589744
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.000775,
+            "ratio": 0.6646655231560892
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3.3e-05,
+            "ratio": 0.66
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 86.35415
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 9.96394
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 33.213134
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 66.426269
+          }
+        ],
+        "cortical_depth_um": 195.95749299999994,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.53546,
+            "ratio": 0.6530000000000001
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.1306,
+            "ratio": 0.6529999999999999
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.15672,
+            "ratio": 0.653
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.15019,
+            "ratio": 0.6529999999999999
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.166066,
+            "ratio": 0.664264
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.332131,
+            "ratio": 0.664262
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 3.321313,
+            "ratio": 0.6642626
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 4.317707,
+            "ratio": 0.6642626153846154
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.398558,
+            "ratio": 0.6642633333333334
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.16325,
+            "ratio": 0.653
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.02612,
+            "ratio": 0.653
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.03265,
+            "ratio": 0.6529999999999999
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.03265,
+            "ratio": 0.6529999999999999
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.03265,
+            "ratio": 0.6529999999999999
+          }
+        ],
+        "excitatory_weight_range": [
+          0.6529999999999999,
+          0.664264
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/013_deg_0.653/1.structure/mouse_cereb_dcn_io_nest_0.653.hdf5",
+        "original_working_hdf5_sha256": "ce96e00c94ac5f6338c1e2e2becf3b0df0a8e2819097e77f5984c9d8d1b302de",
+        "recovered_hdf5_sha256": "d8e3dac33a2d6eb16012a32b705a7ab3440f84e4f82e3b0c707d6fa35dc51fa7"
+      },
+      {
+        "index": 14,
+        "id": "paper_without_14",
+        "sz_percent": 37.33333333333333,
+        "k": 0.627,
+        "factors": {
+          "radius": 0.627,
+          "pruning": 0.627,
+          "shrinking": 0.627,
+          "density": 0.6366770081493872,
+          "thickness": 0.6366770067796611,
+          "excitatory_weights": 0.627
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3.2e-05,
+            "ratio": 0.6399999999999999
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000191,
+            "ratio": 0.6366666666666667
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 6e-06,
+            "ratio": 0.6666666666666666
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.002483,
+            "ratio": 0.6366666666666667
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.000742,
+            "ratio": 0.6363636363636365
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3.2e-05,
+            "ratio": 0.6399999999999999
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 82.768011
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 9.550155
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 31.83385
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 63.667701
+          }
+        ],
+        "cortical_depth_um": 187.81971700000003,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.51414,
+            "ratio": 0.6270000000000001
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.1254,
+            "ratio": 0.627
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.15048,
+            "ratio": 0.627
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.14421,
+            "ratio": 0.627
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.159169,
+            "ratio": 0.636676
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.318339,
+            "ratio": 0.636678
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 3.183385,
+            "ratio": 0.6366769999999999
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 4.138401,
+            "ratio": 0.636677076923077
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.382006,
+            "ratio": 0.6366766666666667
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.15675,
+            "ratio": 0.627
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.02508,
+            "ratio": 0.627
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.03135,
+            "ratio": 0.627
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.03135,
+            "ratio": 0.627
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.03135,
+            "ratio": 0.627
+          }
+        ],
+        "excitatory_weight_range": [
+          0.627,
+          0.636678
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/014_deg_0.627/1.structure/mouse_cereb_dcn_io_nest_0.627.hdf5",
+        "original_working_hdf5_sha256": "161f31bd13f30380fc2537451364cacba8c69345aaeeb6a41bcfd8da7f95d2bb",
+        "recovered_hdf5_sha256": "bd12952eb59d3a57c439862345e7c9809859b5c43dfa1ebb01d417b8c4a391a8"
+      },
+      {
+        "index": 15,
+        "id": "paper_without_15",
+        "sz_percent": 40.0,
+        "k": 0.6,
+        "factors": {
+          "radius": 0.6,
+          "pruning": 0.6,
+          "shrinking": 0.6,
+          "density": 0.6078384472892452,
+          "thickness": 0.6078384474576272,
+          "excitatory_weights": 0.6
+        },
+        "density_parameters": [
+          {
+            "population": "basket_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3e-05,
+            "ratio": 0.6
+          },
+          {
+            "population": "glomerulus",
+            "field": "density",
+            "baseline": 0.0003,
+            "value": 0.000182,
+            "ratio": 0.6066666666666667
+          },
+          {
+            "population": "golgi_cell",
+            "field": "density",
+            "baseline": 9e-06,
+            "value": 5e-06,
+            "ratio": 0.5555555555555556
+          },
+          {
+            "population": "granule_cell",
+            "field": "density",
+            "baseline": 0.0039,
+            "value": 0.002371,
+            "ratio": 0.607948717948718
+          },
+          {
+            "population": "purkinje_cell",
+            "field": "planar_density",
+            "baseline": 0.001166,
+            "value": 0.000709,
+            "ratio": 0.6080617495711835
+          },
+          {
+            "population": "stellate_cell",
+            "field": "density",
+            "baseline": 5e-05,
+            "value": 3e-05,
+            "ratio": 0.6
+          }
+        ],
+        "layers": [
+          {
+            "layer": "granular_layer",
+            "baseline_um": 130.0,
+            "value_um": 79.018998
+          },
+          {
+            "layer": "purkinje_layer",
+            "baseline_um": 15.0,
+            "value_um": 9.117577
+          },
+          {
+            "layer": "b_molecular_layer",
+            "baseline_um": 50.0,
+            "value_um": 30.391922
+          },
+          {
+            "layer": "t_molecular_layer",
+            "baseline_um": 100.0,
+            "value_um": 60.783845
+          }
+        ],
+        "cortical_depth_um": 179.312342,
+        "excitatory_weight_ratios": [
+          {
+            "connection": "ascending_axon_to_golgi",
+            "baseline_weight": 0.82,
+            "weight": 0.492,
+            "ratio": 0.6
+          },
+          {
+            "connection": "ascending_axon_to_purkinje",
+            "baseline_weight": 0.2,
+            "weight": 0.12,
+            "ratio": 0.6
+          },
+          {
+            "connection": "glomerulus_to_golgi",
+            "baseline_weight": 0.24,
+            "weight": 0.144,
+            "ratio": 0.6
+          },
+          {
+            "connection": "glomerulus_to_granule",
+            "baseline_weight": 0.23,
+            "weight": 0.138,
+            "ratio": 0.6
+          },
+          {
+            "connection": "io_to_dcn_i",
+            "baseline_weight": 0.25,
+            "weight": 0.15196,
+            "ratio": 0.60784
+          },
+          {
+            "connection": "io_to_dcn_p",
+            "baseline_weight": 0.5,
+            "weight": 0.303919,
+            "ratio": 0.607838
+          },
+          {
+            "connection": "io_to_mli_io_to_basket_cell",
+            "baseline_weight": 5.0,
+            "weight": 3.039192,
+            "ratio": 0.6078384
+          },
+          {
+            "connection": "io_to_mli_io_to_stellate_cell",
+            "baseline_weight": 6.5,
+            "weight": 3.95095,
+            "ratio": 0.6078384615384615
+          },
+          {
+            "connection": "io_to_purkinje",
+            "baseline_weight": 0.6,
+            "weight": 0.364703,
+            "ratio": 0.6078383333333334
+          },
+          {
+            "connection": "mossy_fibers_to_dcn_p",
+            "baseline_weight": 0.25,
+            "weight": 0.15,
+            "ratio": 0.6
+          },
+          {
+            "connection": "parallel_fiber_to_basket",
+            "baseline_weight": 0.04,
+            "weight": 0.024,
+            "ratio": 0.6
+          },
+          {
+            "connection": "parallel_fiber_to_golgi",
+            "baseline_weight": 0.05,
+            "weight": 0.03,
+            "ratio": 0.6
+          },
+          {
+            "connection": "parallel_fiber_to_purkinje",
+            "baseline_weight": 0.05,
+            "weight": 0.03,
+            "ratio": 0.6
+          },
+          {
+            "connection": "parallel_fiber_to_stellate",
+            "baseline_weight": 0.05,
+            "weight": 0.03,
+            "ratio": 0.6
+          }
+        ],
+        "excitatory_weight_range": [
+          0.6,
+          0.60784
+        ],
+        "recorded_cells": [
+          "GranuleCell",
+          "GolgiCell",
+          "PurkinjeCell",
+          "StellateCell",
+          "BasketCell"
+        ],
+        "hdf5_source": "02_BASAL/20251004180523_basal_activity_2_0_glutamate_all/015_deg_0.600/1.structure/mouse_cereb_dcn_io_nest_0.600.hdf5",
+        "original_working_hdf5_sha256": "6c3b67b06b594b0e0a851250b1252104da55f9aaa74d5956929a5a178b51c872",
+        "recovered_hdf5_sha256": "d026c1d72b4cc9f56bd1d61f44b3e34f82ed80efc63928230a80f42a364ea5f1"
+      }
+    ],
+    "reused_movies_unchanged": true,
+    "source_archives_modified": false,
+    "new_simulations": false
   }
 }

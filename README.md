@@ -278,6 +278,6 @@ Alberto Arturo Vergani — University of Pavia, Italy.
 
 For questions about scientific reproducibility: albertoarturo.vergani@unipv.it.
 
-## Activity videos
+## Paper videos
 
-See [original-paper autorhythmic and Kase activity videos](videos/README.md) for synchronized healthy-versus-SZ replays, captions, exact curve data, provenance and validation.
+See [original-paper autorhythmic, basal, Kase and structural atrophy videos](videos/README.md) for synchronized healthy-versus-SZ replays, captions, exact curve data, provenance and validation.

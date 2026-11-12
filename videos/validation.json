@@ -46,5 +46,35 @@
     "preview_visually_checked": true
   },
   "original_archives_modified": false,
-  "new_simulations_run": false
+  "new_simulations_run": false,
+  "basal": {
+    "file": "basal_sz_factor_dcnp.mp4",
+    "frames": 1001,
+    "duration_s": 40.04,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": 25,
+    "sha256": "8f861c4624de1beae318648f5a1514985555f14d7e4dd23ddabd0fa2b69ed017",
+    "bytes": 19304252,
+    "passed": true,
+    "preview_visually_checked": true
+  },
+  "structural_atrophy": {
+    "file": "atrofia_senza_resilienza_rotante_100.mp4",
+    "frames": 850,
+    "duration_s": 34.0,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": 25,
+    "sha256": "5afb919129c1b4abbcdb7f6091debb764ef3890849cdc9edca25232106b1e7eb",
+    "bytes": 42620606,
+    "passed": true,
+    "preview_visually_checked": true
+  },
+  "basal_and_structure_all_16_recovered_levels_match": true,
+  "structural_parameters_and_network_counts_verified": true
 }
