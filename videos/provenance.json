@@ -1,0 +1,3674 @@
+{
+  "release_date": "2026-11-12",
+  "dataset_doi": "10.5281/zenodo.23391996",
+  "paper_doi": "10.5281/zenodo.18813588",
+  "branch": "without resilience (sharpness 2)",
+  "nominal_sz_percent": [
+    0.0,
+    2.6666666666666665,
+    5.333333333333333,
+    8.0,
+    10.666666666666666,
+    13.333333333333334,
+    16.0,
+    18.666666666666668,
+    21.333333333333332,
+    24.0,
+    26.666666666666668,
+    29.333333333333332,
+    32.0,
+    34.666666666666664,
+    37.333333333333336,
+    40.0
+  ],
+  "recovered_data_validation": {
+    "passed": true,
+    "conditions": [
+      {
+        "id": "paper_autoritmo_00",
+        "populations": 10,
+        "cells": 33672,
+        "original_counts_verified": true,
+        "current_export_sha256": "441be216e637225e98785a60c77ba32971f503232c69fe2d7cc16720b3a12109",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/000_deg_1.000/1.structure/mouse_cereb_dcn_io_nest_1.000.hdf5": "370f7ab8854bdb950cc6b4881b6f946d0bb8b0f4a57889c45ab8be1fdc038ed6",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/242d0353-544d-4d0c-a7f2-13ec664dac88.nio": "bcee0dbc3c03d79ccd465fc9ab7d78088cb11aaeff0e24a073655b15217e25de",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/28d0d29e-0276-4e10-af0e-c65705deb3e4.nio": "20fcdd87c6154204f1bcf5136e387f73fff31b37b3478d71577f722e8ef21776",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/4468a449-3101-494c-a782-6db1fa33be42.nio": "75be612a8706391077d0c9df27d414f9e0a7fb7df0213b2361bc6e5ab2454c96",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/4d75f5e3-dd4d-4e73-80cc-6448b16ca3cb.nio": "d40d36f7c850c6e74a02f063c258faf32612d0eaa42bc744ed00bfcfea4aa762",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/5527934a-638e-4283-baf8-3e887a68d28e.nio": "157744fb8a341feb912b43cef789769b2433db59eead71810915465443b0b9da",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/8319435e-e915-4a33-a8b3-7d39ac160f19.nio": "7824ce94b816d3d7652f45a5db9ecc4fde92bba068e9ef8166fef8da0602a753",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/bc9ab8f2-200f-4944-80bc-44d1a8dd6af9.nio": "735e8e88dff06b35009ee11ed8c86e0c583091bd0bff5993486c4b9f76863a41",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/000_deg_1.000/3.function/e24b9cab-f453-42a4-8b81-c5d2ac205f4b.nio": "8ebedda561f8b2883588babfa2c83d592131cb8a6da3201ae1abb4ceb683d72e",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/000_deg_1.000/2.stimulus/basal_vitro_1.000.yaml": "d34baa167b207d618cc5b3ff65087e575926b481b35f8fdf5aa9a15b5d61895a",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/000_deg_1.000/2.stimulus/dcn_vitro_nest_1.000.yaml": "55d20942d61357c9f62514b03e5da96fb0eeae78ef0f89e938e2769a6381a6af",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/000_deg_1.000/2.stimulus/dcn_io_vitro_nest_1.000.yaml": "1151efe7aa1dd7c8362c644e4e7cb1ffe4a0ed35f6949eb2211b8eb9590203e1"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 11,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_1.000.hdf5",
+            "old_sha256": "fe3f3ff9fe939ce43284da904d65f148f1ef46ed16a9909409e7a4c3bc8d266b",
+            "recovered_sha256": "370f7ab8854bdb950cc6b4881b6f946d0bb8b0f4a57889c45ab8be1fdc038ed6"
+          }
+        ]
+      },
+      {
+        "id": "paper_autoritmo_01",
+        "populations": 10,
+        "cells": 32124,
+        "original_counts_verified": true,
+        "current_export_sha256": "00c5f72f11d39128bf5b8225e3e9ffc81d7bb3a6759f37046c3c30ab9c4afaff",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/001_deg_0.973/1.structure/mouse_cereb_dcn_io_nest_0.973.hdf5": "68dc8a3205ccd3715f4e3bc71c768237d24be8fb28e8fa768496c662b17d3adc",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/0dd37f46-0da1-4d45-99c1-d8339a12f333.nio": "b074eb3af7c8d1251308a8afd6774de72a5dd98749db74ec7bf92c67c9e2bdff",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/12af5e55-8529-4655-8564-6d60ef72f29b.nio": "e248b55bb9db238c792d9db531e0d8c03bcffb9aa895bccf9184c4bc9b3433d4",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/30c441e8-47c3-4e0e-a54f-d0b4dc183df4.nio": "2a9bd30730c10969081aac79efd6071b423db4ddda04eb9a2913d9b530e49494",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/532faaf0-e933-462c-bbe6-93f60b4e134a.nio": "ddbd8f4bd468f62585cc894810650d0a7022b27e6f6c0d0893f29ca46cc50a6d",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/7b249ea6-1cbe-4372-9aef-4c479c888d72.nio": "a259d34646fc31baea7692908eb898831a2c6c71b56749f24b4b8ffe6d9e0921",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/ba483261-db20-4ead-aae1-d6c1f535ac5d.nio": "40cfc752ebed75be206a062647be978a444e41285729d7f5e33a28a15cb1f270",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/bf0f1ab1-545f-4151-af3d-7e5957e0e11e.nio": "9c7a963bde43f8d63c48c5ba0f5c34761d5df1805d4b0f60371290d275e87be2",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/001_deg_0.973/3.function/ea86977e-2e5c-4901-9ff7-969d6a71c638.nio": "f69dcccec4ddecec8150d1d06a3e83716454aa12ae338280ff43eaabb2334da2",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/001_deg_0.973/2.stimulus/basal_vitro_0.973.yaml": "af15938b85ea32c2fdf4345b4c21501e2d5ad35394efeb326476980154c32969",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/001_deg_0.973/2.stimulus/dcn_vitro_nest_0.973.yaml": "15076090031fa733aa42b0bd166a54e4c192033c022cf82f8e938cde9735cf2e",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/001_deg_0.973/2.stimulus/dcn_io_vitro_nest_0.973.yaml": "edb8e248fd88e83b5c307964b916859844c94f274e5ce34936db534bd3aa4140"
+        }
+      },
+      {
+        "id": "paper_autoritmo_02",
+        "populations": 10,
+        "cells": 30628,
+        "original_counts_verified": true,
+        "current_export_sha256": "803c8d920826c2b34dc642d16e6539dc75f18e0e33a5199b2195f180da7e5aba",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/002_deg_0.947/1.structure/mouse_cereb_dcn_io_nest_0.947.hdf5": "e4ae226824662508f0772e88c0a485ca2a2549948d4cd05ebb68b8c16a6638ec",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/10c31dde-6a74-40b5-ab3f-e289ccedadbd.nio": "4783fc5b9b740146f1169da6aec2f34fedab26898c971935ca699b52d18b9fdc",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/47cd3c3e-ce7b-4c49-b25d-a898992f384e.nio": "f4d6d7c9a33ad38ed105c199a6b0a6f15fc8936f44151df584e37714cf35e056",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/517c880e-7a56-42c6-9392-1fb99e8382a2.nio": "acfa9f54f83ce2688d36b530078bee4721f285e87e015953ea461f119a67e253",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/5ae62a92-98e5-4ed9-a524-b7ce3a530877.nio": "66ed3b5db28cacb07e5184e158d6c3141307591039327b0c50f22478a26efa37",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/85980889-f194-471f-b924-428e8690ce0e.nio": "7c91d56dbe69d35a788cacafd76e0ce45f0f54228be31c88ba5ec7a761c07af9",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/90e8ffc7-fdd4-4f08-a9cd-b3146eb74855.nio": "0a7c155860a1989cc009b3949e46e7584787fdf54b94b2b84ed6f3384ac02fee",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/c9c24698-047d-40c0-8ab6-6b8e9fcea053.nio": "de5c38ffab2700a79d8f67cd7063914c054e782b511abaf06c2e9fbd13044d77",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/002_deg_0.947/3.function/d71c78b6-814b-4720-b612-4cca0a9d1c1d.nio": "b6444a117146e34e6d18b04541569ccf89a11b4c89d7a6ef979b3ee3e17a56ce",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/002_deg_0.947/2.stimulus/basal_vitro_0.947.yaml": "1224735ed5126850f9811dd3c8cd2a792395f3335585104eb466d37a65b5be6b",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/002_deg_0.947/2.stimulus/dcn_vitro_nest_0.947.yaml": "64df70b7fb39b87efd42f3680eb3640e3b8788e6626d974d0a414b0f4671dfab",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/002_deg_0.947/2.stimulus/dcn_io_vitro_nest_0.947.yaml": "d8ef979d84065f9366f4b3d72bd08a570ef60a18a0513b2c5f3b183bcd1ca097"
+        }
+      },
+      {
+        "id": "paper_autoritmo_03",
+        "populations": 10,
+        "cells": 29080,
+        "original_counts_verified": true,
+        "current_export_sha256": "5c0a561df3f581997ab40bd56105a1f60f6a57ea295b4e3952465d060184b2d1",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/003_deg_0.920/1.structure/mouse_cereb_dcn_io_nest_0.920.hdf5": "d681a04cb35832670d287243b0fd87999e21bc117d70f82e6bee758634c7fafb",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/036671b5-755f-44fa-85d5-0f59eba493c4.nio": "b39807efe0e813e3f8a362d7d794057f2ca7f6eb2b84e91c6847a68d600af568",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/05e103bc-b58d-4ab9-883b-afc5ceafed21.nio": "47d05e8560f31b28c1224d099765abb405a795cb7e02a8b81303b949777fc201",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/225c3ad2-5112-4c61-8482-1ab8d5b6bfd6.nio": "f88b04832143f0fd51efef3e01f94db37649d51139f2ef149c870715b62b221f",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/3e3f8b26-0c9f-4fbe-9e7c-bcfc12aff180.nio": "53d666e4bbfe2a27a24e92e8a0b9e06308d387e718368f310eedf980b395e4f1",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/4c8f2943-bb6b-4c16-ac79-e0a8cc570f78.nio": "8e73222005917739bc3618f915184409768854ad4c40fa4879617878c1ecd2b5",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/69b456d9-e83f-4662-abf8-aa05fd62bdda.nio": "a720b156211a2d2a5ca6246b8a19f82dba63152152faf88b0e0156d5c90b58d6",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/80700a82-b4ab-4e88-b763-4be89370bc44.nio": "06b9794394fbdb3fe0498bd8fbd8130a147ea45670a6ca608903a73e69b684f3",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/003_deg_0.920/3.function/d032aa3e-0ee0-4833-9511-84ad24118961.nio": "cb9cb85913870aa990ab631b4d9271fba4bae41058fde6b53efa1bc2faa828cc",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/003_deg_0.920/2.stimulus/basal_vitro_0.920.yaml": "74a92ba89ee04497a887673ce1b478970a1ba2196146ae32227c8ffff6e4ce6f",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/003_deg_0.920/2.stimulus/dcn_vitro_nest_0.920.yaml": "8b64209f01e3a13e1d5e5c95f0389f079db389e66cf68abf646d67878bfa1fcf",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/003_deg_0.920/2.stimulus/dcn_io_vitro_nest_0.920.yaml": "b7417dadd569e49e40b9a04e81f895e44db7f69f8a81d53beaf47569b2912236"
+        }
+      },
+      {
+        "id": "paper_autoritmo_04",
+        "populations": 10,
+        "cells": 27546,
+        "original_counts_verified": true,
+        "current_export_sha256": "2d455137b359fa029a80a000660c492f37e067bb9fbecbd42a9d4aaf11a0bfa2",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/004_deg_0.893/1.structure/mouse_cereb_dcn_io_nest_0.893.hdf5": "a800801d8d8ba8519da4d732b9978be56e38dd13c2d03b7794d5e699a258abcb",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/32e001fe-7f6c-4b97-9ba3-ad176e48e69b.nio": "7dfe13e433e4a9dee21eacda0e96119365d063d7d4571beac48d9267c9b77eb0",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/3d669ec6-974d-4e54-bb05-d3d3bd286347.nio": "fa59a06ff743383b96f296caa2acc6bef4def70c8afd5932f279bdb337d22db0",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/86d90dfa-fd8c-4cef-bae4-428df93fa4ae.nio": "a5b2945b685e7a2381c8b87cde9d960570b574cfbcf3e2c4a70d9580ff430360",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/8857e5d0-d1b8-40a6-98be-754e9bdf9f59.nio": "13fea089b42abc365889e8ea27e3ec1370e176825322716b918abded384bd8fe",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/c03c6f4f-f6fc-401b-bc30-cfb321cc47bf.nio": "4572878f45d840476809463a6c98c421a5026f0499097a5d66dff4cff63bb036",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/e7f59482-3781-4e43-9acb-3d6e2431e371.nio": "be73ff4eda8423cc4d543c265c5c85b1ec133c029910b235b00f01a2674b5a69",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/ed019962-61b6-4d03-baa8-b92b8a4d7d3c.nio": "9947f756de24ccada35cd6ad6454a92519c8ce01f4a7dd49f35a1b680b8a4e7c",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/004_deg_0.893/3.function/ede8552d-f97c-4fd0-9124-0b4405eacee8.nio": "c6baf8301962c98d44ff9e1d627526b07b941c89daa25065ed570f50342f2968",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/004_deg_0.893/2.stimulus/basal_vitro_0.893.yaml": "9d12188153955842a3cabb01603c006d59c4bfd1f515a1501879eea27c6459cb",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/004_deg_0.893/2.stimulus/dcn_vitro_nest_0.893.yaml": "7c6a521a06870710ccb0241b759fe82f4738275d5f806b97b56ae13a4ee22385",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/004_deg_0.893/2.stimulus/dcn_io_vitro_nest_0.893.yaml": "0ac1f6f737595126980da866ae7e9198ae487b74edf3558f42186a3406dff8f0"
+        }
+      },
+      {
+        "id": "paper_autoritmo_05",
+        "populations": 10,
+        "cells": 26096,
+        "original_counts_verified": true,
+        "current_export_sha256": "e67c419b557af0f7e2824c8a66870300565e7d4623924cac9b93b280a2a2e6f1",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/005_deg_0.867/1.structure/mouse_cereb_dcn_io_nest_0.867.hdf5": "20eba4763d3202a98c2057840397f0a8171df5a2755a35eb9e128107d9c9d0c2",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/0f17b1db-410a-4738-b51b-14e5d3c80d55.nio": "6b44223eee7c2f46a9faaa7e9e7aaa6fdbc162d8a384fa5e17913892ecaa71c9",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/17c42a41-1ae4-442d-8828-ca232e3d55dc.nio": "2b934a0ead41aaf12d9a41149a945655dd44b2e9612495f43c1b2273b8d70db4",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/99062359-901d-4865-badd-da61a758e9f7.nio": "a669561ce2e2d2a1454f29be8a1e37232a2f70632a25ed014aa0091f6e0027fd",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/b614c930-0ac4-4af5-9ead-52c06dca48f4.nio": "1fa549a86524c4d28fdf61f733728a6f55dd9636003f0accc01048f5d29c12dd",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/d348f9b8-624e-498d-849d-fe2c5edcff83.nio": "3aaff9e6d233c28de95bb9a47b9d3436964e8105bfdfa9048dd8ac817cbe8594",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/e3e74366-4084-4bff-86ca-1a193bf6e3e9.nio": "8a2b6bb04fbc6c33cc6879a6a42a13941d6017b3e94e6e45a4f623caa23b4327",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/e7fe0422-2b74-401c-bbdf-3085dfea6f3b.nio": "d3a9f069921e3c4bbe98c093b984d698a332f14e70d59e977d818ca7e77b0ecb",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/005_deg_0.867/3.function/f4c6f2b8-9c1a-41ef-a051-81cd8cbb025c.nio": "f28272cf34cac56b389dfd55aa3c91e924f0c33d339c05102caa984e84e7da66",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/005_deg_0.867/2.stimulus/basal_vitro_0.867.yaml": "6c942b12056b8d72e89881121b0a64688ef89f68eb72c961c75edeaa2883f1db",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/005_deg_0.867/2.stimulus/dcn_vitro_nest_0.867.yaml": "1634e2082004231daf8e71c99ebc766942ed92588c001ffc479006529ffe0d98",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/005_deg_0.867/2.stimulus/dcn_io_vitro_nest_0.867.yaml": "f03f01ad116e442f6fd910162c8786a257d4cf35a1f947816c9bf8ebe1af140e"
+        }
+      },
+      {
+        "id": "paper_autoritmo_06",
+        "populations": 10,
+        "cells": 24576,
+        "original_counts_verified": true,
+        "current_export_sha256": "3d2193653c8f45b897b5012f5a06887d2b118444bbef524eaf86782a4506f11c",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/006_deg_0.840/1.structure/mouse_cereb_dcn_io_nest_0.840.hdf5": "8630f414b3ec9320d931106c8ef7137d72eaa5cda8acc42e600c3b844fb7c658",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/1c4e1aea-b97d-48dd-9b35-853e376307ac.nio": "fb555ee1e866b6ab0039fc6c5b888deeb6ce486ad27bd3d9cbf339046041c873",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/649f88d8-be07-4ec6-9c84-bf327bc198d5.nio": "eb9085052442f2078d8c1696808ee3374d45ddebe00b47e1e364385045c12c87",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/7bbe7fba-c31f-4222-9171-1dff7110b7b2.nio": "3f8db6e1553bae42f1491997c5dbdb606d065f37a9185bf1352bb366bb5b2ead",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/886e622c-3fd8-44a9-b226-eec7b9e92ba0.nio": "e1c49b3ef8d6069dcf9378e3e45a209241d68a659f30d8eafa578622fcde0158",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/9245d97b-d43d-4236-8b0f-baa3aa0f2193.nio": "e9507e8edc5278d2e717caa54e1bdd882299f548d0e915aac690e466d26a57fa",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/ebf58330-9304-4153-95f0-68d123ece7c3.nio": "0a74b3bd92d5eee061a7eab37d185ac60e897dbdaa3d3d1c2df9925c09061832",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/ee2bb31f-d852-49fe-9c79-703621a8a70f.nio": "80e42eb2c9defe13d3823c71e3e04d2459d3358a25d783ddd998fd5a7cfce493",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/006_deg_0.840/3.function/ef221e46-e5cf-408d-a6e6-8ccc810b66e1.nio": "18bf389f31d93773b617c6d9a04e209e00e57cb44c25a2319268f8f142ae9725",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/006_deg_0.840/2.stimulus/basal_vitro_0.840.yaml": "e60198d8cc06c004be83ce76e46a8e0edc436c7892f4f0bc56e59e25ebd67948",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/006_deg_0.840/2.stimulus/dcn_vitro_nest_0.840.yaml": "f6419e7419571c1d749a629c7cce2946d2db9399f860abfd6d0998fa3cdd9eca",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/006_deg_0.840/2.stimulus/dcn_io_vitro_nest_0.840.yaml": "f91f35f51fc25fb650651835ae1fad9391eae9030d4618ab5c02d76ba515cbb2"
+        }
+      },
+      {
+        "id": "paper_autoritmo_07",
+        "populations": 10,
+        "cells": 23084,
+        "original_counts_verified": true,
+        "current_export_sha256": "b769b8e995bb71c58872bc057c1b54b63fc21d09b6065eec7b9abc6057d331d3",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/007_deg_0.813/1.structure/mouse_cereb_dcn_io_nest_0.813.hdf5": "21b6805fd6d4dbbd9a464b2075df1d62be159a65e338b3a49f3d91e30a1ff09f",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/1af41c1c-efe7-4cf6-bee8-4762ed9f53fe.nio": "aabd19454554d1ca76ef675d39e449f0e93e4124b174e11a24837624888a32a5",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/20719f86-352a-4006-b6a8-763002a20007.nio": "fd9b6d0a9475da5993f22d6c445fa5514f6dca84624be47d5596786e0f8a4862",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/34d4b6ef-6496-4e10-ace6-6ba7f7cc41ca.nio": "cd502ac4b50de7f90cf09330170aa8795fa70a07e756cc8fedd79014c1dd95a8",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/394827f0-34ee-4369-9ebc-5668a089e83a.nio": "ba60d0cbe79460c06d28a988a49bb1ecb57d73a46933bf5ef1dabe2e4b015278",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/4f253c7c-ed37-4f54-9836-cfb8fa349b09.nio": "ca9ea00380f1c9d69bb310e13a75c51452b60553e3d5fccec0e2e669bc8dd24c",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/53bcfc8b-4586-4c73-be66-880adb52c0a9.nio": "47366a732f367ebed7bca116b0e96e484a6e6435da55028adb0f247dfcfe19ef",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/bf107e7b-1c03-47f4-a276-f0b266091393.nio": "98c4ab9eecb6f3394124468a581fbfde2427aece7e91fe7db623127eca3e2794",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/007_deg_0.813/3.function/cb4282b9-68f3-4d57-9aa4-4cf781780734.nio": "96f0c0fc69466f9fec3f888e9e19e89ca41bfd06b30572c2badc560db901bc20",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/007_deg_0.813/2.stimulus/basal_vitro_0.813.yaml": "0da01d0e1f768e287905431591d40c9ce3df3198a8e6007edaf3596827f0b350",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/007_deg_0.813/2.stimulus/dcn_vitro_nest_0.813.yaml": "124db4810fa2749df68dbb3ed87df30b27a600b8fd0c4c23a819831e3af64a3a",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/007_deg_0.813/2.stimulus/dcn_io_vitro_nest_0.813.yaml": "b83ec55ffd32664bda75cf1b0ab47211666ee00e200fd172059d41cc6dc29118"
+        }
+      },
+      {
+        "id": "paper_autoritmo_08",
+        "populations": 10,
+        "cells": 21685,
+        "original_counts_verified": true,
+        "current_export_sha256": "65c09bcd4c1ad3d1ec65969f82569660979c6ee88bd81b7b5d45aa15cefef50b",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/008_deg_0.787/1.structure/mouse_cereb_dcn_io_nest_0.787.hdf5": "87c86768857aeedb2bd111368bc64e57f46e7073f9099c952e930947ee84ba4a",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/03765889-89ae-4a6f-8b78-1f4f10cbda06.nio": "4cbacad3db71fa137eff16ef78d1e8d85d38d4b6d90ad6e90591651fcfdff4a3",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/2758327c-f7bd-4571-822d-a4d159590f19.nio": "928a39fd815492cfe9149bc3a23203c35943938adc5e41ba619bc1702c696f00",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/61283243-41a6-4ca5-81cf-2347c90dbfcf.nio": "c8274e93e898f96d48c1841e6327a881861e64d8c8c067547738832008dcb3b8",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/66061fc9-c191-4886-93e3-a6fd22949158.nio": "78c964a5b692432743b40cb58ca522a21c83779e0d9fd90d846b2e316114531c",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/79b76fcf-aaa9-4f40-9460-3ec682a00d35.nio": "5fab2b861ea8081a0dc0494cbc52f56df588b2ced2be4f070234927df1e9faf9",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/8dd46292-c733-4a01-ab42-01db01f0c110.nio": "8e750cccf6bccb66db24aab24bdb51e32270f181b18b023b95696c991cd31ac8",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/c07c6362-59d2-448d-b7e7-76ae521b2464.nio": "d12f19e5c55c851314f8ebd99284cc6ac951c50a4d9b2af51da776c8bd775e9b",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/008_deg_0.787/3.function/e91ed6a5-1742-4897-add9-ca3cc9185391.nio": "3088352b5e38e3bb039dbdb01fa16c4b63eb8870afd37ee07bc6bfc0babda0e7",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/008_deg_0.787/2.stimulus/basal_vitro_0.787.yaml": "37055029130ebc339c59b7c1dca7a951aa9680d2dc8d7d40020fe812e30c4a47",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/008_deg_0.787/2.stimulus/dcn_vitro_nest_0.787.yaml": "3e956cb7ce3ce359013b2c6d63a72492689e0dc81b432aa7c70e84c5bb2b5bb8",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/008_deg_0.787/2.stimulus/dcn_io_vitro_nest_0.787.yaml": "80a284b392ab20591a2d043e3edaa18501d145b155b7f7099c843992e048292a"
+        }
+      },
+      {
+        "id": "paper_autoritmo_09",
+        "populations": 10,
+        "cells": 20249,
+        "original_counts_verified": true,
+        "current_export_sha256": "b94c3c2bdaac848712dd38835fe81dc0058207ba2d1f3dd77dd762ae25777a50",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/009_deg_0.760/1.structure/mouse_cereb_dcn_io_nest_0.760.hdf5": "71168f43bc3fea2c6c4e45a4a29bde6202fe06cfb581ad8400dd7269f6cf9a8b",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/028629cf-d888-406b-924b-52fdfda09ed9.nio": "a387ad668c28299dcd297dad49119d293ade06b5211b624c74236db6b2ef69f6",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/1d1cbaf3-b66e-4c97-9af0-855fa484d59e.nio": "805f068b89acf00690a68908e5aafb38083d8f1143c3f6096e1df79e0158bcc5",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/525be0e8-83e0-495a-ab5f-b8084bef2bb6.nio": "dcec1e3850381de829cecbd96ad4cd52a5657971d5d4412956e8596b9a3b6000",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/54d0456d-0d7f-4214-92ba-141d1b251296.nio": "ed503509fa4d4f1fb9d68286413d9a63bb597e9ac2fa4dbebd49ea311891bf13",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/c1137cc8-9adf-4e55-84ae-d7e286849a18.nio": "3e50de0500ecf03cef17af33d07dc8dc4efd7d4152b356fed238ef9042dd17dc",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/dd93e06d-b55c-453a-8d8e-a422e5a9edd5.nio": "60dee2a2d2af7d6c34a424c2060e5884c5d68c3ce6afe20fdcd27400af07ce1f",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/df91dbf3-a552-4bf2-8745-7f2788b52f7e.nio": "357ee380d1546c59544051257810da3682ef7295ab8cfc2c65f07db782ab0cf4",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/009_deg_0.760/3.function/e942d43a-bbac-49ab-8602-55b4338f1c1f.nio": "f2bc1d114d7a21c00195be881f23dbe53177e51f4bc3aecb1444a41db621f236",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/009_deg_0.760/2.stimulus/basal_vitro_0.760.yaml": "bb449ced36dd55c0ad3aa1efd21fd6a3ae2d6db432335be16857251dca019839",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/009_deg_0.760/2.stimulus/dcn_vitro_nest_0.760.yaml": "74a99defdc4fab0fd8a31d16836a3cee69d09477ecf1e0d7d3198e5678ede46f",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/009_deg_0.760/2.stimulus/dcn_io_vitro_nest_0.760.yaml": "e46d5d8590158e0a2a568f1ccad8070f3244bef630f4beee9830d5b6b0fd7beb"
+        }
+      },
+      {
+        "id": "paper_autoritmo_10",
+        "populations": 10,
+        "cells": 18825,
+        "original_counts_verified": true,
+        "current_export_sha256": "33dac7e06e8540f447976184d0c8e0b1e7573b93f199a5069d18362f356ed65a",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/010_deg_0.733/1.structure/mouse_cereb_dcn_io_nest_0.733.hdf5": "641970bbc49f8f13a5ebf5c18aaab5c01dd5f9abd909b0444666968442cf9881",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/4d7ef91f-22b4-496e-bc65-26d25a6bc0f5.nio": "0e15d3e53cc2ccc8372924d76ee0dbc12f5f0ea2647a63a7bf60b94db0985087",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/6265f116-4b10-4f8f-9939-07cf106039a5.nio": "d43fa60498b6bc85faed40c9d4323a8f636e3606288edbfd938b2af1863bd893",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/679dfd4a-8cc4-4916-a6d6-45311f0ca449.nio": "e3f17945706a89a3e9840eba1e4ef3c8ee02fce2a70b36091816cbee12f8ab5b",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/abc13bcf-d926-40fc-8817-cc10c7022129.nio": "2a2045800cd3c2ab6fd7c87ddf794497068bc04be1522f11272588f78249f903",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/adad3f07-9ac6-4d6e-810e-129c2900dfd2.nio": "018da2c3fe174bc0e6683983da674305a04cdec8b51d5a1f85f4e5f364b44887",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/d3c91b10-087b-4f2d-8fd0-04fd9f6a1725.nio": "fbc42730582830c9ca45f7520a7894cd6b63d2003d5fd56d5ab93003d7b3ee35",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/d7da65cd-4ae6-4258-b357-56cda84439b9.nio": "06583409feba100c7a07a337e6f5e8027bd5058b065d658686ed797a2c345464",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/010_deg_0.733/3.function/d7e37d6c-63b2-442d-911c-496659a928e1.nio": "8472b50e3cd93ff83c2bbf2cc7566be40dff65e292cac57631959d8c0f7509b4",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/010_deg_0.733/2.stimulus/basal_vitro_0.733.yaml": "77424cf4c0f587744e17b654a89b0ccf06b70ff067a7603027f900dfe4e2483a",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/010_deg_0.733/2.stimulus/dcn_vitro_nest_0.733.yaml": "58a35e659ab1fcd5b55068512aed40db2f06e12686c767c7834a55a9b0983131",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/010_deg_0.733/2.stimulus/dcn_io_vitro_nest_0.733.yaml": "d85d2006c20555b80068b77700b50c4c1cf23fc804a06cb39e562060a0bead4b"
+        }
+      },
+      {
+        "id": "paper_autoritmo_11",
+        "populations": 10,
+        "cells": 17503,
+        "original_counts_verified": true,
+        "current_export_sha256": "e0bea8fd41379a9c1998579ca09fec3d5f59dc0a3baa78682e76a37015b4f2fb",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/011_deg_0.707/1.structure/mouse_cereb_dcn_io_nest_0.707.hdf5": "c0046f947e3b5d201027f1b1a7aa407f43f5545c908d1d19d7427916a63164af",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/031371fc-9dcb-4e33-8835-1df622da47f2.nio": "9ba09ab2eb5129113cdbd823d728028bd8dfc8f42014f9bb0a0e0da7b5bca489",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/115d228c-c1b8-4e99-a426-3197838719fb.nio": "fa44f92c8ca3f10dd5912dfa35d0daa22a37eda04a2e9205cc5a637a509ab4e4",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/19c2a471-df44-4e3d-ba7d-17b321b8303a.nio": "5be61427318852e58d27afdd2a59fdb71a0e49e5deecb1c9497fa3a7d96fa055",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/2b46ea84-3da0-4f1c-8860-a559f06e751d.nio": "3e925298d130fe163981cd2d1ea54d1e8c909f4a1c3444451023541622cb22d6",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/301aa046-1da7-4725-afce-a7d4d0fb708c.nio": "bb3613ef6726d3dc246ee69ea8b78fcf6bed08c796df79d846649dc79dbb6766",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/629f146f-31e5-4379-827f-0256326408cf.nio": "ea8456942c9470a49463543cb9398fb19ea7af2c4cf3afb26ef6a0229cdc3474",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/c0354096-16ba-4256-9391-f59760c88480.nio": "5c62545150a4116bb9d50aed30523bcecd5680e6f906f780c3e9d80f2075d522",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/011_deg_0.707/3.function/f17af814-072b-4ed4-8c8b-34990c2d8690.nio": "4994ebdc8d638cc37ab02e0599caba97fd266b14bb8c599240c59c17747e1d35",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/011_deg_0.707/2.stimulus/basal_vitro_0.707.yaml": "91a92e73d40c963c0f0c93f289889ea12ecd817c7d7f8c9294624f741d61c53b",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/011_deg_0.707/2.stimulus/dcn_vitro_nest_0.707.yaml": "6d8e65d8e2d8427e7b8be868dd6cc724e2647321d166cef577204dd9d9f1f0d4",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/011_deg_0.707/2.stimulus/dcn_io_vitro_nest_0.707.yaml": "bb26fe7aae27803d0e2a42ad001e1ce9109ebce440be15e826436f17cf38a6c9"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 11,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cereb_dcn_io_nest_0.707.hdf5",
+            "old_sha256": "e0f5fb112270a5425e531b40b6ca4454c135047fba44e7c1f060b9d468deadcb",
+            "recovered_sha256": "c0046f947e3b5d201027f1b1a7aa407f43f5545c908d1d19d7427916a63164af"
+          }
+        ]
+      },
+      {
+        "id": "paper_autoritmo_12",
+        "populations": 10,
+        "cells": 16169,
+        "original_counts_verified": true,
+        "current_export_sha256": "4caf31f261e8e5ff27621573cf5761fc480dd8fd406de2e5115386243398a9de",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/012_deg_0.680/1.structure/mouse_cereb_dcn_io_nest_0.680.hdf5": "e83604f3b0345d6adbf86492b0ac42120da5353ec70ab950857f33d7b8ef1ac7",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/29596713-6e62-4887-9443-a0b67c8e174c.nio": "48c3e927c985cde2be11e44bb1bbee5329f1e915fa54a4697f81f068124b2d11",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/34a8fd16-80d2-42f0-a4af-1745193f7213.nio": "37a99e0e414b5234d135fca1ce925321a5973ca038405da53d638b7bfe0b32e0",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/40c12232-ed17-4b3d-905e-23a572cc1538.nio": "9f2a664c3cd255ebba4486f0f1fb44ed250ad2b28a852a61f1b6116c7a55a1f6",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/600aa178-dd28-4cb1-90a8-7a927c5985df.nio": "8bff3e48a5b4cb5f723e11f502f420e47039bad0170c6f8b44ef43e7f365bdfb",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/60636ce6-28ba-42ac-96be-b5ce1a2bf030.nio": "b7b2cdaa49b9c5631bf559205908679a00555f03b383f11c511ea04f1b707e24",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/b87f344c-aaa2-4136-9ce6-7c0ce12b8f5e.nio": "ab7c71b99cee8f3561175034b8b1edfb8568c9560048419bbd47b0661dd8c781",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/b8cbc475-cda1-4c5a-a0f2-c7de0cfd8a0c.nio": "1a9027ce88a394b67e851f2dff20d7066a0a43afe1eb9e4d6d57bddde3f987d1",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/012_deg_0.680/3.function/d556179e-f8c2-4aed-9963-8ae0b87fdc30.nio": "70b31555fc2a4a4ca6768af1355ecc2f33f249693438a2bb0c662558a97cb5be",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/012_deg_0.680/2.stimulus/basal_vitro_0.680.yaml": "0a890045872250fa4d7d1d8b7b22bc7e8b190154c72936b067446a0e7bd934a7",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/012_deg_0.680/2.stimulus/dcn_vitro_nest_0.680.yaml": "d1651870cea6bf5afad64588d170c928caa95e156788c92ec7fd66a5cc9e8a9e",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/012_deg_0.680/2.stimulus/dcn_io_vitro_nest_0.680.yaml": "44b0e637fc93f7d017de3ce2c7f61a74b5a24781d0d99df2b872b1eb96476384"
+        }
+      },
+      {
+        "id": "paper_autoritmo_13",
+        "populations": 10,
+        "cells": 14881,
+        "original_counts_verified": true,
+        "current_export_sha256": "542b256156eb82cc69b419ed3f5117e52472e18765d9d24cbfc35fcf42d1dd01",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/013_deg_0.653/1.structure/mouse_cereb_dcn_io_nest_0.653.hdf5": "27294fcfe623171267ae240c85742634333c64f3cf061b6cf0b4cfddad7ddd67",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/00ff347f-dd21-46eb-8d5e-ed6803fe044e.nio": "892bcc07ea90f2dd7313e011fcefd026b5de46dcc675b19215ca485041b16cc9",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/298ab806-faf8-4249-a047-21547c6fdcc2.nio": "d6628e59007f2eff5d929618a96480c9609caa02b542b80bd821977acd953b73",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/6d0d41b4-2e93-4f84-8742-53a23a19574c.nio": "314d82417c17e254a1e99514478b058c550e0883863c467d09712dd6dd60f3c6",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/74cea1e2-e702-48b1-9304-a7e4edb64040.nio": "d38429f818cc972bad265d3229f66a1583a7381b5d5d72685ebbccb7a2482dc3",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/9ff9c9c4-f4c3-4a2a-b54b-92a42629dd64.nio": "47ac1fd21fc3c92b66a1db026ae4b41271f98ea906d7e84d4ebe35c93d19e0fb",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/dc9dc614-5816-461d-b224-94fdec68e9e2.nio": "bb804de51753278251ab9480352606cbad03036d20c44f1fd36fdcdfb8a9962b",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/ed49f0f1-4e3f-4cbc-a463-de678a7fd2cb.nio": "2a5b8f2d32c08a6ae8377d9ec9d4365ad89d549fe22c2b173d3367ca6c2ae718",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/013_deg_0.653/3.function/fe7c45fe-531f-489f-9f38-b3e6c04430ba.nio": "1f8a1abe82717d6d36fdc0323b27eb8f385099abe239cfef43014a7160e3fd6a",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/013_deg_0.653/2.stimulus/basal_vitro_0.653.yaml": "db8383dbb45710ce98c58bae8fce54e747f02304e9a2d7b652610220f91c4f75",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/013_deg_0.653/2.stimulus/dcn_vitro_nest_0.653.yaml": "4f4c844f1c6cc6ea8b6b52468b4128970213de493baa01b3334fc04cefa53b5e",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/013_deg_0.653/2.stimulus/dcn_io_vitro_nest_0.653.yaml": "aaf2e46c5bbe00d34ce8af78086fe45f62ef20a7e0721b5521f53fde8afbe6c6"
+        }
+      },
+      {
+        "id": "paper_autoritmo_14",
+        "populations": 10,
+        "cells": 13666,
+        "original_counts_verified": true,
+        "current_export_sha256": "451c35006f9127d233a08608d3649a45282bdfd249a980cca97d6d7e2e215063",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/014_deg_0.627/1.structure/mouse_cereb_dcn_io_nest_0.627.hdf5": "deec8e3e01fe6f4e1f944e9e7b5d4eb961016324c315de003554710236e33116",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/003a964f-1ed8-4f2f-8976-b6dae9896c7f.nio": "29b03fa880806e146c7dee9e17d94ba3ad4fffabdb3154b53fcd50e078f6f3ec",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/1c6fdf00-0bc8-43a2-b083-2fe4f627fc80.nio": "94861681927b8fb80e25189be414f990a6860dbb622da6ecb926b9d92543adf6",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/463ea2d7-d8d7-4679-8f2f-2f87931e6af0.nio": "5665620ae9575227c2bcb7b41529beee1dad2d222dc9ba4fe834e6da0f39daa9",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/5c0ab541-43c8-4efd-8e29-f331e2d5d0d4.nio": "e2d947eae7c33f8ab5226eb73bd78110a481349fc8f0287553ddbbf458975b75",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/7b94cb1f-52d3-4a50-8867-fc11e41248e2.nio": "f6d829994d0fb1a4881cf7d9503f20385b2b68405982729c71ea73fdbf118631",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/b156af17-fe67-415a-b279-d6cc02c10da8.nio": "9bc448affa80231191d1e2d55bd39b8b8c13a9cf5fbadaf03f17e7ccbbff9a9d",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/cabad6f7-f0c5-446c-a0ac-c29890e4cdb3.nio": "1cda50acd9f3283b7850f105316e7f4472b96729b0a932891c01467f96a34d8c",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/014_deg_0.627/3.function/ef7524a3-4426-4243-bb52-ed5405e454cd.nio": "321af398d2a6d96ceced2d7054a946b89f4baaaf49592800540453223adfccf0",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/014_deg_0.627/2.stimulus/basal_vitro_0.627.yaml": "d0141afa097abbaafae6526e4b3eeec88ff0c4d59925a49fa9a9db874bada3f8",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/014_deg_0.627/2.stimulus/dcn_vitro_nest_0.627.yaml": "8cb6ee9c62b40b935add1bc5773c33205dd7803779992d799a62b53e106bdec1",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/014_deg_0.627/2.stimulus/dcn_io_vitro_nest_0.627.yaml": "6649d96af9b814401466b1cfed305c4566b8d9459cf22e577a6e3c75a41913f8"
+        }
+      },
+      {
+        "id": "paper_autoritmo_15",
+        "populations": 10,
+        "cells": 12448,
+        "original_counts_verified": true,
+        "current_export_sha256": "4fc5f623402d7dcea780ad5447c2e14910bb19959c9c8fa88cbcea27a59cc79f",
+        "current_source_hashes": {
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/015_deg_0.600/1.structure/mouse_cereb_dcn_io_nest_0.600.hdf5": "0aaa1d983fb9b2966febad614c548802723531b35f74c45bf16085e07477fe13",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/090a3301-e9fa-4817-bcf0-0573e2600a2c.nio": "58b3b5d48f5f6bddf1764aa15ba48cd441e873de2dce36da4776283be87ce659",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/12a75bf5-b0b8-4a75-9b3a-a1713fe9f4b0.nio": "ad5da04f1c1e60f1c0dff9aa0df3cc7bb0762d89d936b3c01116677d5d2aed3c",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/1b6d9a21-fba1-4ec2-bde6-5acfae012cb6.nio": "e3e30e0cf72e064441fe0cf3acb668dd9d296e29e48ef36f10b5f582f38ea685",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/1d79d150-2196-4688-9341-f0e6b259ece3.nio": "a47763bf012a65d89e70369042338dd76b7bdf3c0602c3bcdf70096a36b4201c",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/6ee65893-f6d0-40ed-a21c-a5976caa45c8.nio": "634ca2d1669b9fa43e4f17beb85b9a92b2533674ceac5e91a433d14cfdac48ca",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/8b3c00ee-08f2-47f3-8457-ab4108995121.nio": "0e710c1c57df95760edd59cbc266cd81b1a54753e4d282ca3e075b4656c0faa0",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/9dd0b5e9-7492-4740-a15b-ddad6af609f0.nio": "72c1f2bc834a01f5744091faed39fb3589c1f2a6cc8a65572a70ed79de975c33",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/015_deg_0.600/3.function/b3f5d809-a629-4f2e-b429-2218e8d6c4c4.nio": "13d13363b810a0ef2c8ce6a3f8cb5c9090b9c3e7235d115e41cebcb574ac4142",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/015_deg_0.600/2.stimulus/basal_vitro_0.600.yaml": "c86ba0af67f0931593663bc1a932928fc2cc0bc85a1403b710ca5e145019d311",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/015_deg_0.600/2.stimulus/dcn_vitro_nest_0.600.yaml": "f2a51b7fb20e1fc7e0fca4e5c13a3488947efedb12c93c423fe8614138a8f01b",
+          "01_AUTOR/20251120172014_basal_activity_2_0_glutamate_all/015_deg_0.600/2.stimulus/dcn_io_vitro_nest_0.600.yaml": "cc7b99d20f2faf5a9aa033dfdfef8860cd4765c559b4c36ea4d6418eb831e51c"
+        }
+      },
+      {
+        "id": "paper_kase_00",
+        "populations": 7,
+        "cells": 33466,
+        "original_counts_verified": true,
+        "current_export_sha256": "62a1b0b2a58e2bafda58df2e7c86266ef43669765d164f819c2c2fdd992bbf3b",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/000_deg_1.000/1.structure/mouse_cerebellar_cortex_1.000.hdf5": "1dbf922bb526f3efe8ca1d1b3a786079ffbd04bc6e80f4b47068b7c70be97234",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/000_deg_1.000/3.function/315b4fc4-eb81-4e17-8910-d9ff2768a20d.nio": "d960ae424304e768048abaf3b3306c92cefdd02c8c5ff31c65ac0d75a0fed6cf",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/000_deg_1.000/3.function/87b63991-2bd1-440c-a702-1528ca5039c8.nio": "84454d4d939fb25859a64d2009b40764042271a4cc713762fa82979e3bf458b9",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/000_deg_1.000/3.function/92b4db1c-17a9-4ac5-8f93-1133e045dc0d.nio": "90077d2a40db7e296658a9f254c3e9960d699ccf0b11211f7a8384ee0410a328",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/000_deg_1.000/3.function/ab8531dc-f38f-4c67-9578-ae030cee5d03.nio": "972cd9fa35806376be25a683d8e5b4f4ede4e045f595a3cdfca624ebdecc5ad3",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/000_deg_1.000/3.function/c482eff0-ed8d-4bfb-9f30-f486ab241851.nio": "12bf3aaeb7c4af24e84dc3cf42056c030b3d823786649cbef6098dd93508b657",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/000_deg_1.000/3.function/c922a85a-189c-4cf4-b775-005d51f8793a.nio": "8fc2b28cf41eeac1f8dd5b5977c693afae0640918775313199d6d0c23baf417f",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/000_deg_1.000/3.function/cae061b9-aa7e-480d-9198-6be3a026e9c5.nio": "567777535e062a7066159da360bcb0baaaf5df39ec16def028c33a1ef1b67e66",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/000_deg_1.000/3.function/e9698edb-574b-4805-9608-05ca0201e376.nio": "eea5e79b3e8761b6d55478505a3a29c02d194fa49afba26ebd41bcedeab481d0",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/000_deg_1.000/2.stimulus/kase_stim_vitro_1.000.yaml": "e657a673e65b033fb5565838dfb7cb76b99ff75d677421c45e7154a05123ce53"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_1.000.hdf5",
+            "old_sha256": "da6c84c0bd257394dde9ee75dbcb180822d64ab792e816870458da72d2b8b9b1",
+            "recovered_sha256": "1dbf922bb526f3efe8ca1d1b3a786079ffbd04bc6e80f4b47068b7c70be97234"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_01",
+        "populations": 7,
+        "cells": 31928,
+        "original_counts_verified": true,
+        "current_export_sha256": "f2c3a2b8d2cddcee7f37f34d9fec2ae5aa0e4204dfa7f38e64d4cc35e757b932",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/001_deg_0.973/1.structure/mouse_cerebellar_cortex_0.973.hdf5": "187bd09fbc0d3cc18b3d21801b6315a17a3a7b5ff1ea940ceae43bbfd1fb1a90",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/001_deg_0.973/3.function/02974ed0-7e6d-4a35-b8e0-145350598c8d.nio": "e40ce23796959714aa4357e4c29bae033bc0f9789bfdca6974b3927075bda6ab",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/001_deg_0.973/3.function/329c9cb5-3225-4578-afaf-1651b9875bc9.nio": "17f22decd91dc7804893e33b6e2422c22d7d9ce3b36ab9ef598d4786a39088fe",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/001_deg_0.973/3.function/5567213b-646d-47ee-834e-37455448a85c.nio": "f46f8a46a6a9b1ba6decd7dd5219a91fd3a727540b1d736207452ac2474def8b",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/001_deg_0.973/3.function/613f5c75-7c5f-4771-857a-4ae30f3ad98d.nio": "9b73b702afe82c7581ad611bb956cdf94ad55430b41a517492c404f39fae8019",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/001_deg_0.973/3.function/ae50453d-87a9-4cb8-b15b-aec2ec5233bd.nio": "73e351b91897edee0d495e379a25f1579bfbefb42847f7d19acb4b394ab49140",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/001_deg_0.973/3.function/bb8ecbea-3ebe-4d62-9e62-5dd322ca551b.nio": "e08d8af4b1e8f6eec8e009e6d0821e812cadfe5f0e9637643bd81bef963c05c2",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/001_deg_0.973/3.function/e166f428-ad1a-43fb-bc3c-bea7e4a7b532.nio": "e9ea98c895e0efb51f29e5aefd2b6237b1a1419a0b6aec1fec789d48db590321",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/001_deg_0.973/3.function/f9a76b0f-b2ca-4845-b17c-6cf081f5c2fe.nio": "59e9dc62c9c907fe5de53da733c560151ab315692204ddb8ddfd3b785cd993a0",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/001_deg_0.973/2.stimulus/kase_stim_vitro_0.973.yaml": "42eee662aa37c3f8321fa255100def4e056ac375afe8878699364ee12273bc48"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.973.hdf5",
+            "old_sha256": "f36bf8ce654bd4aeccf4dac37e59d6cab07c5eac8c9f99fbbbdeac080b4dbb30",
+            "recovered_sha256": "187bd09fbc0d3cc18b3d21801b6315a17a3a7b5ff1ea940ceae43bbfd1fb1a90"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_02",
+        "populations": 7,
+        "cells": 30452,
+        "original_counts_verified": true,
+        "current_export_sha256": "f032e6a4ef37de685cfe26183b5c9ac1b8c7a62d7185a378faa8976c241aee51",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/002_deg_0.947/1.structure/mouse_cerebellar_cortex_0.947.hdf5": "c0c367aaa4b7fc6dcb57d916b28eef2bb7f784bf090e6f21efe0c52abfa7c469",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/002_deg_0.947/3.function/20508729-a998-4471-b4d9-93ffe9031ddb.nio": "f238611addbc4d6862296261e2e7fb9cce0637e8ffc955f705612b958e09aeb7",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/002_deg_0.947/3.function/25cd4933-31fb-4e46-af93-66c71fa8738d.nio": "b4dc6a023950ac761720b605b5f09a81bbc06d44f683ffb79a08bb10ce2282f0",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/002_deg_0.947/3.function/5da37444-7bef-4800-b4db-9eab31421498.nio": "1707608a37433b8a4559521057ac0f0e46a5e94292b509936ad037ef5ebf5de0",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/002_deg_0.947/3.function/77df5b61-6fb7-45d8-a21f-20bcd843e4dc.nio": "73788a0b5e5a50c53077ed8e71ebd8823bcc4411366b302bafeed73b4d663a18",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/002_deg_0.947/3.function/a8beebfe-7f4b-4536-9be6-928894b1e545.nio": "14fd33d6340d29315e76ebedc5fef2e6b4b2987f955fca5b6a08efa354724f25",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/002_deg_0.947/3.function/bd4d431a-b64f-4bb8-aa87-28d7b92f1568.nio": "a2677a44dd131da62b2bb35edcbb669bbb50d7b46c8bf89e153e3c960bcf709c",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/002_deg_0.947/3.function/ed7c2a2f-7aa5-4448-be54-c9c52b282ce4.nio": "35f25a5c58affcade60a63ad0f95af69cf5ddab077d288b4e88944cf8b7a8c11",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/002_deg_0.947/3.function/f2d2d089-040b-4191-973f-ad635214dc6a.nio": "671825b04a8bfd25a988c04d1d8c307d1cb2bc1c32d6bce1d5b9a4a09edc9fcd",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/002_deg_0.947/2.stimulus/kase_stim_vitro_0.947.yaml": "1cfe0f4f090f4e9686dc9f9d43e5afa372a3f1e8757a68aef838bb2c709f4956"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.947.hdf5",
+            "old_sha256": "ac941492f096de3e641b3d0530e4c2a5f69e4f20e2d6a4802fe1ff4eadc36fb1",
+            "recovered_sha256": "c0c367aaa4b7fc6dcb57d916b28eef2bb7f784bf090e6f21efe0c52abfa7c469"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_03",
+        "populations": 7,
+        "cells": 28914,
+        "original_counts_verified": true,
+        "current_export_sha256": "9b3693d72e2bbaae8ad791c9cf826794283de27c48565879c4eaebcc0853675f",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/003_deg_0.920/1.structure/mouse_cerebellar_cortex_0.920.hdf5": "5bd8c81f7dc02131912ff5c42c081b185c9303309b5b8e8e3e05ad97a93ccbbb",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/003_deg_0.920/3.function/0859a01b-d88b-4b3f-8c73-897e9362af2b.nio": "46f97faca3fc7183aa4f14149bc7a67ae1fd6c62e34cb82168eb03e2c91fa787",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/003_deg_0.920/3.function/213b2701-8af6-4e71-b0f3-77610dc52731.nio": "14a970fb713289573da7af3436d79e330959d2a4273d62e1e2aab3ed20229323",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/003_deg_0.920/3.function/26248f1e-b76a-4cd6-9289-aea3a20b1d9c.nio": "5117c2b2326ecb0b90d1000e0a046c88f00395f859afbcac7b5ebcc2fe17f555",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/003_deg_0.920/3.function/2e5e1fe6-9e0f-449f-b0a8-94e909bfe8e2.nio": "4f0a8b96edb8048cba3a1a804a81764eadf1b17687ca62b82a22198057bcef7c",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/003_deg_0.920/3.function/5deabe0b-7ccd-40ef-b956-5576c2b28915.nio": "f70dff8265f2d84de9c92da1aaaf8a312846bba41809e1057486783d116a1f87",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/003_deg_0.920/3.function/ae241a84-e3d2-41ce-a21d-5e2a4cb96ffc.nio": "9bdd7004a284cc9e6eaf7efea134850338e79f373b34914b9eb16694e1dae548",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/003_deg_0.920/3.function/aeb0994c-68dd-4740-a0bb-940bd5f8ea20.nio": "140500104835c21852e8752c00b5f2676c5f5704cac7bf95b02ef43d9f11854c",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/003_deg_0.920/3.function/ec4f4358-163d-4c9b-9f2a-8cccde67fdb0.nio": "c070077c9dd4a07de400b73f5e2f058b366803bf5706c4070fc4075ea20a4f95",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/003_deg_0.920/2.stimulus/kase_stim_vitro_0.920.yaml": "4269101d76d953e7ec53708ab2c0f87f625da8190d2ab2983af38da805a686c5"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.920.hdf5",
+            "old_sha256": "a6d275ed0ac4ba569998ced1bf345feccc40c360876efd3d9466fa3d1af90a22",
+            "recovered_sha256": "5bd8c81f7dc02131912ff5c42c081b185c9303309b5b8e8e3e05ad97a93ccbbb"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_04",
+        "populations": 7,
+        "cells": 27382,
+        "original_counts_verified": true,
+        "current_export_sha256": "c30a16b89d2d5695025f69577b34053e4b87cb7dabc387223364993f7ff6d424",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/004_deg_0.893/1.structure/mouse_cerebellar_cortex_0.893.hdf5": "e95a577e608687cb32218d6eaf50d7462abcb5a66696cf6a0d7d659c56a25a97",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/004_deg_0.893/3.function/173e4e4c-276d-4d34-b128-6f6fe9cf4132.nio": "4321903bc022d33bcb0c0d601344fd9bd4c96debd346903ae251d45200991d35",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/004_deg_0.893/3.function/39c8fb7c-9107-41cc-b6b5-0405811a808d.nio": "8417f5396d548f2528d116e293663223330127f3dbaa80eb2934837440c19686",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/004_deg_0.893/3.function/42439918-fe38-4fb5-b953-165efec56a4c.nio": "4d220ff963fa1d8f9ddc645d701d2ac0ea03d152bd18671c2c344eb7bf918bf7",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/004_deg_0.893/3.function/67450271-3310-4830-bed5-8764441657fe.nio": "d60bd019762c33c5c9ef27d9b2c07e25956c836e11b59a39ecdeb9995904454f",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/004_deg_0.893/3.function/7c8edaa7-5076-4d2e-a197-168360100580.nio": "405841f962636eeea900f20011a48db7765545b3e97ecff5a285c309004cd1ea",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/004_deg_0.893/3.function/92c90800-8eb3-4a36-afc6-03ca784bed42.nio": "e369ec166d7938a77f57b2c08ed9aa1242da5d8769a5618a2b3111f7e41112c1",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/004_deg_0.893/3.function/d30dd32d-f6eb-488b-8679-1d530c2d13e4.nio": "9a8a4bf4c5dff697e0fe93a39f1f201ecbb32ae529c712e5008702186d1591e0",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/004_deg_0.893/3.function/fa4b6a83-e884-4fc9-b928-56fc8e1e78f0.nio": "070c693059c51bb9048b2f1a5fd4fd72e83dec93cf8d13e20ee3a4a679759a36",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/004_deg_0.893/2.stimulus/kase_stim_vitro_0.893.yaml": "eddffe89050c3323cc6a1d564348b52ee4d3c9e9ed89a74d280b0d7a90787874"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.893.hdf5",
+            "old_sha256": "cee75d0ad73529affa00b26261c849aaf52a3dc1d9a84a3a3742fbec9593d458",
+            "recovered_sha256": "e95a577e608687cb32218d6eaf50d7462abcb5a66696cf6a0d7d659c56a25a97"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_05",
+        "populations": 7,
+        "cells": 25941,
+        "original_counts_verified": true,
+        "current_export_sha256": "559f359b909708ead7463688242d742943cc854613a2583907e217553347fa4d",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/005_deg_0.867/1.structure/mouse_cerebellar_cortex_0.867.hdf5": "6bce1a6a36e1849fc9a7bff53996b17d8d98ca3456ddaf8439f5107bea08ea87",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/005_deg_0.867/3.function/0896cb76-190e-43c4-964f-0cadd28b313e.nio": "db8cc68097d5500a89e94c73c1b1e14b7d9951823899867f11f243bd7e73df3e",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/005_deg_0.867/3.function/229c807b-a3c4-46aa-b9a4-7d7bfb581989.nio": "33745d12749e562f3b66a64721b7a686d199ce18fd51d0dbc380ef336a608760",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/005_deg_0.867/3.function/34cb247a-4b52-47fe-8df5-1d836469cd16.nio": "a2472098e0dbaccb4cc3ebedd310089e01a5da635d2e739036b5b8468a8618ab",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/005_deg_0.867/3.function/9b3bf121-59c4-4f8b-b8e1-0ba17c06099e.nio": "400f834f9a17faf321aca216d64db6411166a602b478c5a84ddc62e4293b494a",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/005_deg_0.867/3.function/c78f4af1-4583-4c34-a15b-fe796811b864.nio": "8cfd07b6b622cc7eb82076464cff2e0b36ab31edbbccdeb49c9b8e89c1dea18b",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/005_deg_0.867/3.function/c8ba5cde-0501-4835-8bf4-9456eb742514.nio": "ae0ca0de789a73c486b42979c2b547f05e34fabf022e14485d98afc6735fe19f",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/005_deg_0.867/3.function/ca903388-6337-4228-b2f9-2d839f0eef04.nio": "bd424b2bc36e1e2a533b7a5ae5b0292ec4d8f9f1d5cc912afc0e746c88f91be5",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/005_deg_0.867/3.function/e4550855-94b8-4953-b675-8173494af0dc.nio": "0b49c141be160333108319b59c5d47a7816535b939e2e1030af2164250a174ad",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/005_deg_0.867/2.stimulus/kase_stim_vitro_0.867.yaml": "2b4ae2b362695d6d24f6b89fadf3f241616dd524c492bc67efc724422d3b0456"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.867.hdf5",
+            "old_sha256": "8155049834d43f922f21eded228e36170a8726ad49b156b865450f898d0b0e3f",
+            "recovered_sha256": "6bce1a6a36e1849fc9a7bff53996b17d8d98ca3456ddaf8439f5107bea08ea87"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_06",
+        "populations": 7,
+        "cells": 24444,
+        "original_counts_verified": true,
+        "current_export_sha256": "933c33f430fd9f4b9d489e9d334e35d1bf4441526341adb19a5b4a7193e40b19",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/006_deg_0.840/1.structure/mouse_cerebellar_cortex_0.840.hdf5": "c5098c589e32e30bec4f8a782caea7fdd0e782734e0370ebfc5fa39937d95875",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/006_deg_0.840/3.function/23d57ec2-0239-444c-bbd4-d15e30acf4c3.nio": "05e8a707670a39a45d6317a4e7bb12eca5317349b02abc174204e12d34f03311",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/006_deg_0.840/3.function/4070ad3e-bf13-42f8-8e3c-516e3653fdbe.nio": "aa58d4a53233b9af826f1db66de6031f39ece1a07cd7518f90d32f4b7021488c",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/006_deg_0.840/3.function/955a0942-af67-4859-a7e7-b89c09f43367.nio": "e8290ab72b69f87e3c2849e996ea9dbac9a149b7f0fb1b10f2acea06dc198716",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/006_deg_0.840/3.function/96b11ac4-84c4-4174-8880-e71c7b715b9a.nio": "4c69d310cf1a5fd4b2d2775d72307b238aa7b8ecc3b404e5a86a01a2ed30b312",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/006_deg_0.840/3.function/a517b955-e51a-47b4-ad87-4899c3108917.nio": "7f80f19319ae8cfdf3f0e68118cb0cbb277a02013f8ca26a62ecced48c0796b4",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/006_deg_0.840/3.function/ce8edc4d-b49f-40de-8018-972c084abe39.nio": "5f03e355b1f06a78ddafdf845d744c22ad21f2ca6eba10dc68306d3786f3402b",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/006_deg_0.840/3.function/da5aae38-8de9-42b4-bad9-00811179dcd3.nio": "080cce26b7fff217e269eabccf635b422d85d6508adb459bdf2dc9966c820577",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/006_deg_0.840/3.function/ef329929-c6f6-4d87-b375-8e8c2218545a.nio": "af13a8b669ef71be107f98d1878ad679790daaf8f6acdf300ca10f0d76ac5b80",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/006_deg_0.840/2.stimulus/kase_stim_vitro_0.840.yaml": "2fcf5db02b923b4a6c4be9e3c322a8d3b1b465e1303c03abca3417325bd3010e"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.840.hdf5",
+            "old_sha256": "6cd1b81c49113d975212ee16f3a0f76125f476fdc0c20e0f5175d0ced399e399",
+            "recovered_sha256": "c5098c589e32e30bec4f8a782caea7fdd0e782734e0370ebfc5fa39937d95875"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_07",
+        "populations": 7,
+        "cells": 22943,
+        "original_counts_verified": true,
+        "current_export_sha256": "0cca8ca61eb0ff1af6d4cff4d852bf5f911628e7946a6a9932994b4238d73413",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/007_deg_0.813/1.structure/mouse_cerebellar_cortex_0.813.hdf5": "e3ab93928fafdfc182f14835f4082503d25e34e74809bb61c23410c863933533",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/007_deg_0.813/3.function/46cb26d1-4471-4b2a-9797-aacbbc3b5b3c.nio": "754041b066f35f1a0436d26370cd8e75d94d102d52d7c06fc0350bf429d241e9",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/007_deg_0.813/3.function/49351bbf-6fe2-4968-a20f-b0971d4cbe75.nio": "064ade67ad3c1b65c80b144edba4b11e8c1a377d14f6b544688228a9ac301245",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/007_deg_0.813/3.function/60e3958d-739b-4764-895c-9ee78f422365.nio": "4934fa305f4b5d9bc926bff4a8955e4a1fffd1d75d0afcaba8636668b5587734",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/007_deg_0.813/3.function/70101252-050a-43cb-9e97-b800df8f6501.nio": "59e7d0d2c98fd4ec236db7810936da4633182f014a4614e50be35f681fa10b7e",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/007_deg_0.813/3.function/a4015cc3-df68-4342-90b6-c458f6fb6b07.nio": "e7984f1f60dd5110b6077817145549484839bf03ae4d17b193bfafe480f9af4a",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/007_deg_0.813/3.function/bb42e908-1cab-4d37-a64e-b340102f4b82.nio": "53e54321c3ff9467bb0ddc39ecbb37f983475cc4066b405d6677ee79aaa0df95",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/007_deg_0.813/3.function/bdae7632-de26-4a09-9768-23b03c70dcd8.nio": "73b3dd5221f36d6057ce6e66448e64f262b23060fa51247fc99dd8a162150543",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/007_deg_0.813/3.function/dee682c9-7987-4006-9444-58c9abc35e41.nio": "11ba2b386669cccf7c3363f56ce934cdd52a63474c20589f609b0fce51021df9",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/007_deg_0.813/2.stimulus/kase_stim_vitro_0.813.yaml": "a61cb8e47e3385db667c064251539db8a1eda5ea5dfea26b2a9b00f54612b09e"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.813.hdf5",
+            "old_sha256": "59f1a05822fa29651e404bf57c9221c47fd9a540b4e133fb9a070e2442576211",
+            "recovered_sha256": "e3ab93928fafdfc182f14835f4082503d25e34e74809bb61c23410c863933533"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_08",
+        "populations": 7,
+        "cells": 21542,
+        "original_counts_verified": true,
+        "current_export_sha256": "92a2db5ca2e720a77bb8247e887868cbbc449e1fee712108068a204a7ae5aa11",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/008_deg_0.787/1.structure/mouse_cerebellar_cortex_0.787.hdf5": "0ab8e5f6e0e15ce3b6884a4153a3f9f88462f6e62f194f9a2ce093b56ee7ce0d",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/008_deg_0.787/3.function/02272d54-7fa4-462a-bbf8-bd0adbeb678e.nio": "0d25fc530525653447eee153dff7910874ac9dcdff044c473f1f026c4fb0fab3",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/008_deg_0.787/3.function/064b7936-debd-4243-8718-6e005bc0ddf8.nio": "76f971bb0c0aa8029188bc837eae1385cb940d6d6fb9abeba411244a9bb2663e",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/008_deg_0.787/3.function/1c9a2236-c7fa-4646-bab5-097b1dd35c20.nio": "5e4766f3b75771ee9c00aba08d06e8e8190aacf356c0adbfae438fb18faa8286",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/008_deg_0.787/3.function/3266de9a-f567-4c17-a131-17a49f9bfd67.nio": "5bdc8e899cf8e5e6c1ab757272e8ecc88d589798869e5c5fd9d449900a0c9960",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/008_deg_0.787/3.function/8c0eedcd-b4a3-4b3a-93f4-59e3ac857a40.nio": "cbd4c0cb5c78f1e8449e8463adead61e2fdbadb5b0bd12298d4267efcd4f94f4",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/008_deg_0.787/3.function/ad615d50-3f40-4540-bd73-edc81e0b754b.nio": "1d0ef783c7205a391bab83bfd988a84f39a5ebbfcea15b97fecc0a5134a619a2",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/008_deg_0.787/3.function/cfc6e2ce-a260-40c8-a446-f3624c90f836.nio": "7066cb3e50bbd2e5c13369e88951cc1e06d9c02808ea20d71035570089c621f7",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/008_deg_0.787/3.function/f3016ecc-1260-49c5-8c1d-f13a34ab5e72.nio": "713120f28861612947ae1daca8afdd61ebe2f30ef84a68c905ec5678b6cf9246",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/008_deg_0.787/2.stimulus/kase_stim_vitro_0.787.yaml": "b224ca4064efa8e868486553c45a50822465b4bdac9cb825684e77064f94ada7"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.787.hdf5",
+            "old_sha256": "ccf06ab7c7a69ceeb8d611451985891f00ec70b55c1fe55ab9b8ee2f9599a192",
+            "recovered_sha256": "0ab8e5f6e0e15ce3b6884a4153a3f9f88462f6e62f194f9a2ce093b56ee7ce0d"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_09",
+        "populations": 7,
+        "cells": 20122,
+        "original_counts_verified": true,
+        "current_export_sha256": "331359fdf3fd58134d4b25060e964897a22c06b771ae198bd9a379a06b47a16c",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/009_deg_0.760/1.structure/mouse_cerebellar_cortex_0.760.hdf5": "affe55e75b479b60415eefb3b1b936880a17402fe429eca7ae2518698a9bc20d",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/009_deg_0.760/3.function/3b48e445-3fe6-4972-bcbe-16a1dd9f7caf.nio": "6142986dddf13f66670533a33778d9c7a9812d73f034d765f69f3d5741785649",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/009_deg_0.760/3.function/56f72cc0-4b9e-4722-9a8f-049260bb31bb.nio": "23d7aee19d53460bc51d99890e23ae3b765c792cef46df8361497fa149e90c34",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/009_deg_0.760/3.function/5e7e444e-1212-4c79-a70e-00eabe1f79d9.nio": "a44d73ea591a7402cd89018c241c227de7bd0db8177fe1bd3029816a2b3255d5",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/009_deg_0.760/3.function/8f0cf83e-4190-430d-8de4-b534fdc022bc.nio": "2364ea24c841ace152cdffb4e0f431ab5d50f87670c90d9c1b6fac591f48c7f1",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/009_deg_0.760/3.function/987afd94-16a6-4ac4-81ca-0ce1dbb10347.nio": "5b2fa50a43e2a2a87239f13700ad506b5b4b78cfefa1b81ea4cc759e13d1e773",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/009_deg_0.760/3.function/c20792f3-f0ce-4a3c-a375-db3512d616ea.nio": "442ccca237472e47e58d2da0580bbb8de8d2a267da3270c8c40e97a30d12a9e3",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/009_deg_0.760/3.function/c9f19210-4e1a-447c-a139-9d769800196d.nio": "45793ca7622568d6a4315a73afdba695800354b13a6f19038df06ff0dc044fff",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/009_deg_0.760/3.function/dc7b2503-53ec-4b3d-b818-850dd23a3516.nio": "4764874d1c75623b1b0efdd9f7c5270e5cc21e23288e0d9d5ceaf002b2e18be2",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/009_deg_0.760/2.stimulus/kase_stim_vitro_0.760.yaml": "de144421ad849a45576bdb29c77257d1b6823d38723135b280849b94403cda5c"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.760.hdf5",
+            "old_sha256": "de84e610c574d843a28f47bd500f4860776dc057754b81fbe96764942ea3bf30",
+            "recovered_sha256": "affe55e75b479b60415eefb3b1b936880a17402fe429eca7ae2518698a9bc20d"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_10",
+        "populations": 7,
+        "cells": 18719,
+        "original_counts_verified": true,
+        "current_export_sha256": "f7965c7360c5dc4bba87ba3dc1535573ff11a231bd5e639dbfa8444c6a6bf88c",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/010_deg_0.733/1.structure/mouse_cerebellar_cortex_0.733.hdf5": "e3d23766b79e5530a654344bcf22a642aa7dbbbdf9f12cea1154d4f7bf78090c",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/010_deg_0.733/3.function/3d8c1026-3bd1-47b1-88f1-64e37723dc32.nio": "0cd7fcaf40d266a09ca737a06c0c2090402a4074a2f590347562a392b8b9b192",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/010_deg_0.733/3.function/4905f227-504e-4b47-8805-9078c5037f77.nio": "697c24a2a10dbf36649909f8624bcb25f3c55dfbde9c2fd07d7784a6c21bac33",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/010_deg_0.733/3.function/508dd52a-f70c-4b40-826a-11fdb46b345f.nio": "7ca892af5f8851153b716796affbed96515976907b39cbe8d4c1527be4f683f2",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/010_deg_0.733/3.function/5b127fc0-93b9-4091-8233-9939da417a25.nio": "73bcb2a12066b58627ece5da4eadaf93c47e467d6a811c4902531a76c3644d29",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/010_deg_0.733/3.function/6872852e-cb34-4f1f-9eb8-36187da5e9c1.nio": "ad281751328365c772abbc39172ea4f9ef978c6118aea942709fdd5925d5931c",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/010_deg_0.733/3.function/7850032d-9499-4e35-8259-75c6dde817e5.nio": "a4b2b605b7ba801c1baabe7048ddf5f70c365b4ff1f287873679a0eaa0cd7e7a",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/010_deg_0.733/3.function/975ce561-c0ed-41bf-bffa-4a41f4614860.nio": "43a2d2dd027b2a41f7262b40f841c2a6675073eea11bf16a35ebddd62aa71188",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/010_deg_0.733/3.function/e5c4892c-1599-45ef-a1cb-88aa819aeb0d.nio": "045d4b275c3ef3ec133276a404ba7c83b23826517534285a0664df7765e22614",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/010_deg_0.733/2.stimulus/kase_stim_vitro_0.733.yaml": "2a06d96e0f944698da6f3c3deb701e40fc5f610747fd43e3b1ed05051eacbb13"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.733.hdf5",
+            "old_sha256": "c57c4116808547df006cfc79e4e2adee1d25e1d95702d3d3ec052f0e9e587e84",
+            "recovered_sha256": "e3d23766b79e5530a654344bcf22a642aa7dbbbdf9f12cea1154d4f7bf78090c"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_11",
+        "populations": 7,
+        "cells": 17398,
+        "original_counts_verified": true,
+        "current_export_sha256": "6d3f6807c1573f6a0e3d793dace3e0b3d2aad4d1728303eea5ee748fc4799eae",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/011_deg_0.707/1.structure/mouse_cerebellar_cortex_0.707.hdf5": "5b929e6e1fe5dd74d68eb4da0f67187e5e7da74ff5ec22a6007e2f1c113065dd",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/011_deg_0.707/3.function/0d287ec5-7f8f-4166-836e-0edaf83412a4.nio": "f01da3806ea3a4c4f4e9518be394200cff6997baa194f31b51f9a1e49c325759",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/011_deg_0.707/3.function/357bc77a-5d92-41c6-aa28-a42f01fa077c.nio": "88733279e92b10deaeeb246ae2a2b436e5df9961a641ef97c2658b661f3688c3",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/011_deg_0.707/3.function/396bcab8-afe3-4992-a688-02715852bfb6.nio": "5732ac549756a4587f0ce68ac953799c68be2dd18e7c910be1d242eda0501c51",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/011_deg_0.707/3.function/5f739c46-0e39-4329-b0a0-2bf0365bb1a7.nio": "a178a18b0cb74fc17361210da2760e685c5048a0ef353865b96b1e20f28eaabe",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/011_deg_0.707/3.function/9654fcb6-2bd2-4caa-b49f-5e8a5b739dd6.nio": "3423e7134b1b022f8a3aeac41d9b62add213ed662307929bdd39746b7c0d7ea6",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/011_deg_0.707/3.function/b6e9db7f-17a7-40e5-a2a6-5328219d8dbc.nio": "5a30a6ea643984282518c01bc1ddeb7c36d0f24735df84a0d1bba14462d12c7f",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/011_deg_0.707/3.function/c85828ba-c6c3-4fe5-841f-218f3b4ef4b6.nio": "b45ff8ff6e12127f7cfbf248376a52e9a17d021c5d9a4510bfbd74b8a891713f",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/011_deg_0.707/3.function/eb42822c-4a59-4ba2-a5c6-ef8aa6c998dd.nio": "b1ef1e519d472d9d4e7e21a134a7337c597a9e76e5326d836d465756488ea514",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/011_deg_0.707/2.stimulus/kase_stim_vitro_0.707.yaml": "9529298b73bc390a90e586c646ffa9cc10da4ed8f695de11c985723aaf9a7e73"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.707.hdf5",
+            "old_sha256": "0b8e1ec1d155b8ca4bcdb746dc285f27203fc81d1a52cfca42cc8b960accb898",
+            "recovered_sha256": "5b929e6e1fe5dd74d68eb4da0f67187e5e7da74ff5ec22a6007e2f1c113065dd"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_12",
+        "populations": 7,
+        "cells": 16074,
+        "original_counts_verified": true,
+        "current_export_sha256": "8e9e1f570effbba9782a1b2f00e3ada509868bca18046db269e67c14e3e5f8de",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/012_deg_0.680/1.structure/mouse_cerebellar_cortex_0.680.hdf5": "f58e9f20f355352f705bc43be687249997e1828561346ae4744de2f71579c146",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/012_deg_0.680/3.function/11f80593-3b62-4957-9c72-49a73547c150.nio": "82f95ea94014f2ff7284600573a63b6500c5b8cba7be42e29701f8cd6b1485f3",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/012_deg_0.680/3.function/4d80485a-4269-44c4-aff3-c3998e5b42a1.nio": "8d45d32581b4255959845f6e25e5752f0d83aa66857ccaf2d4187df2c015d585",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/012_deg_0.680/3.function/616f2dc1-3bea-470b-831c-46ebb96f41fe.nio": "65ce92dc5c38d57fa628be1057a64f274f0b5c49191985c60e8b30fb1b8e1567",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/012_deg_0.680/3.function/697e961a-d4d0-408b-8cf4-42b6f31518f0.nio": "32dbc86cc770e14653de77fc1255b651584f005ad0dcc7d3caa463047c2679f7",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/012_deg_0.680/3.function/c7c0face-5545-422a-b9c9-b8e07c6db9d5.nio": "5b42241febb9fe6f6d634241cf06db37dbd0f400d6d1c81ff311cbd557f4ebbe",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/012_deg_0.680/3.function/d759babc-3c15-4fe2-ba4a-e94651ee92ef.nio": "540810a58f343f7ac5248c0fa2832184e58a630e0134e8f79e9d10f4984f71a3",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/012_deg_0.680/3.function/dfd61748-a6e7-4591-9c9c-43b5c2820322.nio": "1293c90a6a0a560d85829546a2cbb76aa96e9b87c0808029c831e6541199e739",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/012_deg_0.680/3.function/f8f92f36-e839-4f08-87ba-dfd271bfdcc8.nio": "c6d70038ead30f688d4a317ea26d8bada6d8fb13b62ee925783f6f2a2a8ef8ad",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/012_deg_0.680/2.stimulus/kase_stim_vitro_0.680.yaml": "eb4c6638d817e07a5a50304623a912facc271c9a2c62d59fcb5977908cbcafb9"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.680.hdf5",
+            "old_sha256": "fb8bf068ae982350063c070c5e88a796365498c584de7c6ecaf0311d19f9b801",
+            "recovered_sha256": "f58e9f20f355352f705bc43be687249997e1828561346ae4744de2f71579c146"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_13",
+        "populations": 7,
+        "cells": 14782,
+        "original_counts_verified": true,
+        "current_export_sha256": "b47f0c27a0be96b5532170d5d441fd2ba500558627b148b13dc67798715c152f",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/013_deg_0.653/1.structure/mouse_cerebellar_cortex_0.653.hdf5": "fff0586082107325ae001bc2fc6f38c838aa4608ccdd3ec64acfdffd9306ddca",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/013_deg_0.653/3.function/17c64f4c-3543-4e63-8060-4c6b3b262e44.nio": "fa832f00a1dfd2544de00c1d7d39d77aa1adf63664b89f1de2026bc292047e8b",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/013_deg_0.653/3.function/5ba7741b-7833-490f-b279-77f7df40ab45.nio": "8d6c089b2ad9ece1343f58a425a1aef58c8c8e49364657e2bdf13d0fcc3523bc",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/013_deg_0.653/3.function/5d6e2ee7-3c89-4b64-a30d-e5cc3ebdea94.nio": "2187a8facf9ac37cb210f486d19d2d00086e38a8d6657dd9ea499c66106be7d3",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/013_deg_0.653/3.function/b1c5201d-f2a8-4dd8-920e-e0a478f264d9.nio": "be07062d52b8b6d0eb1abcabf15bd7681a490bc9fa3d21aa232d98783a4c760d",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/013_deg_0.653/3.function/d543081f-8410-4db3-bfa9-cab3b5a0aad8.nio": "a6691f30f788cfc35ffa81797822e910e0767ac066a68a8ae3113ff3c24aa09d",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/013_deg_0.653/3.function/e76f21af-4848-4fef-b872-2b3b53056dd2.nio": "258736fa18cc1bc39f911f574f0771d3bebfbdbb9fa3ff5cde59ceddf96c64ac",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/013_deg_0.653/3.function/efdb2389-4a9e-4cdc-9300-fe7edda5b263.nio": "886763888dd0e5fe3773b472196735d9d8d77e92a04d6d60a28349a9db7f62d7",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/013_deg_0.653/3.function/f6ef97bc-889d-4822-9de8-0bf0417da18b.nio": "57eadb3c1f7669afa5ebabf6c200a061952a270c62cd2292bec020651940b1dc",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/013_deg_0.653/2.stimulus/kase_stim_vitro_0.653.yaml": "c3e2f708da7b5cedb3c42aebc3772ed783db2b10c64ccc432db50716eff9f921"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.653.hdf5",
+            "old_sha256": "e6c6d264e27c20b67f7745476add0170d5cfb6c773ad8e62cbf52f3fbe95f49e",
+            "recovered_sha256": "fff0586082107325ae001bc2fc6f38c838aa4608ccdd3ec64acfdffd9306ddca"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_14",
+        "populations": 7,
+        "cells": 13585,
+        "original_counts_verified": true,
+        "current_export_sha256": "16b92d967ed9fe3878a7a773113a217fb19738c69adbef3d31414a3930ee2a3a",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/014_deg_0.627/1.structure/mouse_cerebellar_cortex_0.627.hdf5": "edce7e5c06dbe3e86fbc0c02049c2f839998eebf8a7bc9d979a4bdc402c1545a",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/014_deg_0.627/3.function/0ebf3ab5-06c0-405e-ba54-bc82ac5fb53b.nio": "8039325f30b234be0b4ccf0383f86c8c98447c54c7bf5049b541892ef7fb278e",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/014_deg_0.627/3.function/2a5eb153-5919-458b-a9a6-7cb844140f9f.nio": "1aebd6e3e34ce5dc427ed4c5a20c697cd934b34f8cd58955c89795955c4e2f13",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/014_deg_0.627/3.function/48f6cb78-044b-481a-86f9-7280021e391a.nio": "d6bd3ab96661ea40e72812c0aecff8b8d1d5bb3480b6aacefddce4a074a66148",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/014_deg_0.627/3.function/60fae068-fc28-4451-808a-6532c4767a3a.nio": "f0768f4aa4855310132542c288115a376a42b733317148992152cb33ac7de401",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/014_deg_0.627/3.function/8d0d518a-1fd0-4594-af90-b9e904fbae93.nio": "dd1ab3a76191e94f4b068b2dd0e2e4c8ad38acfe6004a5434a80c7b4a178d33f",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/014_deg_0.627/3.function/98b2b732-3e12-4eaf-a5a5-b89867113974.nio": "4c1cfa9ba8e1b8a0ee8be88f73c5e44a054ce8576feb5de526a95de0a575b590",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/014_deg_0.627/3.function/a5241d17-c9fd-4493-b184-48c5c72667dc.nio": "14f0f20eb29d2f0c085db4c39d47ee3b73fa13932a9748f5a1ef3cfe59409328",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/014_deg_0.627/3.function/d96b9642-2359-424d-bbc6-f9245cdff5ea.nio": "1f2038f9838b64bd95aa01246d8f596736909214cb50dce5be7b4cd7fd489196",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/014_deg_0.627/2.stimulus/kase_stim_vitro_0.627.yaml": "87d200d2015475e571bafa383ce2ff1b30e2b31f41bd70cdfa6f20a1db844ce5"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.627.hdf5",
+            "old_sha256": "35c17b26a377f9326959aa132531e844ba23401bd0a43e1fdfa8b891f8bc9ae9",
+            "recovered_sha256": "edce7e5c06dbe3e86fbc0c02049c2f839998eebf8a7bc9d979a4bdc402c1545a"
+          }
+        ]
+      },
+      {
+        "id": "paper_kase_15",
+        "populations": 7,
+        "cells": 12366,
+        "original_counts_verified": true,
+        "current_export_sha256": "683b76848a1efd803bdf632b3ba1da82effff2baae2b15e4d2d62f601e26c65c",
+        "current_source_hashes": {
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/015_deg_0.600/1.structure/mouse_cerebellar_cortex_0.600.hdf5": "df5e5676415c905f60907430d12bc3ce758cf90d48231f1af16ca883b963c95e",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/015_deg_0.600/3.function/045d77f4-82ee-48d7-b035-2497e08239f4.nio": "608d860c5bbab11a8d580f326c902fc7680022807610d3cafa8223a8c7791bf3",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/015_deg_0.600/3.function/40866613-75ae-49c6-9d54-835b2bad463b.nio": "dd6f61e733b0387561bf68a718877873022561633f689d87890c594376cb9fb2",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/015_deg_0.600/3.function/6bfe581e-0b1f-4115-8064-71a395e80d23.nio": "855f1fde94ea5eb43f6b01792e02907c7facc93c95054f0ddd41cb5643d72925",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/015_deg_0.600/3.function/724c9225-f604-4ea4-bd7e-59f3d1167463.nio": "2286daad16b461252f6a272bb68d1cdbd06c4dd7915c12fc3f473bd149a73ded",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/015_deg_0.600/3.function/9a2a3f4a-342c-4bb8-9f8e-d8725e7d1cb4.nio": "5d56db61525884ae7f2b53c6fff8eda18b71bb99e504da3f50050e24161747de",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/015_deg_0.600/3.function/e627e91a-732e-4d6c-97c0-40f278b82b26.nio": "00282b232cd6a50169c67f137adf2874896785c56ed276fd73a524ed95f572f4",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/015_deg_0.600/3.function/e746871b-6331-46f0-aa86-9b49862619e7.nio": "c553abaa18e96ce6035608de45499a8603681f3e63f2c8ee74edab913e6b1225",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/015_deg_0.600/3.function/febe1283-c589-4da0-bcad-c216655e8d11.nio": "46656db031378b3e172a030783c782895674dda2bbb8d821be2aa5187a21fbc1",
+          "03_EVOKED_A/20251113161643_kase_stim_vitro_2_0_glutamate_all/015_deg_0.600/2.stimulus/kase_stim_vitro_0.600.yaml": "a6a8ae9bfa91105ec85cf295573c2f3fa8626cbf574a9c8a4a9937f44a510c0e"
+        },
+        "identical_geometry_counts_radii_order": true,
+        "identical_spike_bitsets_and_rates": true,
+        "identical_archived_stimuli": true,
+        "identical_raw_nio_yaml_hashes": true,
+        "matching_container_hashes": 9,
+        "hdf5_container_hash_differences": [
+          {
+            "file": "mouse_cerebellar_cortex_0.600.hdf5",
+            "old_sha256": "936f971ad7e02e33dbba6c2833f68aead0c0673a3d308e70b9fc08f0f56967a9",
+            "recovered_sha256": "df5e5676415c905f60907430d12bc3ce758cf90d48231f1af16ca883b963c95e"
+          }
+        ]
+      }
+    ],
+    "kase_reused_without_changes": true,
+    "kase_frames": 1456,
+    "kase_duration_s": 58.24,
+    "kase_sha256": "78f9c77f55f6d0c822e86b735ae39630454fd8f8a5c4f05377e0fb99219d0acb",
+    "kase_curve_all_320_lags_verified": true,
+    "hdf5_note": "Recovered HDF5 containers may differ in bytes from previous working copies. All geometry, population counts, radii, numeric chunk order and displayed totals used by the old video are exactly equal. Raw NIO/YAML bytes and derived event bitsets/rates match. Other HDF5 content equivalence is not claimed."
+  },
+  "kase_delay_analysis": {
+    "rows": [
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "effective_sz_percent": 0.0,
+        "k_stored": 1.0,
+        "delay_ms": 5.680000000000001,
+        "sd_across_sigma_ms": 0.6057618083215981,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "effective_sz_percent": 2.7000000000000024,
+        "k_stored": 0.973,
+        "delay_ms": 7.245,
+        "sd_across_sigma_ms": 0.662908265464425,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 1.5649999999999995
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "effective_sz_percent": 5.300000000000004,
+        "k_stored": 0.947,
+        "delay_ms": 7.675000000000001,
+        "sd_across_sigma_ms": 0.62565754884046,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 1.995
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "effective_sz_percent": 7.9999999999999964,
+        "k_stored": 0.92,
+        "delay_ms": 8.75,
+        "sd_across_sigma_ms": 0.48612322457755947,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 3.0699999999999994
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "effective_sz_percent": 10.7,
+        "k_stored": 0.893,
+        "delay_ms": 9.57,
+        "sd_across_sigma_ms": 0.5639148871948674,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 3.8899999999999997
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "effective_sz_percent": 13.3,
+        "k_stored": 0.867,
+        "delay_ms": 8.3,
+        "sd_across_sigma_ms": 0.5572488813712179,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 2.62
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "effective_sz_percent": 16.000000000000004,
+        "k_stored": 0.84,
+        "delay_ms": 9.42,
+        "sd_across_sigma_ms": 0.5257575987387906,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 3.7399999999999993
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "effective_sz_percent": 18.700000000000006,
+        "k_stored": 0.813,
+        "delay_ms": 9.325000000000001,
+        "sd_across_sigma_ms": 0.6912041361962015,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 3.6450000000000005
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "effective_sz_percent": 21.299999999999997,
+        "k_stored": 0.787,
+        "delay_ms": 8.43,
+        "sd_across_sigma_ms": 0.6829502563375894,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 2.749999999999999
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "effective_sz_percent": 24.0,
+        "k_stored": 0.76,
+        "delay_ms": 8.635,
+        "sd_across_sigma_ms": 0.6737756928017858,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 2.954999999999999
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "effective_sz_percent": 26.700000000000003,
+        "k_stored": 0.733,
+        "delay_ms": 7.9,
+        "sd_across_sigma_ms": 0.5515528318445926,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 2.2199999999999998
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "effective_sz_percent": 29.300000000000004,
+        "k_stored": 0.707,
+        "delay_ms": 9.83,
+        "sd_across_sigma_ms": 0.6697210731263231,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 4.1499999999999995
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "effective_sz_percent": 31.999999999999996,
+        "k_stored": 0.68,
+        "delay_ms": 8.870000000000001,
+        "sd_across_sigma_ms": 0.5181952487137197,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 3.1900000000000004
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "effective_sz_percent": 34.699999999999996,
+        "k_stored": 0.653,
+        "delay_ms": 10.375,
+        "sd_across_sigma_ms": 0.5329905696805723,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 4.694999999999999
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "effective_sz_percent": 37.3,
+        "k_stored": 0.627,
+        "delay_ms": 11.32,
+        "sd_across_sigma_ms": 0.6143888705132331,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 5.64
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "effective_sz_percent": 40.0,
+        "k_stored": 0.6,
+        "delay_ms": 11.280000000000001,
+        "sd_across_sigma_ms": 0.45259485775156355,
+        "sigma_min_ms": 36,
+        "sigma_max_ms": 55,
+        "sigma_count": 20,
+        "delta_delay_ms": 5.6000000000000005
+      }
+    ],
+    "sigma_samples": [
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 36,
+        "delay_ms": 6.7,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 37,
+        "delay_ms": 6.6000000000000005,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 38,
+        "delay_ms": 6.5,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 39,
+        "delay_ms": 6.4,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 40,
+        "delay_ms": 6.2,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 41,
+        "delay_ms": 6.1000000000000005,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 42,
+        "delay_ms": 6.0,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 43,
+        "delay_ms": 5.9,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 44,
+        "delay_ms": 5.800000000000001,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 45,
+        "delay_ms": 5.7,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 46,
+        "delay_ms": 5.6000000000000005,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 47,
+        "delay_ms": 5.5,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 48,
+        "delay_ms": 5.4,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 49,
+        "delay_ms": 5.300000000000001,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 50,
+        "delay_ms": 5.2,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 51,
+        "delay_ms": 5.1000000000000005,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 52,
+        "delay_ms": 5.0,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 53,
+        "delay_ms": 4.9,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 54,
+        "delay_ms": 4.9,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 0,
+        "sz_factor_percent": 0.0,
+        "k_stored": 1.0,
+        "sigma_ms": 55,
+        "delay_ms": 4.800000000000001,
+        "delta_delay_ms": 0.0
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 36,
+        "delay_ms": 8.3,
+        "delta_delay_ms": 1.6000000000000005
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 37,
+        "delay_ms": 8.200000000000001,
+        "delta_delay_ms": 1.6000000000000005
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 38,
+        "delay_ms": 8.1,
+        "delta_delay_ms": 1.5999999999999996
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 39,
+        "delay_ms": 8.0,
+        "delta_delay_ms": 1.5999999999999996
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 40,
+        "delay_ms": 7.9,
+        "delta_delay_ms": 1.7000000000000002
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 41,
+        "delay_ms": 7.7,
+        "delta_delay_ms": 1.5999999999999996
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 42,
+        "delay_ms": 7.6000000000000005,
+        "delta_delay_ms": 1.6000000000000005
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 43,
+        "delay_ms": 7.5,
+        "delta_delay_ms": 1.5999999999999996
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 44,
+        "delay_ms": 7.4,
+        "delta_delay_ms": 1.5999999999999996
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 45,
+        "delay_ms": 7.300000000000001,
+        "delta_delay_ms": 1.6000000000000005
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 46,
+        "delay_ms": 7.2,
+        "delta_delay_ms": 1.5999999999999996
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 47,
+        "delay_ms": 7.1000000000000005,
+        "delta_delay_ms": 1.6000000000000005
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 48,
+        "delay_ms": 7.0,
+        "delta_delay_ms": 1.5999999999999996
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 49,
+        "delay_ms": 6.9,
+        "delta_delay_ms": 1.5999999999999996
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 50,
+        "delay_ms": 6.7,
+        "delta_delay_ms": 1.5
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 51,
+        "delay_ms": 6.6000000000000005,
+        "delta_delay_ms": 1.5
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 52,
+        "delay_ms": 6.5,
+        "delta_delay_ms": 1.5
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 53,
+        "delay_ms": 6.4,
+        "delta_delay_ms": 1.5
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 54,
+        "delay_ms": 6.300000000000001,
+        "delta_delay_ms": 1.4000000000000004
+      },
+      {
+        "index": 1,
+        "sz_factor_percent": 2.6666666666666665,
+        "k_stored": 0.973,
+        "sigma_ms": 55,
+        "delay_ms": 6.2,
+        "delta_delay_ms": 1.3999999999999995
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 36,
+        "delay_ms": 8.700000000000001,
+        "delta_delay_ms": 2.000000000000001
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 37,
+        "delay_ms": 8.6,
+        "delta_delay_ms": 1.9999999999999991
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 38,
+        "delay_ms": 8.5,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 39,
+        "delay_ms": 8.4,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 40,
+        "delay_ms": 8.3,
+        "delta_delay_ms": 2.1000000000000005
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 41,
+        "delay_ms": 8.1,
+        "delta_delay_ms": 1.9999999999999991
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 42,
+        "delay_ms": 8.0,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 43,
+        "delay_ms": 7.9,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 44,
+        "delay_ms": 7.800000000000001,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 45,
+        "delay_ms": 7.7,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 46,
+        "delay_ms": 7.6000000000000005,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 47,
+        "delay_ms": 7.5,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 48,
+        "delay_ms": 7.4,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 49,
+        "delay_ms": 7.300000000000001,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 50,
+        "delay_ms": 7.2,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 51,
+        "delay_ms": 7.1000000000000005,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 52,
+        "delay_ms": 7.0,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 53,
+        "delay_ms": 6.9,
+        "delta_delay_ms": 2.0
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 54,
+        "delay_ms": 6.800000000000001,
+        "delta_delay_ms": 1.9000000000000004
+      },
+      {
+        "index": 2,
+        "sz_factor_percent": 5.333333333333333,
+        "k_stored": 0.947,
+        "sigma_ms": 55,
+        "delay_ms": 6.7,
+        "delta_delay_ms": 1.8999999999999995
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 36,
+        "delay_ms": 9.600000000000001,
+        "delta_delay_ms": 2.9000000000000012
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 37,
+        "delay_ms": 9.5,
+        "delta_delay_ms": 2.8999999999999995
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 38,
+        "delay_ms": 9.4,
+        "delta_delay_ms": 2.9000000000000004
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 39,
+        "delay_ms": 9.3,
+        "delta_delay_ms": 2.9000000000000004
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 40,
+        "delay_ms": 9.200000000000001,
+        "delta_delay_ms": 3.000000000000001
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 41,
+        "delay_ms": 9.1,
+        "delta_delay_ms": 2.999999999999999
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 42,
+        "delay_ms": 9.0,
+        "delta_delay_ms": 3.0
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 43,
+        "delay_ms": 8.9,
+        "delta_delay_ms": 3.0
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 44,
+        "delay_ms": 8.8,
+        "delta_delay_ms": 3.0
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 45,
+        "delay_ms": 8.700000000000001,
+        "delta_delay_ms": 3.000000000000001
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 46,
+        "delay_ms": 8.700000000000001,
+        "delta_delay_ms": 3.1000000000000005
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 47,
+        "delay_ms": 8.6,
+        "delta_delay_ms": 3.0999999999999996
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 48,
+        "delay_ms": 8.5,
+        "delta_delay_ms": 3.0999999999999996
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 49,
+        "delay_ms": 8.5,
+        "delta_delay_ms": 3.1999999999999993
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 50,
+        "delay_ms": 8.4,
+        "delta_delay_ms": 3.2
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 51,
+        "delay_ms": 8.3,
+        "delta_delay_ms": 3.2
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 52,
+        "delay_ms": 8.200000000000001,
+        "delta_delay_ms": 3.200000000000001
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 53,
+        "delay_ms": 8.200000000000001,
+        "delta_delay_ms": 3.3000000000000007
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 54,
+        "delay_ms": 8.1,
+        "delta_delay_ms": 3.1999999999999993
+      },
+      {
+        "index": 3,
+        "sz_factor_percent": 8.0,
+        "k_stored": 0.92,
+        "sigma_ms": 55,
+        "delay_ms": 8.0,
+        "delta_delay_ms": 3.1999999999999993
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 36,
+        "delay_ms": 10.5,
+        "delta_delay_ms": 3.8
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 37,
+        "delay_ms": 10.4,
+        "delta_delay_ms": 3.8
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 38,
+        "delay_ms": 10.3,
+        "delta_delay_ms": 3.8000000000000007
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 39,
+        "delay_ms": 10.200000000000001,
+        "delta_delay_ms": 3.8000000000000007
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 40,
+        "delay_ms": 10.100000000000001,
+        "delta_delay_ms": 3.9000000000000012
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 41,
+        "delay_ms": 10.0,
+        "delta_delay_ms": 3.8999999999999995
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 42,
+        "delay_ms": 9.9,
+        "delta_delay_ms": 3.9000000000000004
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 43,
+        "delay_ms": 9.8,
+        "delta_delay_ms": 3.9000000000000004
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 44,
+        "delay_ms": 9.700000000000001,
+        "delta_delay_ms": 3.9000000000000004
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 45,
+        "delay_ms": 9.600000000000001,
+        "delta_delay_ms": 3.9000000000000012
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 46,
+        "delay_ms": 9.5,
+        "delta_delay_ms": 3.8999999999999995
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 47,
+        "delay_ms": 9.4,
+        "delta_delay_ms": 3.9000000000000004
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 48,
+        "delay_ms": 9.3,
+        "delta_delay_ms": 3.9000000000000004
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 49,
+        "delay_ms": 9.200000000000001,
+        "delta_delay_ms": 3.9000000000000004
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 50,
+        "delay_ms": 9.1,
+        "delta_delay_ms": 3.8999999999999995
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 51,
+        "delay_ms": 9.0,
+        "delta_delay_ms": 3.8999999999999995
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 52,
+        "delay_ms": 9.0,
+        "delta_delay_ms": 4.0
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 53,
+        "delay_ms": 8.9,
+        "delta_delay_ms": 4.0
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 54,
+        "delay_ms": 8.8,
+        "delta_delay_ms": 3.9000000000000004
+      },
+      {
+        "index": 4,
+        "sz_factor_percent": 10.666666666666666,
+        "k_stored": 0.893,
+        "sigma_ms": 55,
+        "delay_ms": 8.700000000000001,
+        "delta_delay_ms": 3.9000000000000004
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 36,
+        "delay_ms": 9.3,
+        "delta_delay_ms": 2.6000000000000005
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 37,
+        "delay_ms": 9.1,
+        "delta_delay_ms": 2.499999999999999
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 38,
+        "delay_ms": 9.0,
+        "delta_delay_ms": 2.5
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 39,
+        "delay_ms": 8.9,
+        "delta_delay_ms": 2.5
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 40,
+        "delay_ms": 8.8,
+        "delta_delay_ms": 2.6000000000000005
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 41,
+        "delay_ms": 8.700000000000001,
+        "delta_delay_ms": 2.6000000000000005
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 42,
+        "delay_ms": 8.6,
+        "delta_delay_ms": 2.5999999999999996
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 43,
+        "delay_ms": 8.5,
+        "delta_delay_ms": 2.5999999999999996
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 44,
+        "delay_ms": 8.4,
+        "delta_delay_ms": 2.5999999999999996
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 45,
+        "delay_ms": 8.3,
+        "delta_delay_ms": 2.6000000000000005
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 46,
+        "delay_ms": 8.200000000000001,
+        "delta_delay_ms": 2.6000000000000005
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 47,
+        "delay_ms": 8.200000000000001,
+        "delta_delay_ms": 2.700000000000001
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 48,
+        "delay_ms": 8.1,
+        "delta_delay_ms": 2.6999999999999993
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 49,
+        "delay_ms": 8.0,
+        "delta_delay_ms": 2.6999999999999993
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 50,
+        "delay_ms": 7.9,
+        "delta_delay_ms": 2.7
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 51,
+        "delay_ms": 7.800000000000001,
+        "delta_delay_ms": 2.7
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 52,
+        "delay_ms": 7.7,
+        "delta_delay_ms": 2.7
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 53,
+        "delay_ms": 7.6000000000000005,
+        "delta_delay_ms": 2.7
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 54,
+        "delay_ms": 7.5,
+        "delta_delay_ms": 2.5999999999999996
+      },
+      {
+        "index": 5,
+        "sz_factor_percent": 13.333333333333332,
+        "k_stored": 0.867,
+        "sigma_ms": 55,
+        "delay_ms": 7.4,
+        "delta_delay_ms": 2.5999999999999996
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 36,
+        "delay_ms": 10.3,
+        "delta_delay_ms": 3.6000000000000005
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 37,
+        "delay_ms": 10.200000000000001,
+        "delta_delay_ms": 3.6000000000000005
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 38,
+        "delay_ms": 10.100000000000001,
+        "delta_delay_ms": 3.6000000000000014
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 39,
+        "delay_ms": 10.0,
+        "delta_delay_ms": 3.5999999999999996
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 40,
+        "delay_ms": 9.9,
+        "delta_delay_ms": 3.7
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 41,
+        "delay_ms": 9.8,
+        "delta_delay_ms": 3.7
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 42,
+        "delay_ms": 9.700000000000001,
+        "delta_delay_ms": 3.700000000000001
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 43,
+        "delay_ms": 9.600000000000001,
+        "delta_delay_ms": 3.700000000000001
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 44,
+        "delay_ms": 9.5,
+        "delta_delay_ms": 3.6999999999999993
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 45,
+        "delay_ms": 9.5,
+        "delta_delay_ms": 3.8
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 46,
+        "delay_ms": 9.4,
+        "delta_delay_ms": 3.8
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 47,
+        "delay_ms": 9.3,
+        "delta_delay_ms": 3.8000000000000007
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 48,
+        "delay_ms": 9.200000000000001,
+        "delta_delay_ms": 3.8000000000000007
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 49,
+        "delay_ms": 9.1,
+        "delta_delay_ms": 3.799999999999999
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 50,
+        "delay_ms": 9.0,
+        "delta_delay_ms": 3.8
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 51,
+        "delay_ms": 8.9,
+        "delta_delay_ms": 3.8
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 52,
+        "delay_ms": 8.8,
+        "delta_delay_ms": 3.8000000000000007
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 53,
+        "delay_ms": 8.8,
+        "delta_delay_ms": 3.9000000000000004
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 54,
+        "delay_ms": 8.700000000000001,
+        "delta_delay_ms": 3.8000000000000007
+      },
+      {
+        "index": 6,
+        "sz_factor_percent": 16.0,
+        "k_stored": 0.84,
+        "sigma_ms": 55,
+        "delay_ms": 8.6,
+        "delta_delay_ms": 3.799999999999999
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 36,
+        "delay_ms": 10.5,
+        "delta_delay_ms": 3.8
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 37,
+        "delay_ms": 10.4,
+        "delta_delay_ms": 3.8
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 38,
+        "delay_ms": 10.200000000000001,
+        "delta_delay_ms": 3.700000000000001
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 39,
+        "delay_ms": 10.100000000000001,
+        "delta_delay_ms": 3.700000000000001
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 40,
+        "delay_ms": 10.0,
+        "delta_delay_ms": 3.8
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 41,
+        "delay_ms": 9.8,
+        "delta_delay_ms": 3.7
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 42,
+        "delay_ms": 9.700000000000001,
+        "delta_delay_ms": 3.700000000000001
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 43,
+        "delay_ms": 9.600000000000001,
+        "delta_delay_ms": 3.700000000000001
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 44,
+        "delay_ms": 9.5,
+        "delta_delay_ms": 3.6999999999999993
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 45,
+        "delay_ms": 9.3,
+        "delta_delay_ms": 3.6000000000000005
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 46,
+        "delay_ms": 9.200000000000001,
+        "delta_delay_ms": 3.6000000000000005
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 47,
+        "delay_ms": 9.1,
+        "delta_delay_ms": 3.5999999999999996
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 48,
+        "delay_ms": 9.0,
+        "delta_delay_ms": 3.5999999999999996
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 49,
+        "delay_ms": 8.9,
+        "delta_delay_ms": 3.5999999999999996
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 50,
+        "delay_ms": 8.700000000000001,
+        "delta_delay_ms": 3.500000000000001
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 51,
+        "delay_ms": 8.700000000000001,
+        "delta_delay_ms": 3.6000000000000005
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 52,
+        "delay_ms": 8.6,
+        "delta_delay_ms": 3.5999999999999996
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 53,
+        "delay_ms": 8.5,
+        "delta_delay_ms": 3.5999999999999996
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 54,
+        "delay_ms": 8.4,
+        "delta_delay_ms": 3.5
+      },
+      {
+        "index": 7,
+        "sz_factor_percent": 18.666666666666664,
+        "k_stored": 0.813,
+        "sigma_ms": 55,
+        "delay_ms": 8.3,
+        "delta_delay_ms": 3.5
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 36,
+        "delay_ms": 9.600000000000001,
+        "delta_delay_ms": 2.9000000000000012
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 37,
+        "delay_ms": 9.4,
+        "delta_delay_ms": 2.8
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 38,
+        "delay_ms": 9.3,
+        "delta_delay_ms": 2.8000000000000007
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 39,
+        "delay_ms": 9.200000000000001,
+        "delta_delay_ms": 2.8000000000000007
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 40,
+        "delay_ms": 9.1,
+        "delta_delay_ms": 2.8999999999999995
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 41,
+        "delay_ms": 9.0,
+        "delta_delay_ms": 2.8999999999999995
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 42,
+        "delay_ms": 8.8,
+        "delta_delay_ms": 2.8000000000000007
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 43,
+        "delay_ms": 8.700000000000001,
+        "delta_delay_ms": 2.8000000000000007
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 44,
+        "delay_ms": 8.6,
+        "delta_delay_ms": 2.799999999999999
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 45,
+        "delay_ms": 8.4,
+        "delta_delay_ms": 2.7
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 46,
+        "delay_ms": 8.3,
+        "delta_delay_ms": 2.7
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 47,
+        "delay_ms": 8.1,
+        "delta_delay_ms": 2.5999999999999996
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 48,
+        "delay_ms": 8.200000000000001,
+        "delta_delay_ms": 2.8000000000000007
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 49,
+        "delay_ms": 8.0,
+        "delta_delay_ms": 2.6999999999999993
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 50,
+        "delay_ms": 7.9,
+        "delta_delay_ms": 2.7
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 51,
+        "delay_ms": 7.800000000000001,
+        "delta_delay_ms": 2.7
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 52,
+        "delay_ms": 7.7,
+        "delta_delay_ms": 2.7
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 53,
+        "delay_ms": 7.6000000000000005,
+        "delta_delay_ms": 2.7
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 54,
+        "delay_ms": 7.5,
+        "delta_delay_ms": 2.5999999999999996
+      },
+      {
+        "index": 8,
+        "sz_factor_percent": 21.333333333333332,
+        "k_stored": 0.787,
+        "sigma_ms": 55,
+        "delay_ms": 7.4,
+        "delta_delay_ms": 2.5999999999999996
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 36,
+        "delay_ms": 9.700000000000001,
+        "delta_delay_ms": 3.000000000000001
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 37,
+        "delay_ms": 9.600000000000001,
+        "delta_delay_ms": 3.000000000000001
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 38,
+        "delay_ms": 9.5,
+        "delta_delay_ms": 3.0
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 39,
+        "delay_ms": 9.4,
+        "delta_delay_ms": 3.0
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 40,
+        "delay_ms": 9.3,
+        "delta_delay_ms": 3.1000000000000005
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 41,
+        "delay_ms": 9.200000000000001,
+        "delta_delay_ms": 3.1000000000000005
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 42,
+        "delay_ms": 9.0,
+        "delta_delay_ms": 3.0
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 43,
+        "delay_ms": 8.9,
+        "delta_delay_ms": 3.0
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 44,
+        "delay_ms": 8.8,
+        "delta_delay_ms": 3.0
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 45,
+        "delay_ms": 8.700000000000001,
+        "delta_delay_ms": 3.000000000000001
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 46,
+        "delay_ms": 8.6,
+        "delta_delay_ms": 2.999999999999999
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 47,
+        "delay_ms": 8.4,
+        "delta_delay_ms": 2.9000000000000004
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 48,
+        "delay_ms": 8.3,
+        "delta_delay_ms": 2.9000000000000004
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 49,
+        "delay_ms": 8.200000000000001,
+        "delta_delay_ms": 2.9000000000000004
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 50,
+        "delay_ms": 8.1,
+        "delta_delay_ms": 2.8999999999999995
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 51,
+        "delay_ms": 8.0,
+        "delta_delay_ms": 2.8999999999999995
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 52,
+        "delay_ms": 7.9,
+        "delta_delay_ms": 2.9000000000000004
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 53,
+        "delay_ms": 7.800000000000001,
+        "delta_delay_ms": 2.9000000000000004
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 54,
+        "delay_ms": 7.7,
+        "delta_delay_ms": 2.8
+      },
+      {
+        "index": 9,
+        "sz_factor_percent": 24.0,
+        "k_stored": 0.76,
+        "sigma_ms": 55,
+        "delay_ms": 7.6000000000000005,
+        "delta_delay_ms": 2.8
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 36,
+        "delay_ms": 8.8,
+        "delta_delay_ms": 2.1000000000000005
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 37,
+        "delay_ms": 8.700000000000001,
+        "delta_delay_ms": 2.1000000000000005
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 38,
+        "delay_ms": 8.6,
+        "delta_delay_ms": 2.0999999999999996
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 39,
+        "delay_ms": 8.5,
+        "delta_delay_ms": 2.0999999999999996
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 40,
+        "delay_ms": 8.6,
+        "delta_delay_ms": 2.3999999999999995
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 41,
+        "delay_ms": 8.3,
+        "delta_delay_ms": 2.2
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 42,
+        "delay_ms": 8.200000000000001,
+        "delta_delay_ms": 2.200000000000001
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 43,
+        "delay_ms": 8.1,
+        "delta_delay_ms": 2.1999999999999993
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 44,
+        "delay_ms": 8.0,
+        "delta_delay_ms": 2.1999999999999993
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 45,
+        "delay_ms": 7.9,
+        "delta_delay_ms": 2.2
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 46,
+        "delay_ms": 7.800000000000001,
+        "delta_delay_ms": 2.2
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 47,
+        "delay_ms": 7.7,
+        "delta_delay_ms": 2.2
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 48,
+        "delay_ms": 7.6000000000000005,
+        "delta_delay_ms": 2.2
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 49,
+        "delay_ms": 7.5,
+        "delta_delay_ms": 2.1999999999999993
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 50,
+        "delay_ms": 7.5,
+        "delta_delay_ms": 2.3
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 51,
+        "delay_ms": 7.4,
+        "delta_delay_ms": 2.3
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 52,
+        "delay_ms": 7.300000000000001,
+        "delta_delay_ms": 2.3000000000000007
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 53,
+        "delay_ms": 7.2,
+        "delta_delay_ms": 2.3
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 54,
+        "delay_ms": 7.2,
+        "delta_delay_ms": 2.3
+      },
+      {
+        "index": 10,
+        "sz_factor_percent": 26.666666666666664,
+        "k_stored": 0.733,
+        "sigma_ms": 55,
+        "delay_ms": 7.1000000000000005,
+        "delta_delay_ms": 2.3
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 36,
+        "delay_ms": 10.9,
+        "delta_delay_ms": 4.2
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 37,
+        "delay_ms": 10.8,
+        "delta_delay_ms": 4.2
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 38,
+        "delay_ms": 10.700000000000001,
+        "delta_delay_ms": 4.200000000000001
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 39,
+        "delay_ms": 10.600000000000001,
+        "delta_delay_ms": 4.200000000000001
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 40,
+        "delay_ms": 10.5,
+        "delta_delay_ms": 4.3
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 41,
+        "delay_ms": 10.3,
+        "delta_delay_ms": 4.2
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 42,
+        "delay_ms": 10.200000000000001,
+        "delta_delay_ms": 4.200000000000001
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 43,
+        "delay_ms": 10.100000000000001,
+        "delta_delay_ms": 4.200000000000001
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 44,
+        "delay_ms": 10.0,
+        "delta_delay_ms": 4.199999999999999
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 45,
+        "delay_ms": 9.9,
+        "delta_delay_ms": 4.2
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 46,
+        "delay_ms": 9.8,
+        "delta_delay_ms": 4.2
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 47,
+        "delay_ms": 9.600000000000001,
+        "delta_delay_ms": 4.100000000000001
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 48,
+        "delay_ms": 9.5,
+        "delta_delay_ms": 4.1
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 49,
+        "delay_ms": 9.4,
+        "delta_delay_ms": 4.1
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 50,
+        "delay_ms": 9.3,
+        "delta_delay_ms": 4.1000000000000005
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 51,
+        "delay_ms": 9.200000000000001,
+        "delta_delay_ms": 4.1000000000000005
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 52,
+        "delay_ms": 9.1,
+        "delta_delay_ms": 4.1
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 53,
+        "delay_ms": 9.0,
+        "delta_delay_ms": 4.1
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 54,
+        "delay_ms": 8.9,
+        "delta_delay_ms": 4.0
+      },
+      {
+        "index": 11,
+        "sz_factor_percent": 29.333333333333332,
+        "k_stored": 0.707,
+        "sigma_ms": 55,
+        "delay_ms": 8.8,
+        "delta_delay_ms": 4.0
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 36,
+        "delay_ms": 9.700000000000001,
+        "delta_delay_ms": 3.000000000000001
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 37,
+        "delay_ms": 9.600000000000001,
+        "delta_delay_ms": 3.000000000000001
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 38,
+        "delay_ms": 9.5,
+        "delta_delay_ms": 3.0
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 39,
+        "delay_ms": 9.5,
+        "delta_delay_ms": 3.0999999999999996
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 40,
+        "delay_ms": 9.4,
+        "delta_delay_ms": 3.2
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 41,
+        "delay_ms": 9.3,
+        "delta_delay_ms": 3.2
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 42,
+        "delay_ms": 9.200000000000001,
+        "delta_delay_ms": 3.200000000000001
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 43,
+        "delay_ms": 9.1,
+        "delta_delay_ms": 3.1999999999999993
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 44,
+        "delay_ms": 9.0,
+        "delta_delay_ms": 3.1999999999999993
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 45,
+        "delay_ms": 8.9,
+        "delta_delay_ms": 3.2
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 46,
+        "delay_ms": 8.8,
+        "delta_delay_ms": 3.2
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 47,
+        "delay_ms": 8.700000000000001,
+        "delta_delay_ms": 3.200000000000001
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 48,
+        "delay_ms": 8.5,
+        "delta_delay_ms": 3.0999999999999996
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 49,
+        "delay_ms": 8.4,
+        "delta_delay_ms": 3.0999999999999996
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 50,
+        "delay_ms": 8.5,
+        "delta_delay_ms": 3.3
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 51,
+        "delay_ms": 8.4,
+        "delta_delay_ms": 3.3
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 52,
+        "delay_ms": 8.3,
+        "delta_delay_ms": 3.3000000000000007
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 53,
+        "delay_ms": 8.3,
+        "delta_delay_ms": 3.4000000000000004
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 54,
+        "delay_ms": 8.200000000000001,
+        "delta_delay_ms": 3.3000000000000007
+      },
+      {
+        "index": 12,
+        "sz_factor_percent": 32.0,
+        "k_stored": 0.68,
+        "sigma_ms": 55,
+        "delay_ms": 8.1,
+        "delta_delay_ms": 3.299999999999999
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 36,
+        "delay_ms": 11.3,
+        "delta_delay_ms": 4.6000000000000005
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 37,
+        "delay_ms": 11.200000000000001,
+        "delta_delay_ms": 4.6000000000000005
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 38,
+        "delay_ms": 11.100000000000001,
+        "delta_delay_ms": 4.600000000000001
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 39,
+        "delay_ms": 11.0,
+        "delta_delay_ms": 4.6
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 40,
+        "delay_ms": 10.9,
+        "delta_delay_ms": 4.7
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 41,
+        "delay_ms": 10.8,
+        "delta_delay_ms": 4.7
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 42,
+        "delay_ms": 10.600000000000001,
+        "delta_delay_ms": 4.600000000000001
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 43,
+        "delay_ms": 10.5,
+        "delta_delay_ms": 4.6
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 44,
+        "delay_ms": 10.4,
+        "delta_delay_ms": 4.6
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 45,
+        "delay_ms": 10.5,
+        "delta_delay_ms": 4.8
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 46,
+        "delay_ms": 10.200000000000001,
+        "delta_delay_ms": 4.6000000000000005
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 47,
+        "delay_ms": 10.100000000000001,
+        "delta_delay_ms": 4.600000000000001
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 48,
+        "delay_ms": 10.100000000000001,
+        "delta_delay_ms": 4.700000000000001
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 49,
+        "delay_ms": 10.0,
+        "delta_delay_ms": 4.699999999999999
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 50,
+        "delay_ms": 10.0,
+        "delta_delay_ms": 4.8
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 51,
+        "delay_ms": 9.9,
+        "delta_delay_ms": 4.8
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 52,
+        "delay_ms": 9.8,
+        "delta_delay_ms": 4.800000000000001
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 53,
+        "delay_ms": 9.8,
+        "delta_delay_ms": 4.9
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 54,
+        "delay_ms": 9.700000000000001,
+        "delta_delay_ms": 4.800000000000001
+      },
+      {
+        "index": 13,
+        "sz_factor_percent": 34.666666666666664,
+        "k_stored": 0.653,
+        "sigma_ms": 55,
+        "delay_ms": 9.600000000000001,
+        "delta_delay_ms": 4.800000000000001
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 36,
+        "delay_ms": 12.4,
+        "delta_delay_ms": 5.7
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 37,
+        "delay_ms": 12.3,
+        "delta_delay_ms": 5.7
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 38,
+        "delay_ms": 12.100000000000001,
+        "delta_delay_ms": 5.600000000000001
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 39,
+        "delay_ms": 12.0,
+        "delta_delay_ms": 5.6
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 40,
+        "delay_ms": 11.9,
+        "delta_delay_ms": 5.7
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 41,
+        "delay_ms": 11.8,
+        "delta_delay_ms": 5.7
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 42,
+        "delay_ms": 11.600000000000001,
+        "delta_delay_ms": 5.600000000000001
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 43,
+        "delay_ms": 11.5,
+        "delta_delay_ms": 5.6
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 44,
+        "delay_ms": 11.4,
+        "delta_delay_ms": 5.6
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 45,
+        "delay_ms": 11.3,
+        "delta_delay_ms": 5.6000000000000005
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 46,
+        "delay_ms": 11.3,
+        "delta_delay_ms": 5.7
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 47,
+        "delay_ms": 11.100000000000001,
+        "delta_delay_ms": 5.600000000000001
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 48,
+        "delay_ms": 11.0,
+        "delta_delay_ms": 5.6
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 49,
+        "delay_ms": 10.9,
+        "delta_delay_ms": 5.6
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 50,
+        "delay_ms": 10.8,
+        "delta_delay_ms": 5.6000000000000005
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 51,
+        "delay_ms": 10.8,
+        "delta_delay_ms": 5.7
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 52,
+        "delay_ms": 10.700000000000001,
+        "delta_delay_ms": 5.700000000000001
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 53,
+        "delay_ms": 10.600000000000001,
+        "delta_delay_ms": 5.700000000000001
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 54,
+        "delay_ms": 10.5,
+        "delta_delay_ms": 5.6
+      },
+      {
+        "index": 14,
+        "sz_factor_percent": 37.33333333333333,
+        "k_stored": 0.627,
+        "sigma_ms": 55,
+        "delay_ms": 10.4,
+        "delta_delay_ms": 5.6
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 36,
+        "delay_ms": 11.700000000000001,
+        "delta_delay_ms": 5.000000000000001
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 37,
+        "delay_ms": 11.600000000000001,
+        "delta_delay_ms": 5.000000000000001
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 38,
+        "delay_ms": 11.600000000000001,
+        "delta_delay_ms": 5.100000000000001
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 39,
+        "delay_ms": 11.600000000000001,
+        "delta_delay_ms": 5.200000000000001
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 40,
+        "delay_ms": 11.5,
+        "delta_delay_ms": 5.3
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 41,
+        "delay_ms": 11.700000000000001,
+        "delta_delay_ms": 5.6000000000000005
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 42,
+        "delay_ms": 11.600000000000001,
+        "delta_delay_ms": 5.600000000000001
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 43,
+        "delay_ms": 11.600000000000001,
+        "delta_delay_ms": 5.700000000000001
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 44,
+        "delay_ms": 11.5,
+        "delta_delay_ms": 5.699999999999999
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 45,
+        "delay_ms": 11.4,
+        "delta_delay_ms": 5.7
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 46,
+        "delay_ms": 11.3,
+        "delta_delay_ms": 5.7
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 47,
+        "delay_ms": 11.3,
+        "delta_delay_ms": 5.800000000000001
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 48,
+        "delay_ms": 11.200000000000001,
+        "delta_delay_ms": 5.800000000000001
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 49,
+        "delay_ms": 11.200000000000001,
+        "delta_delay_ms": 5.9
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 50,
+        "delay_ms": 11.100000000000001,
+        "delta_delay_ms": 5.900000000000001
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 51,
+        "delay_ms": 11.100000000000001,
+        "delta_delay_ms": 6.000000000000001
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 52,
+        "delay_ms": 11.4,
+        "delta_delay_ms": 6.4
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 53,
+        "delay_ms": 10.9,
+        "delta_delay_ms": 6.0
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 54,
+        "delay_ms": 10.4,
+        "delta_delay_ms": 5.5
+      },
+      {
+        "index": 15,
+        "sz_factor_percent": 40.0,
+        "k_stored": 0.6,
+        "sigma_ms": 55,
+        "delay_ms": 9.9,
+        "delta_delay_ms": 5.1
+      }
+    ],
+    "method": "Absolute MF-to-PC lag: mean of the 20 independently audited cross-correlation lags at sigma=36..55 ms, matching the paper selected range.",
+    "positive_lag": "PC follows MF",
+    "selection": "Top quartile by 99th-percentile firing rate, separately for MF and PC.",
+    "smoothing": "Triangular kernel, sigma parameter 36..55 ms; time step 0.1 ms; full lag search.",
+    "coordinates": "Nominal paper SZ grid 0..40%, matched to stored k by condition index; right k=0.707 has nominal 29.3333% and effective 29.3%.",
+    "display": "delta_delay_ms is baseline-subtracted lag relative to SZ 0%, as in Fig. 3a. The original absolute delay_ms is retained for provenance.",
+    "limitations": "Sigma settings are analysis choices, not independent replicates. Instantaneous movie rates use all cells in 10 ms bins. Archived burst inputs differ across conditions; the comparison does not isolate an atrophy-only effect."
+  },
+  "archived_input_note": "Kase stimulus amplitudes and durations vary by condition; original inputs are preserved.",
+  "visual_methods": {
+    "visual_bin_ms": 5,
+    "optical_afterglow_ms": 30,
+    "colour_quantity": "Population mean rate difference, including silent cells",
+    "colour_transfer": "symmetric square root",
+    "colour_limits_hz": {
+      "autoritmo": [
+        -20,
+        20
+      ],
+      "kase": [
+        -15,
+        15
+      ]
+    },
+    "paired_cells": false
+  }
+}

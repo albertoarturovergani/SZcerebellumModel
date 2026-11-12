@@ -277,3 +277,7 @@ Funding specific to other manuscript coauthors is detailed in the manuscript's F
 Alberto Arturo Vergani — University of Pavia, Italy.
 
 For questions about scientific reproducibility: albertoarturo.vergani@unipv.it.
+
+## Activity videos
+
+See [original-paper autorhythmic and Kase activity videos](videos/README.md) for synchronized healthy-versus-SZ replays, captions, exact curve data, provenance and validation.
